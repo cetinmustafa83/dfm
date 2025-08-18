@@ -20,6 +20,7 @@ export const pageSchema = z.object({
   metaDescription: z.string()
     .max(160, 'Meta description must be less than 160 characters')
     .optional(),
+  published: z.boolean().default(false),
 });
 
 export type PageFormValues = z.infer<typeof pageSchema>;

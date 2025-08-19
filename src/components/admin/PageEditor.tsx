@@ -3,7 +3,7 @@
 import { useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
-import { pageSchema, PageFormValues } from '@/validations/page';
+import { pageSchema, PageFormValues, PageFormInput } from '@/validations/page';
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
@@ -13,21 +13,21 @@ import { toast } from 'sonner';
 import { useRouter } from 'next/navigation';
 
 interface PageEditorProps {
-  initialData?: PageFormValues & { id?: string };
+  initialData?: PageFormInput & { id?: string };
 }
 
 export default function PageEditor({ initialData }: PageEditorProps) {
   const router = useRouter();
-  // Removed explicit type argument from zodResolver to allow TypeScript to infer correctly.
+  
   const form = useForm<PageFormValues>({
     resolver: zodResolver(pageSchema),
-    defaultValues: initialData || {
-      title: '',
-      slug: '',
-      content: '',
-      metaTitle: '',
-      metaDescription: '',
-      published: false
+    defaultValues: {
+      title: initialData?.title || '',
+      slug: initialData?.slug || '',
+      content: initialData?.content || '',
+      metaTitle: initialData?.metaTitle || '',
+      metaDescription: initialData?.metaDescription || '',
+      published: initialData?.published ?? false // Ensure published is always a boolean for the form
     }
   });
 

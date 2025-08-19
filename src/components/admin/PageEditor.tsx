@@ -19,16 +19,19 @@ interface PageEditorProps {
 export default function PageEditor({ initialData }: PageEditorProps) {
   const router = useRouter();
   
+  // Explicitly define default values to ensure type alignment with PageFormValues
+  const defaultFormValues: PageFormValues = {
+    title: initialData?.title || '',
+    slug: initialData?.slug || '',
+    content: initialData?.content || '',
+    metaTitle: initialData?.metaTitle || '',
+    metaDescription: initialData?.metaDescription || '',
+    published: initialData?.published ?? false // Ensure published is always a boolean for the form
+  };
+
   const form = useForm<PageFormValues>({
-    resolver: zodResolver(pageSchema),
-    defaultValues: {
-      title: initialData?.title || '',
-      slug: initialData?.slug || '',
-      content: initialData?.content || '',
-      metaTitle: initialData?.metaTitle || '',
-      metaDescription: initialData?.metaDescription || '',
-      published: initialData?.published ?? false // Ensure published is always a boolean for the form
-    }
+    resolver: zodResolver<PageFormValues>(pageSchema), // Explicitly type the resolver
+    defaultValues: defaultFormValues, // Use the explicitly typed default values
   });
 
   useEffect(() => {

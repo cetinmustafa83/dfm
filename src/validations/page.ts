@@ -1,7 +1,8 @@
 import { z } from 'zod';
 
-// Define the base schema where 'published' is optional, to be used for initial data
-const basePageSchema = z.object({
+// Schema for the data that the form will handle and submit.
+// 'published' is a required boolean with a default.
+export const pageSchema = z.object({
   title: z.string()
     .min(1, 'Title is required')
     .max(100, 'Title must be less than 100 characters'),
@@ -21,13 +22,13 @@ const basePageSchema = z.object({
   metaDescription: z.string()
     .max(160, 'Meta description must be less than 160 characters')
     .optional(),
-  published: z.boolean().optional(), // Explicitly optional for raw input
+  published: z.boolean().default(false), // Directly defined as boolean with a default
 });
 
-// This is the schema used for form validation, ensuring 'published' defaults to false if not provided
-export const pageSchema = basePageSchema.extend({
-  published: basePageSchema.shape.published.default(false), // Apply default for the final validated type
-});
+export type PageFormValues = z.infer<typeof pageSchema>;
 
-export type PageFormValues = z.infer<typeof pageSchema>; // Type for validated form data (published: boolean)
-export type PageFormInput = z.infer<typeof basePageSchema>; // Type for initial input data (published?: boolean)
+// Type for incoming data that might have 'published' as optional.
+// This is used for 'initialData' in components.
+export type PageFormInput = Omit<PageFormValues, 'published'> & {
+  published?: boolean;
+};

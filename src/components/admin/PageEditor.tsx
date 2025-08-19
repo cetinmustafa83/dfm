@@ -18,6 +18,7 @@ interface PageEditorProps {
 
 export default function PageEditor({ initialData }: PageEditorProps) {
   const router = useRouter();
+  // Removed explicit type argument from zodResolver to allow TypeScript to infer correctly.
   const form = useForm<PageFormValues>({
     resolver: zodResolver(pageSchema),
     defaultValues: initialData || {
@@ -31,6 +32,7 @@ export default function PageEditor({ initialData }: PageEditorProps) {
   });
 
   useEffect(() => {
+    // Auto-generate slug if it's a new page and title is typed
     if (!initialData?.id && !form.getValues('slug')) {
       const generatedSlug = form.getValues('title')
         ?.toLowerCase()
@@ -45,7 +47,6 @@ export default function PageEditor({ initialData }: PageEditorProps) {
       const url = initialData?.id 
         ? `/api/content/pages?id=${initialData.id}`
         : '/api/content/pages';
-      
       const method = initialData?.id ? 'PUT' : 'POST';
 
       const response = await fetch(url, {
@@ -56,8 +57,8 @@ export default function PageEditor({ initialData }: PageEditorProps) {
 
       if (response.ok) {
         toast.success('Page saved successfully');
-        if (!initialData?.id) {
-          router.push('/admin/pages');
+        if (!initialData?.id) { 
+          router.push('/admin/pages'); // Redirect to pages list after creating a new page
         }
       } else {
         const errorData = await response.json();
@@ -98,6 +99,7 @@ export default function PageEditor({ initialData }: PageEditorProps) {
                     {...field}
                     className="pl-7"
                     onBlur={(e) => {
+                      // Format slug on blur
                       const formattedSlug = e.target.value
                         .toLowerCase()
                         .replace(/\s+/g, '-')
@@ -184,7 +186,7 @@ export default function PageEditor({ initialData }: PageEditorProps) {
           <Button type="submit" disabled={form.formState.isSubmitting}>
             {form.formState.isSubmitting ? 'Saving...' : 'Save Page'}
           </Button>
-          <Button
+          <Button 
             variant="secondary"
             type="button"
             onClick={() => router.push('/admin/pages')}

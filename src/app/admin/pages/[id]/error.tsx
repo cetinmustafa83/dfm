@@ -1,26 +1,17 @@
 "use client";
 
 import { useEffect } from 'react';
-import { Alert, AlertDescription, AlertTitle
-
-Let's complete the error boundary implementation and finalize the validation flow:
-
-<dyad-write path="src/app/admin/pages/[id]/error.tsx" description="Completing error boundary">
-"use client";
-
-import { useEffect } from 'react';
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
 import { Button } from '@/components/ui/button';
 import { useRouter } from 'next/navigation';
 import { Terminal } from 'lucide-react';
 
-export default function ErrorPage({
-  error,
-  reset,
-}: {
-  error: Error & { digest?: string }
-  reset: () => void
-}) {
+interface ErrorPageProps {
+  error: Error & { digest?: string };
+  reset: () => void;
+}
+
+export default function ErrorPage({ error, reset }: ErrorPageProps) {
   const router = useRouter();
 
   useEffect(() => {

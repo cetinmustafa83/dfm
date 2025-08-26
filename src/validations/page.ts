@@ -22,7 +22,11 @@ export const pageSchema = z.object({
   metaDescription: z.string()
     .max(160, 'Meta description must be less than 160 characters')
     .optional(),
-  published: z.boolean().default(false), // Directly defined as boolean with a default
+  // Use preprocess to handle potential undefined input for 'published' before validation
+  published: z.preprocess(
+    (val) => (val === undefined ? false : val), // If undefined, treat as false
+    z.boolean()
+  ),
 });
 
 export type PageFormValues = z.infer<typeof pageSchema>;

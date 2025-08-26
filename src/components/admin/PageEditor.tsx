@@ -18,7 +18,6 @@ interface PageEditorProps {
 
 export default function PageEditor({ initialData }: PageEditorProps) {
   const router = useRouter();
-  
   // Explicitly define default values to ensure type alignment with PageFormValues
   const defaultFormValues: PageFormValues = {
     title: initialData?.title || '',
@@ -30,7 +29,7 @@ export default function PageEditor({ initialData }: PageEditorProps) {
   };
 
   const form = useForm<PageFormValues>({
-    resolver: zodResolver<PageFormValues>(pageSchema), // Explicitly type the resolver
+    resolver: zodResolver(pageSchema), // Removed the explicit generic type <PageFormValues> here
     defaultValues: defaultFormValues, // Use the explicitly typed default values
   });
 

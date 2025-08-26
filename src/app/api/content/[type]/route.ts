@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server';
 import { createItem, getItem, getAllItems, updateItem, deleteItem } from '@/lib/crud';
 import { pageSchema } from '@/validations/page';
+import { serviceSchema } from '@/validations/service'; // Import the new service schema
 import { z } from 'zod';
 
 export async function GET(
@@ -11,7 +12,7 @@ export async function GET(
     const { searchParams } = new URL(request.url);
     const id = searchParams.get('id');
 
-    if (params.type === 'pages') {
+    if (params.type === 'pages' || params.type === 'services') { // Handle both types
       if (id) {
         const item = await getItem(params.type, id);
         return item ? NextResponse.json(item) : NextResponse.json({ error: 'Not found' }, { status: 404 });
@@ -43,14 +44,19 @@ export async function POST(
     }
 
     const body = await request.json();
-    
+    let newItem;
+
     if (params.type === 'pages') {
-      const validatedData = pageSchema.parse(body); // Validate entire payload
-      const newItem = await createItem(params.type, validatedData);
-      return NextResponse.json(newItem, { status: 201 });
+      const validatedData = pageSchema.parse(body);
+      newItem = await createItem(params.type, validatedData);
+    } else if (params.type === 'services') { // Add service handling
+      const validatedData = serviceSchema.parse(body);
+      newItem = await createItem(params.type, validatedData);
+    } else {
+      return NextResponse.json({ error: 'Invalid content type' }, { status: 400 });
     }
 
-    return NextResponse.json({ error: 'Invalid content type' }, { status: 400 });
+    return NextResponse.json(newItem, { status: 201 });
   } catch (error) {
     if (error instanceof z.ZodError) {
       return NextResponse.json(
@@ -83,17 +89,22 @@ export async function PUT(
     if (!id) return NextResponse.json({ error: 'Missing ID parameter' }, { status: 400 });
 
     const body = await request.json();
+    let updatedItem;
     
     if (params.type === 'pages') {
-      const validatedData = pageSchema.partial().parse(body); // Allow partial updates
-      const updatedItem = await updateItem(params.type, id, validatedData);
-      
-      return updatedItem
-        ? NextResponse.json(updatedItem)
-        : NextResponse.json({ error: 'Item not found for update' }, { status: 404 });
+      const validatedData = pageSchema.partial().parse(body);
+      updatedItem = await updateItem(params.type, id, validatedData);
+    } else if (params.type === 'services') { // Add service handling
+      const validatedData = serviceSchema.partial().parse(body);
+      updatedItem = await updateItem(params.type, id, validatedData);
+    } else {
+      return NextResponse.json({ error: 'Invalid content type' }, { status: 400 });
     }
+    
+    return updatedItem
+      ? NextResponse.json(updatedItem)
+      : NextResponse.json({ error: 'Item not found for update' }, { status: 404 });
 
-    return NextResponse.json({ error: 'Invalid content type' }, { status: 400 });
   } catch (error) {
     if (error instanceof z.ZodError) {
       return NextResponse.json(
@@ -118,7 +129,7 @@ export async function DELETE(
     const id = searchParams.get('id');
     if (!id) return NextResponse.json({ error: 'Missing ID parameter' }, { status: 400 });
 
-    if (params.type === 'pages') {
+    if (params.type === 'pages' || params.type === 'services') { // Handle both types
       const success = await deleteItem(params.type, id);
       return success
         ? NextResponse.json({ message: 'Item deleted successfully' })

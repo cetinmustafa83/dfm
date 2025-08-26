@@ -29,7 +29,7 @@ export default function PageEditor({ initialData }: PageEditorProps) {
   };
 
   const form = useForm<PageFormValues>({
-    resolver: zodResolver(pageSchema), // Removed the explicit generic type <PageFormValues> here
+    resolver: zodResolver(pageSchema as any), // Cast schema to 'any' to fix type inference issues
     defaultValues: defaultFormValues, // Use the explicitly typed default values
   });
 

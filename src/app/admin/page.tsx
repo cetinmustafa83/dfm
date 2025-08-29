@@ -1,4 +1,27 @@
-export default function AdminDashboardPage() {
+import { getAllItems } from '@/lib/crud';
+
+async function getCounts() {
+  try {
+    const [pages, services, jobs] = await Promise.all([
+      getAllItems('pages'),
+      getAllItems('services'),
+      getAllItems('jobs'),
+    ]);
+    return {
+      pages: pages.length,
+      services: services.length,
+      jobs: jobs.length,
+    };
+  } catch (error) {
+    console.error("Failed to fetch content counts:", error);
+    // Return 0 counts if there's an error
+    return { pages: 0, services: 0, jobs: 0 };
+  }
+}
+
+export default async function AdminDashboardPage() {
+  const counts = await getCounts();
+
   return (
     <div className="container mx-auto">
       <h1 className="text-3xl font-bold mb-6 text-gray-800 dark:text-gray-200">Admin Dashboard</h1>
@@ -9,9 +32,9 @@ export default function AdminDashboardPage() {
           <h2 className="text-xl font-semibold mb-3 text-gray-800 dark:text-gray-200">Content Overview</h2>
           <p className="text-gray-600 dark:text-gray-400">Manage pages, services, and job postings.</p>
           <ul className="list-disc list-inside mt-4 text-gray-600 dark:text-gray-400">
-            <li>Pages: 0</li>
-            <li>Services: 0</li>
-            <li>Jobs: 0</li>
+            <li>Pages: {counts.pages}</li>
+            <li>Services: {counts.services}</li>
+            <li>Jobs: {counts.jobs}</li>
           </ul>
         </div>
         <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">

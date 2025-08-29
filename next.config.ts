@@ -12,6 +12,7 @@ const nextConfig: NextConfig = {
     }
     return config;
   },
+  serverExternalPackages: ["level", "classic-level", "leveldown"],
 };
 
 export default nextConfig;

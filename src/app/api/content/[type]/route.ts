@@ -1,7 +1,8 @@
 import { NextResponse } from 'next/server';
 import { createItem, getItem, getAllItems, updateItem, deleteItem } from '@/lib/crud';
 import { pageSchema } from '@/validations/page';
-import { serviceSchema } from '@/validations/service'; // Import the new service schema
+import { serviceSchema } from '@/validations/service';
+import { jobSchema } from '@/validations/job';
 import { z } from 'zod';
 
 export async function GET(
@@ -12,7 +13,7 @@ export async function GET(
     const { searchParams } = new URL(request.url);
     const id = searchParams.get('id');
 
-    if (params.type === 'pages' || params.type === 'services') { // Handle both types
+    if (params.type === 'pages' || params.type === 'services' || params.type === 'jobs') {
       if (id) {
         const item = await getItem(params.type, id);
         return item ? NextResponse.json(item) : NextResponse.json({ error: 'Not found' }, { status: 404 });
@@ -49,8 +50,11 @@ export async function POST(
     if (params.type === 'pages') {
       const validatedData = pageSchema.parse(body);
       newItem = await createItem(params.type, validatedData);
-    } else if (params.type === 'services') { // Add service handling
+    } else if (params.type === 'services') {
       const validatedData = serviceSchema.parse(body);
+      newItem = await createItem(params.type, validatedData);
+    } else if (params.type === 'jobs') {
+      const validatedData = jobSchema.parse(body);
       newItem = await createItem(params.type, validatedData);
     } else {
       return NextResponse.json({ error: 'Invalid content type' }, { status: 400 });
@@ -94,8 +98,11 @@ export async function PUT(
     if (params.type === 'pages') {
       const validatedData = pageSchema.partial().parse(body);
       updatedItem = await updateItem(params.type, id, validatedData);
-    } else if (params.type === 'services') { // Add service handling
+    } else if (params.type === 'services') {
       const validatedData = serviceSchema.partial().parse(body);
+      updatedItem = await updateItem(params.type, id, validatedData);
+    } else if (params.type === 'jobs') {
+      const validatedData = jobSchema.partial().parse(body);
       updatedItem = await updateItem(params.type, id, validatedData);
     } else {
       return NextResponse.json({ error: 'Invalid content type' }, { status: 400 });
@@ -129,7 +136,7 @@ export async function DELETE(
     const id = searchParams.get('id');
     if (!id) return NextResponse.json({ error: 'Missing ID parameter' }, { status: 400 });
 
-    if (params.type === 'pages' || params.type === 'services') { // Handle both types
+    if (params.type === 'pages' || params.type === 'services' || params.type === 'jobs') {
       const success = await deleteItem(params.type, id);
       return success
         ? NextResponse.json({ message: 'Item deleted successfully' })

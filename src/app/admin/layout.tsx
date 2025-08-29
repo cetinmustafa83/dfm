@@ -21,6 +21,9 @@ export default function AdminLayout({
             <li className="mb-2">
               <Link href="/admin/services" className="block p-2 rounded-md hover:bg-sidebar-accent hover:text-sidebar-accent-foreground">Services</Link>
             </li>
+            <li className="mb-2">
+              <Link href="/admin/jobs" className="block p-2 rounded-md hover:bg-sidebar-accent hover:text-sidebar-accent-foreground">Jobs</Link>
+            </li>
           </ul>
         </nav>
       </aside>

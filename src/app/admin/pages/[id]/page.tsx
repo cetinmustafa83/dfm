@@ -16,9 +16,10 @@ async function getPageData(id: string) {
 export default async function EditPage({
   params,
 }: {
-  params: { id: string };
+  params: Promise<{ id: string }>;
 }) {
-  const pageData = await getPageData(params.id);
+  const { id } = await params;
+  const pageData = await getPageData(id);
 
   if (!pageData) {
     notFound();
@@ -28,21 +29,6 @@ export default async function EditPage({
     <div className="space-y-6">
       <h1 className="text-2xl font-bold">Edit Page: {pageData.title}</h1>
       <PageEditor initialData={pageData} />
-    </div>
-  );
-}
-
-export function EditPageLoading() {
-  return (
-    <div className="space-y-6">
-      <Skeleton className="h-8 w-[200px]" />
-      <div className="space-y-4">
-        <Skeleton className="h-10 w-full" />
-        <Skeleton className="h-10 w-full" />
-        <Skeleton className="h-[300px] w-full" />
-        <Skeleton className="h-10 w-full" />
-        <Skeleton className="h-10 w-full" />
-      </div>
     </div>
   );
 }

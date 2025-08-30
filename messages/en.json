@@ -1,0 +1,114 @@
+{
+  "Index": {
+    "title": "Welcome to DFM Solutions"
+  },
+  "Header": {
+    "home": "Home",
+    "about": "About Us",
+    "services": "Services",
+    "contact": "Contact",
+    "dayCare": "DFM Day Care",
+    "career": "Career"
+  },
+  "Footer": {
+    "slogan": "Your outpatient care service in Berlin",
+    "contact": "Contact",
+    "address": "Klosterstraße 70, 10179 Berlin",
+    "phone": "Phone: 030 208 47 35 70",
+    "email": "Email: info@dfmsolutions.de",
+    "quickLinks": "Quick Links",
+    "home": "Home",
+    "about": "About Us",
+    "services": "Services",
+    "contactLink": "Contact",
+    "followUs": "Follow Us",
+    "rights": "All rights reserved.",
+    "imprint": "Imprint",
+    "privacy": "Privacy Policy"
+  },
+  "Hero": {
+    "title": "WE CARE WITH HEART AND MIND",
+    "subtitle": "",
+    "contactButton": "To the contact form"
+  },
+  "ServiceTeaser": {
+    "title": "We are your contact for...",
+    "basicCare": "Basic Care",
+    "treatmentCare": "Treatment Care",
+    "housekeeping": "Housekeeping",
+    "respiteCare": "Respite Care",
+    "supportServices": "Support Services",
+    "consultation": "Consultation"
+  },
+  "AboutTeaser": {
+    "title": "DFM - Your outpatient care service in Berlin Reinickendorf & Mitte",
+    "text": "We are an outpatient care service that has made it its mission to care for, support and assist people in their familiar surroundings. Our goal is to maintain and improve the quality of life of our patients.",
+    "button": "More about us"
+  },
+  "ServicesSection": {
+    "title": "Our Services",
+    "button": "More about our services",
+    "basicCare": {
+      "title": "Basic Care",
+      "text": "Basic care includes support with daily personal hygiene, nutrition and mobility."
+    },
+    "treatmentCare": {
+      "title": "Treatment Care",
+      "text": "Treatment care is prescribed by a doctor and includes medical services such as wound care or medication administration."
+    },
+    "housekeeping": {
+      "title": "Housekeeping",
+      "text": "We support you with housekeeping, e.g. shopping, cooking or cleaning the apartment."
+    },
+    "respiteCare": {
+      "title": "Respite Care",
+      "text": "If caring relatives are unavailable, we take over the care and support."
+    },
+    "supportServices": {
+      "title": "Support Services",
+      "text": "We offer individual support and activation to promote mental and physical fitness."
+    },
+    "consultation": {
+      "title": "Consultation Visits",
+      "text": "We advise you and your relatives on all questions relating to care."
+    }
+  },
+  "DayCareTeaser": {
+    "title": "DFM Day Care in Berlin Reinickendorf",
+    "text": "In our day care in Berlin Reinickendorf, we offer you professional care and support in a family atmosphere. We attach great importance to individual and activating care that is tailored to the needs and wishes of our guests.",
+    "button": "More about day care"
+  },
+  "CareerTeaser": {
+    "title": "Career at DFM",
+    "text": "We are always looking for qualified and dedicated employees to strengthen our team. If you have a passion for care and enjoy working in a dynamic and friendly environment, then you have come to the right place.",
+    "button": "To our job offers"
+  },
+  "ContactSection": {
+    "title": "Contact",
+    "addressTitle": "Address",
+    "company": "DFM Solutions GmbH",
+    "street": "Klosterstraße 70",
+    "city": "10179 Berlin",
+    "phone": "Phone: 030 208 47 35 70",
+    "fax": "Fax: 030 208 47 35 71",
+    "email": "Email: info@dfmsolutions.de",
+    "form": {
+      "name": "Name",
+      "namePlaceholder": "Your Name",
+      "email": "Email",
+      "emailPlaceholder": "Your Email Address",
+      "phone": "Phone",
+      "phonePlaceholder": "Your Phone Number (optional)",
+      "message": "Message",
+      "messagePlaceholder": "Your message to us",
+      "privacyLabel": "I have read and agree to the privacy policy.",
+      "submitButton": "Send Message"
+    },
+    "validation": {
+      "name": "Please enter your name.",
+      "email": "Please enter a valid email address.",
+      "message": "Please enter a message with at least 10 characters.",
+      "privacy": "You must accept the privacy policy."
+    }
+  }
+}

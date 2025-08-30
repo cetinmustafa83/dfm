@@ -1,0 +1,114 @@
+{
+  "Index": {
+    "title": "Willkommen bei DFM Solutions"
+  },
+  "Header": {
+    "home": "Home",
+    "about": "Über uns",
+    "services": "Leistungen",
+    "contact": "Kontakt",
+    "dayCare": "DFM-Tagespflege",
+    "career": "Karriere"
+  },
+  "Footer": {
+    "slogan": "Ihr ambulanter Pflegedienst in Berlin",
+    "contact": "Kontakt",
+    "address": "Klosterstraße 70, 10179 Berlin",
+    "phone": "Telefon: 030 208 47 35 70",
+    "email": "E-Mail: info@dfmsolutions.de",
+    "quickLinks": "Schnellinks",
+    "home": "Home",
+    "about": "Über uns",
+    "services": "Leistungen",
+    "contactLink": "Kontakt",
+    "followUs": "Folgen Sie uns",
+    "rights": "Alle Rechte vorbehalten.",
+    "imprint": "Impressum",
+    "privacy": "Datenschutz"
+  },
+  "Hero": {
+    "title": "WIR PFLEGEN MIT HERZ UND VERSTAND",
+    "subtitle": "",
+    "contactButton": "Zum Kontaktformular"
+  },
+  "ServiceTeaser": {
+    "title": "Wir sind Ihr Ansprechpartner für...",
+    "basicCare": "Grundpflege",
+    "treatmentCare": "Behandlungspflege",
+    "housekeeping": "Hauswirtschaft",
+    "respiteCare": "Verhinderungspflege",
+    "supportServices": "Betreuungsleistungen",
+    "consultation": "Beratung"
+  },
+  "AboutTeaser": {
+    "title": "DFM - Ihr ambulanter Pflegedienst in Berlin Reinickendorf & Mitte",
+    "text": "Wir sind ein ambulanter Pflegedienst, der es sich zur Aufgabe gemacht hat, Menschen in ihrer gewohnten Umgebung zu pflegen, zu betreuen und ihnen zur Seite zu stehen. Unser Ziel ist es, die Lebensqualität unserer Patienten zu erhalten und zu verbessern.",
+    "button": "Mehr über uns"
+  },
+  "ServicesSection": {
+    "title": "Unsere Leistungen",
+    "button": "Mehr zu unseren Leistungen",
+    "basicCare": {
+      "title": "Grundpflege",
+      "text": "Die Grundpflege umfasst die Unterstützung bei der täglichen Körperpflege, Ernährung und Mobilität."
+    },
+    "treatmentCare": {
+      "title": "Behandlungspflege",
+      "text": "Die Behandlungspflege wird vom Arzt verordnet und umfasst medizinische Leistungen wie Wundversorgung oder Medikamentengabe."
+    },
+    "housekeeping": {
+      "title": "Hauswirtschaftliche Versorgung",
+      "text": "Wir unterstützen Sie bei der Haushaltsführung, z.B. beim Einkaufen, Kochen oder Reinigen der Wohnung."
+    },
+    "respiteCare": {
+      "title": "Verhinderungspflege",
+      "text": "Wenn pflegende Angehörige verhindert sind, übernehmen wir die Pflege und Betreuung."
+    },
+    "supportServices": {
+      "title": "Betreuungsleistungen",
+      "text": "Wir bieten individuelle Betreuung und Aktivierung, um die geistige und körperliche Fitness zu fördern."
+    },
+    "consultation": {
+      "title": "Beratungsbesuche",
+      "text": "Wir beraten Sie und Ihre Angehörigen zu allen Fragen rund um die Pflege."
+    }
+  },
+  "DayCareTeaser": {
+    "title": "DFM Tagespflege in Berlin Reinickendorf",
+    "text": "In unserer Tagespflege in Berlin Reinickendorf bieten wir Ihnen eine professionelle Betreuung und Pflege in einer familiären Atmosphäre. Wir legen großen Wert auf eine individuelle und aktivierende Betreuung, die auf die Bedürfnisse und Wünsche unserer Gäste abgestimmt ist.",
+    "button": "Mehr zur Tagespflege"
+  },
+  "CareerTeaser": {
+    "title": "Karriere bei DFM",
+    "text": "Wir sind immer auf der Suche nach qualifizierten und engagierten Mitarbeitern, die unser Team verstärken. Wenn Sie eine Leidenschaft für die Pflege haben und gerne in einem dynamischen und freundlichen Umfeld arbeiten, dann sind Sie bei uns genau richtig.",
+    "button": "Zu unseren Stellenangeboten"
+  },
+  "ContactSection": {
+    "title": "Kontakt",
+    "addressTitle": "Anschrift",
+    "company": "DFM Solutions GmbH",
+    "street": "Klosterstraße 70",
+    "city": "10179 Berlin",
+    "phone": "Telefon: 030 208 47 35 70",
+    "fax": "Fax: 030 208 47 35 71",
+    "email": "E-Mail: info@dfmsolutions.de",
+    "form": {
+      "name": "Name",
+      "namePlaceholder": "Ihr Name",
+      "email": "E-Mail",
+      "emailPlaceholder": "Ihre E-Mail-Adresse",
+      "phone": "Telefon",
+      "phonePlaceholder": "Ihre Telefonnummer (optional)",
+      "message": "Nachricht",
+      "messagePlaceholder": "Ihre Nachricht an uns",
+      "privacyLabel": "Ich habe die Datenschutzerklärung zur Kenntnis genommen.",
+      "submitButton": "Nachricht senden"
+    },
+    "validation": {
+      "name": "Bitte geben Sie Ihren Namen ein.",
+      "email": "Bitte geben Sie eine gültige E-Mail-Adresse ein.",
+      "message": "Bitte geben Sie eine Nachricht mit mindestens 10 Zeichen ein.",
+      "privacy": "Sie müssen die Datenschutzerklärung akzeptieren."
+    }
+  }
+}

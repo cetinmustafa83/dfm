@@ -1,0 +1,114 @@
+{
+  "Index": {
+    "title": "DFM Solutions'a Hoş Geldiniz"
+  },
+  "Header": {
+    "home": "Ana Sayfa",
+    "about": "Hakkımızda",
+    "services": "Hizmetler",
+    "contact": "İletişim",
+    "dayCare": "DFM Gündüz Bakımı",
+    "career": "Kariyer"
+  },
+  "Footer": {
+    "slogan": "Berlin'deki ayakta bakım hizmetiniz",
+    "contact": "İletişim",
+    "address": "Klosterstraße 70, 10179 Berlin",
+    "phone": "Telefon: 030 208 47 35 70",
+    "email": "E-posta: info@dfmsolutions.de",
+    "quickLinks": "Hızlı Bağlantılar",
+    "home": "Ana Sayfa",
+    "about": "Hakkımızda",
+    "services": "Hizmetler",
+    "contactLink": "İletişim",
+    "followUs": "Bizi Takip Edin",
+    "rights": "Tüm hakları saklıdır.",
+    "imprint": "Künye",
+    "privacy": "Gizlilik Politikası"
+  },
+  "Hero": {
+    "title": "KALP VE AKILLA BAKIM YAPIYORUZ",
+    "subtitle": "",
+    "contactButton": "İletişim formuna"
+  },
+  "ServiceTeaser": {
+    "title": "İletişim kurabileceğiniz konular...",
+    "basicCare": "Temel Bakım",
+    "treatmentCare": "Tedavi Bakımı",
+    "housekeeping": "Ev İşleri",
+    "respiteCare": "Mola Bakımı",
+    "supportServices": "Destek Hizmetleri",
+    "consultation": "Danışmanlık"
+  },
+  "AboutTeaser": {
+    "title": "DFM - Berlin Reinickendorf & Mitte'deki ayakta bakım hizmetiniz",
+    "text": "İnsanlara alışkın oldukları ortamda bakmayı, desteklemeyi ve yardımcı olmayı kendine görev edinmiş bir ayakta bakım hizmetiyiz. Amacımız, hastalarımızın yaşam kalitesini korumak ve iyileştirmektir.",
+    "button": "Hakkımızda daha fazla bilgi"
+  },
+  "ServicesSection": {
+    "title": "Hizmetlerimiz",
+    "button": "Hizmetlerimiz hakkında daha fazla bilgi",
+    "basicCare": {
+      "title": "Temel Bakım",
+      "text": "Temel bakım, günlük kişisel hijyen, beslenme ve hareketlilik konularında desteği içerir."
+    },
+    "treatmentCare": {
+      "title": "Tedavi Bakımı",
+      "text": "Tedavi bakımı doktor tarafından reçete edilir ve yara bakımı veya ilaç uygulaması gibi tıbbi hizmetleri içerir."
+    },
+    "housekeeping": {
+      "title": "Ev İdaresi",
+      "text": "Alışveriş, yemek pişirme veya daire temizliği gibi ev işlerinde size destek oluyoruz."
+    },
+    "respiteCare": {
+      "title": "Mola Bakımı",
+      "text": "Bakım yapan akrabalar müsait olmadığında, bakım ve desteği biz devralırız."
+    },
+    "supportServices": {
+      "title": "Destek Hizmetleri",
+      "text": "Zihinsel ve fiziksel zindeliği teşvik etmek için bireysel destek ve aktivasyon sunuyoruz."
+    },
+    "consultation": {
+      "title": "Danışma Ziyaretleri",
+      "text": "Bakımla ilgili tüm sorularda size ve yakınlarınıza danışmanlık yapıyoruz."
+    }
+  },
+  "DayCareTeaser": {
+    "title": "Berlin Reinickendorf'taki DFM Gündüz Bakımı",
+    "text": "Berlin Reinickendorf'taki gündüz bakım merkezimizde size aile ortamında profesyonel bakım ve destek sunuyoruz. Misafirlerimizin ihtiyaç ve isteklerine göre şekillendirilmiş bireysel ve aktive edici bakıma büyük önem veriyoruz.",
+    "button": "Gündüz bakımı hakkında daha fazla bilgi"
+  },
+  "CareerTeaser": {
+    "title": "DFM'de Kariyer",
+    "text": "Ekibimizi güçlendirecek nitelikli ve kendini işine adamış çalışanlar arıyoruz. Bakım tutkunuz varsa ve dinamik ve samimi bir ortamda çalışmaktan hoşlanıyorsanız, doğru yerdesiniz.",
+    "button": "İş ilanlarımıza"
+  },
+  "ContactSection": {
+    "title": "İletişim",
+    "addressTitle": "Adres",
+    "company": "DFM Solutions GmbH",
+    "street": "Klosterstraße 70",
+    "city": "10179 Berlin",
+    "phone": "Telefon: 030 208 47 35 70",
+    "fax": "Faks: 030 208 47 35 71",
+    "email": "E-posta: info@dfmsolutions.de",
+    "form": {
+      "name": "İsim",
+      "namePlaceholder": "Adınız",
+      "email": "E-posta",
+      "emailPlaceholder": "E-posta adresiniz",
+      "phone": "Telefon",
+      "phonePlaceholder": "Telefon numaranız (isteğe bağlı)",
+      "message": "Mesaj",
+      "messagePlaceholder": "Bize mesajınız",
+      "privacyLabel": "Gizlilik politikasını okudum ve kabul ediyorum.",
+      "submitButton": "Mesaj Gönder"
+    },
+    "validation": {
+      "name": "Lütfen adınızı girin.",
+      "email": "Lütfen geçerli bir e-posta adresi girin.",
+      "message": "Lütfen en az 10 karakterden oluşan bir mesaj girin.",
+      "privacy": "Gizlilik politikasını kabul etmelisiniz."
+    }
+  }
+}

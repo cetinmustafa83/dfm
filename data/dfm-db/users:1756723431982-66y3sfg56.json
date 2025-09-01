@@ -1,0 +1,11 @@
+{
+  "email": "customer@example.com",
+  "name": "Customer User",
+  "role": "customer",
+  "isActive": true,
+  "passwordHash": "$2b$12$M.2ZEr/LaK2SUumXuPX7r.OWf.PhBq47JEEe1PQnsIBs.agPME3Ji",
+  "id": "users:1756723431982-66y3sfg56",
+  "createdAt": "2025-09-01T10:43:51.982Z",
+  "updatedAt": "2025-09-01T10:44:25.164Z",
+  "lastLogin": "2025-09-01T10:44:25.164Z"
+}

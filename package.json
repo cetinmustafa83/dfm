@@ -1,13 +1,14 @@
 {
   "name": "dfm",
   "version": "1.0.0",
-  "description": "This repository is completely empty and ready for new content.",
+  "description": "DFM Solutions - Next.js Admin Dashboard with PWA, AI integration, and advanced analytics",
   "main": "index.js",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "type-check": "tsc --noEmit"
   },
   "repository": {
     "type": "git",

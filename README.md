@@ -54,3 +54,20 @@ This application is a Progressive Web App with:
 ## 🔧 Configuration
 
 See `src/components/pwa/PWAProvider.tsx` for notification settings and `public/manifest.json` for PWA configuration.
+
+## 🤖 GitHub Actions Automation
+
+This repository includes automated workflows for dependency management:
+
+### Dependabot Auto Merge
+- **Location**: `.github/workflows/dependabot-auto-merge.yml`
+- **Purpose**: Automatically merges Dependabot pull requests when tests pass
+- **Trigger**: Pull requests from Dependabot ([bot] or [preview])
+- **Actions**: 
+  - Checks out code
+  - Sets up Node.js environment
+  - Installs dependencies
+  - Runs tests (if available)
+  - Auto-merges successful PRs using squash method
+
+This ensures that security updates and dependency patches are automatically applied while maintaining code quality.

@@ -98,7 +98,6 @@ export default function NotificationManager({ onNotification }: NotificationMana
       await registration.showNotification('Test Notification', {
         body: 'This is a test notification from DFM Admin',
         icon: '/icon-192x192.png',
-        vibrate: [200, 100, 200],
         tag: 'test-notification',
       });
     } catch (error) {

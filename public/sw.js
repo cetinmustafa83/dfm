@@ -66,7 +66,6 @@ self.addEventListener('push', (event) => {
       body: data.body,
       icon: '/icon-192x192.png',
       badge: '/icon-192x192.png',
-      vibrate: [200, 100, 200],
       tag: 'dfm-notification',
       data: {
         url: data.url || '/admin'

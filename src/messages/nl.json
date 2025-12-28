@@ -1,0 +1,119 @@
+{
+  "navigation": {
+    "home": "Home",
+    "start": "Start",
+    "company": "Company",
+    "services": "Services",
+    "blog": "Blog",
+    "contact": "Contact",
+    "appointment": "Appointment",
+    "career": "Career",
+    "training": "Training",
+    "ticket": "Support Ticket",
+    "adminPanel": "Admin Panel",
+    "adminLogin": "Admin Login"
+  },
+  "hero": {
+    "badge": "#1 Digital Agency 2024",
+    "title": "We Create Digital",
+    "subtitle": "Experiences That Matter",
+    "description": "Transform your online presence with stunning websites, powerful applications, and strategic digital solutions that drive real business results.",
+    "getStarted": "Get Started",
+    "viewWork": "View Our Work"
+  },
+  "services": {
+    "badge": "Our Services",
+    "title": "What We Do Best",
+    "description": "Comprehensive digital solutions tailored to your unique business needs",
+    "startingAt": "Starting at",
+    "monthly": "Monthly",
+    "categories": {
+      "eshop": "E-Shop Solutions",
+      "eshopDesc": "E-Commerce Solutions",
+      "seo": "SEO",
+      "seoDesc": "Optimization Services",
+      "web": "Web Solutions",
+      "webDesc": "Custom Websites"
+    },
+    "items": {
+      "onlineShop": "Online Shop",
+      "individualShop": "Individual Online Shop",
+      "seoOptimization": "Search Engine Optimization",
+      "landingPage": "Landing Page",
+      "fullservice": "Full Service Website from 79€ / Month",
+      "vcardBasic": "Web V-Card Basic",
+      "vcardPremium": "Web V-Card Premium",
+      "businessBasic": "Business Website Basic",
+      "businessPremium": "Business Website Premium",
+      "individualWebsite": "Individual Website"
+    },
+    "needHelp": "Need help choosing?",
+    "getInTouch": "Get in touch with our experts",
+    "contactUs": "Contact Us"
+  },
+  "portfolio": {
+    "badge": "Our Portfolio",
+    "title": "Featured Projects",
+    "description": "Explore our latest work and see how we have helped businesses succeed",
+    "featured": "Featured"
+  },
+  "blog": {
+    "badge": "Latest from Our Blog",
+    "title": "Insights & Updates",
+    "description": "Stay updated with the latest trends and news from the digital world",
+    "by": "By",
+    "readMore": "Read More",
+    "viewAllPosts": "View All Posts"
+  },
+  "contact": {
+    "title": "Contact Form",
+    "description": "Contact us today for your next step to success!",
+    "firstName": "First Name",
+    "lastName": "Last Name",
+    "email": "E-Mail",
+    "phone": "Phone",
+    "message": "Message",
+    "privacyText": "I hereby confirm that I have read the",
+    "privacyLink": "privacy policy",
+    "privacyTextContinued": "and that my personal data (name, first name, telephone number and email address) will be stored and processed for the purpose of handling my request.",
+    "send": "Send",
+    "sending": "Sending...",
+    "success": "Message sent successfully!",
+    "successDescription": "We will get back to you within 24 hours.",
+    "error": "Failed to send message",
+    "errorDescription": "Please try again later."
+  },
+  "footer": {
+    "description": "Creating digital experiences that drive results and inspire growth.",
+    "ourServices": "Our Services",
+    "company": "Company",
+    "findUs": "Find Us",
+    "workingHours": "Working Hours",
+    "mondayFriday": "Monday - Friday: 09:00 - 17:00",
+    "copyright": "All rights reserved.",
+    "aboutUs": "About Us",
+    "bookAppointment": "Book Appointment",
+    "imprint": "Imprint",
+    "privacyPolicy": "Privacy Policy",
+    "workPrinciples": "Work Principles"
+  },
+  "cta": {
+    "readyTitle": "Ready to Start Your Project?",
+    "readyDescription": "Let's discuss how we can help you achieve your digital goals."
+  },
+  "theme": {
+    "toggle": "Toggle theme",
+    "lightMode": "Light Mode",
+    "darkMode": "Dark Mode"
+  },
+  "language": {
+    "switch": "Switch language",
+    "current": "Current language"
+  },
+  "common": {
+    "search": "Search",
+    "searchServices": "Search services...",
+    "noResults": "No services found matching your search.",
+    "loading": "Loading..."
+  }
+}

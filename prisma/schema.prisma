@@ -1,0 +1,361 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Customer {
+  id              String           @id @default(cuid())
+  email           String           @unique
+  name            String
+  phone           String?
+  company         String?
+  status          String           @default("active") // active, inactive, suspended
+  createdAt       DateTime         @default(now())
+  updatedAt       DateTime         @updatedAt
+  projectRequests ProjectRequest[]
+  payments        Payment[]
+  licenses        License[]
+}
+
+model ProjectRequest {
+  id          String    @id @default(cuid())
+  customerId  String
+  customer    Customer  @relation(fields: [customerId], references: [id], onDelete: Cascade)
+  title       String
+  description String
+  budget      Float?
+  status      String    @default("pending") // pending, in_progress, completed, cancelled
+  priority    String    @default("medium") // low, medium, high, urgent
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+}
+
+model SupportPackage {
+  id          String   @id @default(cuid())
+  name        String
+  description String?
+  price       Float
+  duration    Int      // in months
+  status      String   @default("active") // active, inactive
+  features    String   // JSON string of features
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model Payment {
+  id            String   @id @default(cuid())
+  customerId    String
+  customer      Customer @relation(fields: [customerId], references: [id], onDelete: Cascade)
+  amount        Float
+  currency      String   @default("EUR")
+  status        String   @default("pending") // pending, completed, failed, refunded
+  paymentMethod String   // paypal, mollie, stripe, etc
+  description   String?
+  invoiceUrl    String?
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+}
+
+model Template {
+  id          String   @id @default(cuid())
+  name        String
+  description String?
+  category    String
+  price       Float
+  previewUrl  String?
+  downloadUrl String?
+  status      String   @default("active") // active, inactive, draft
+  downloads   Int      @default(0)
+  rating      Float?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model LanguagePackage {
+  id          String   @id @default(cuid())
+  name        String
+  code        String   @unique // en, de, fr, etc
+  flag        String?  // emoji or url
+  status      String   @default("active") // active, inactive
+  completeness Float   @default(100) // percentage
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model License {
+  id         String   @id @default(cuid())
+  customerId String
+  customer   Customer @relation(fields: [customerId], references: [id], onDelete: Cascade)
+  type       String   // extra, premium, enterprise
+  product    String
+  key        String   @unique
+  status     String   @default("active") // active, inactive, expired
+  expiresAt  DateTime?
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+}
+
+model BlogPost {
+  id          String   @id @default(cuid())
+  title       String
+  slug        String   @unique
+  content     String
+  excerpt     String?
+  coverImage  String?
+  author      String
+  status      String   @default("draft") // draft, published, archived
+  publishedAt DateTime?
+  views       Int      @default(0)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model Message {
+  id        String   @id @default(cuid())
+  name      String
+  email     String
+  subject   String
+  message   String
+  status    String   @default("unread") // unread, read, replied, archived
+  category  String?  // ticket, appointment, career, training, general
+  type      String?  // inbox, outbox
+  deleted   Boolean  @default(false)
+  deletedAt DateTime?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model User {
+  id                  String              @id @default(cuid())
+  email               String              @unique
+  name                String?
+  role                String              @default("user") // user, admin
+  createdAt           DateTime            @default(now())
+  updatedAt           DateTime            @updatedAt
+  userProjectRequests UserProjectRequest[]
+  userPayments        UserPayment[]
+  purchases           Purchase[]
+  paymentMethods      PaymentMethod[]
+  walletTransactions  WalletTransaction[]
+  refundRequests      RefundRequest[]
+  tickets             Ticket[]
+}
+
+model UserProjectRequest {
+  id          String   @id @default(cuid())
+  userId      String
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  type        String
+  description String
+  budget      String
+  status      String   @default("submitted") // submitted, reviewing, approved, rejected, completed
+  submittedDate String
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model UserPayment {
+  id            String   @id @default(cuid())
+  userId        String
+  user          User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  amount        Float
+  currency      String   @default("EUR")
+  status        String   @default("pending")
+  paymentMethod String
+  description   String?
+  invoiceUrl    String?
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+}
+
+model Purchase {
+  id         String   @id @default(cuid())
+  userId     String
+  user       User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  itemType   String   // template, package, license, etc
+  itemId     String
+  itemName   String
+  amount     Float
+  currency   String   @default("EUR")
+  status     String   @default("completed")
+  purchaseDate DateTime @default(now())
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+}
+
+model PaymentMethod {
+  id        String   @id @default(cuid())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  type      String   // card, bank, paypal
+  details   String   // JSON string
+  isDefault Boolean  @default(false)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model WalletTransaction {
+  id          String   @id @default(cuid())
+  userId      String
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  type        String   // credit, debit
+  amount      Float
+  description String
+  status      String   @default("completed") // pending, completed, failed
+  date        DateTime @default(now())
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model RefundRequest {
+  id          String   @id @default(cuid())
+  userId      String
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  itemType    String
+  itemId      String
+  reason      String
+  amount      Float
+  status      String   @default("pending") // pending, approved, rejected, completed
+  requestDate DateTime @default(now())
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model Ticket {
+  id        String   @id @default(cuid())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  subject   String
+  message   String
+  priority  String   @default("medium") // low, medium, high, urgent
+  status    String   @default("open") // open, in_progress, resolved, closed
+  category  String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Service {
+  id          String   @id @default(cuid())
+  title       String
+  description String
+  icon        String
+  features    String   // JSON array
+  price       Float?
+  isMonthly   Boolean  @default(false)
+  status      String   @default("active")
+  order       Int      @default(0)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model Project {
+  id          String   @id @default(cuid())
+  title       String
+  category    String
+  description String
+  image       String?
+  clientUrl   String?
+  tags        String   // JSON array
+  featured    Boolean  @default(false)
+  status      String   @default("active")
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model CompletedProject {
+  id          String   @id @default(cuid())
+  projectId   String
+  title       String
+  description String
+  completedAt DateTime
+  clientName  String?
+  testimonial String?
+  images      String?  // JSON array
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model TeamMember {
+  id        String   @id @default(cuid())
+  name      String
+  role      String
+  image     String?
+  bio       String?
+  linkedin  String?
+  twitter   String?
+  email     String?
+  order     Int      @default(0)
+  status    String   @default("active")
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Testimonial {
+  id        String   @id @default(cuid())
+  name      String
+  company   String?
+  position  String?
+  image     String?
+  content   String
+  rating    Int      @default(5)
+  featured  Boolean  @default(false)
+  status    String   @default("active")
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Settings {
+  id    String @id @default(cuid())
+  key   String @unique
+  value String // JSON string
+  updatedAt DateTime @updatedAt
+}
+
+model SEO {
+  id      String @id @default(cuid())
+  page    String @unique // home, about, services, etc
+  title   String
+  description String
+  keywords String // JSON array
+  ogImage String?
+  updatedAt DateTime @updatedAt
+}
+
+model MarketplaceItem {
+  id                String   @id @default(cuid())
+  name              String
+  description       String
+  category          String
+  productType       String   // 'website-basic', 'website-premium', etc
+  price             Float
+  currency          String   @default("EUR")
+  paymentType       String   @default("one-time") // 'one-time' or 'monthly'
+  featured          Boolean  @default(false)
+  image             String?
+  demoUrl           String?
+  downloadUrl       String?
+  technologies      String   // JSON array
+  features          String   // JSON array
+  version           String   @default("1.0.0")
+  downloads         Int      @default(0)
+  rating            Float    @default(0)
+  reviews           Int      @default(0)
+  status            String   @default("active")
+  licenses          Int      @default(1)
+  downloadLimit     Int      @default(0)
+  downloadLimitType String   @default("unlimited") // 'unlimited', 'count', 'date'
+  downloadExpiry    DateTime?
+  includedItems     String   // JSON array
+  createdAt         DateTime @default(now())
+  updatedAt         DateTime @updatedAt
+}

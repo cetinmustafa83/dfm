@@ -11,7 +11,21 @@
     "training": "Training",
     "ticket": "Support Ticket",
     "adminPanel": "Admin Panel",
-    "adminLogin": "Admin Login"
+    "adminLogin": "Admin Login",
+    "eShopSolutions": "E-Commerce Solutions",
+    "seo": "SEO",
+    "webSolutions": "Web Solutions",
+    "eCommerceDesc": "E-commerce solutions and online store development",
+    "optimizationDesc": "Search engine optimization and visibility services",
+    "customWebsitesDesc": "Custom website development and design",
+    "needHelp": "Need help choosing?",
+    "getInTouch": "Get in touch with our experts",
+    "scheduleMeeting": "Schedule Meeting",
+    "joinTeam": "Join Our Team",
+    "learnWithUs": "Learn With Us",
+    "getSupport": "Get Support",
+    "lightMode": "Light Mode",
+    "darkMode": "Dark Mode"
   },
   "hero": {
     "badge": "#1 Digital Agency 2024",
@@ -63,7 +77,8 @@
     "description": "Stay updated with the latest trends and news from the digital world",
     "by": "By",
     "readMore": "Read More",
-    "viewAllPosts": "View All Posts"
+    "viewAllPosts": "View All Posts",
+    "viewAll": "View All"
   },
   "contact": {
     "title": "Contact Form",
@@ -76,12 +91,18 @@
     "privacyText": "I hereby confirm that I have read the",
     "privacyLink": "privacy policy",
     "privacyTextContinued": "and that my personal data (name, first name, telephone number and email address) will be stored and processed for the purpose of handling my request.",
+    "privacyAgreement": "I have read and agree to the privacy policy",
     "send": "Send",
     "sending": "Sending...",
+    "submit": "Submit",
     "success": "Message sent successfully!",
+    "successTitle": "Success!",
     "successDescription": "We will get back to you within 24 hours.",
+    "successMessage": "We received your message. We'll get back to you shortly.",
     "error": "Failed to send message",
-    "errorDescription": "Please try again later."
+    "errorTitle": "Error!",
+    "errorDescription": "Please try again later.",
+    "errorMessage": "An error occurred. Please try again."
   },
   "footer": {
     "description": "Creating digital experiences that drive results and inspire growth.",

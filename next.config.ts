@@ -21,6 +21,10 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  // Force cache invalidation for deployment
+  generateBuildId: async () => {
+    return `build-${Date.now()}`
+  },
 };
 
 export default withNextIntl(nextConfig);

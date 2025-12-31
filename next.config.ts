@@ -22,10 +22,8 @@ const nextConfig: NextConfig = {
     ],
   },
   // Disable static page generation for error pages
-  experimental: {
-    skipMiddlewareUrlNormalize: true,
-    skipTrailingSlashRedirect: true,
-  },
+  skipMiddlewareUrlNormalize: true,
+  skipTrailingSlashRedirect: true,
   // Force cache invalidation for deployment
   generateBuildId: async () => {
     return `build-${Date.now()}`

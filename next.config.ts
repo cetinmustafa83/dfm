@@ -21,16 +21,26 @@ const nextConfig: NextConfig = {
       },
     ],
   },
-  // Use standalone output to skip static optimization
-  output: 'standalone',
   // Force cache invalidation for deployment
   generateBuildId: async () => {
     return `build-${Date.now()}`
   },
-  // Disable webpack cache during build
-  webpack: (config, { isServer }) => {
+  // Override webpack to prevent HtmlContext import
+  webpack: (config, { isServer, webpack }) => {
     if (isServer) {
       config.cache = false;
+
+      // Add fallback for problematic modules
+      config.resolve.fallback = {
+        ...config.resolve.fallback,
+      };
+
+      // Ignore the vendored contexts that cause issues
+      config.plugins.push(
+        new webpack.IgnorePlugin({
+          resourceRegExp: /vendored\/contexts/,
+        })
+      );
     }
     return config;
   },

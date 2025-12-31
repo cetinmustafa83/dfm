@@ -29,9 +29,7 @@ const nextConfig: NextConfig = {
     return `build-${Date.now()}`
   },
   // Disable static 404 page generation
-  experimental: {
-    missingSuspenseWithCSRBailout: false,
-  },
+  experimental: {},
   // Skip 404 page during export
   output: 'standalone',
 };

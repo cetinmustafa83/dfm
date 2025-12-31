@@ -6,34 +6,30 @@ export const dynamic = 'force-dynamic'
 
 export default function RootNotFound() {
   return (
-    <html lang="en">
-      <body>
-        <div style={{
-          minHeight: '100vh',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          flexDirection: 'column',
-          fontFamily: 'system-ui, sans-serif',
-          padding: '20px',
-          margin: 0
-        }}>
-          <h1 style={{ fontSize: '4rem', marginBottom: '1rem' }}>404</h1>
-          <p style={{ fontSize: '1.25rem', marginBottom: '2rem' }}>Page not found</p>
-          <a
-            href="/en"
-            style={{
-              padding: '0.75rem 1.5rem',
-              backgroundColor: '#000',
-              color: '#fff',
-              textDecoration: 'none',
-              borderRadius: '0.375rem'
-            }}
-          >
-            Go to Homepage
-          </a>
-        </div>
-      </body>
-    </html>
+    <div style={{
+      minHeight: '100vh',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      flexDirection: 'column',
+      fontFamily: 'system-ui, sans-serif',
+      padding: '20px',
+      margin: 0
+    }}>
+      <h1 style={{ fontSize: '4rem', marginBottom: '1rem' }}>404</h1>
+      <p style={{ fontSize: '1.25rem', marginBottom: '2rem' }}>Page not found</p>
+      <a
+        href="/en"
+        style={{
+          padding: '0.75rem 1.5rem',
+          backgroundColor: '#000',
+          color: '#fff',
+          textDecoration: 'none',
+          borderRadius: '0.375rem'
+        }}
+      >
+        Go to Homepage
+      </a>
+    </div>
   )
 }

@@ -21,6 +21,9 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  // Skip building 404 page to avoid Html import error
+  skipTrailingSlashRedirect: true,
+  skipMiddlewareUrlNormalize: true,
   // Disable all caching during build
   experimental: {
     disableOptimizedLoading: true,

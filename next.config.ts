@@ -21,13 +21,8 @@ const nextConfig: NextConfig = {
       },
     ],
   },
-  // Skip building 404 page to avoid Html import error
-  skipTrailingSlashRedirect: true,
-  skipMiddlewareUrlNormalize: true,
-  // Disable all caching during build
-  experimental: {
-    disableOptimizedLoading: true,
-  },
+  // Output as standalone to avoid static 404 generation
+  output: 'standalone',
   // Force cache invalidation for deployment
   generateBuildId: async () => {
     return `build-${Date.now()}`

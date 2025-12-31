@@ -1,30 +1,35 @@
 // Root not-found page for Next.js 15 App Router
-// This file must not include <html> or <body> tags as they are handled by the root layout
+// This file MUST include <html> and <body> tags as it's rendered outside the layout hierarchy
 export default function RootNotFound() {
   return (
-    <div style={{
-      minHeight: '100vh',
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'center',
-      flexDirection: 'column',
-      fontFamily: 'system-ui, sans-serif',
-      padding: '20px'
-    }}>
-      <h1 style={{ fontSize: '4rem', marginBottom: '1rem' }}>404</h1>
-      <p style={{ fontSize: '1.25rem', marginBottom: '2rem' }}>Page not found</p>
-      <a
-        href="/en"
-        style={{
-          padding: '0.75rem 1.5rem',
-          backgroundColor: '#000',
-          color: '#fff',
-          textDecoration: 'none',
-          borderRadius: '0.375rem'
-        }}
-      >
-        Go to Homepage
-      </a>
-    </div>
+    <html lang="en">
+      <body>
+        <div style={{
+          minHeight: '100vh',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          flexDirection: 'column',
+          fontFamily: 'system-ui, sans-serif',
+          padding: '20px',
+          margin: 0
+        }}>
+          <h1 style={{ fontSize: '4rem', marginBottom: '1rem' }}>404</h1>
+          <p style={{ fontSize: '1.25rem', marginBottom: '2rem' }}>Page not found</p>
+          <a
+            href="/en"
+            style={{
+              padding: '0.75rem 1.5rem',
+              backgroundColor: '#000',
+              color: '#fff',
+              textDecoration: 'none',
+              borderRadius: '0.375rem'
+            }}
+          >
+            Go to Homepage
+          </a>
+        </div>
+      </body>
+    </html>
   )
 }

@@ -21,9 +21,18 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  // Use standalone output to skip static optimization
+  output: 'standalone',
   // Force cache invalidation for deployment
   generateBuildId: async () => {
     return `build-${Date.now()}`
+  },
+  // Disable webpack cache during build
+  webpack: (config, { isServer }) => {
+    if (isServer) {
+      config.cache = false;
+    }
+    return config;
   },
 };
 

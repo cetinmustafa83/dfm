@@ -21,6 +21,10 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  // Disable all caching during build
+  experimental: {
+    disableOptimizedLoading: true,
+  },
   // Force cache invalidation for deployment
   generateBuildId: async () => {
     return `build-${Date.now()}`

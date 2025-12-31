@@ -28,6 +28,12 @@ const nextConfig: NextConfig = {
   generateBuildId: async () => {
     return `build-${Date.now()}`
   },
+  // Disable static 404 page generation
+  experimental: {
+    missingSuspenseWithCSRBailout: false,
+  },
+  // Skip 404 page during export
+  output: 'standalone',
 };
 
 export default withNextIntl(nextConfig);

@@ -1,5 +1,9 @@
 // Root not-found page for Next.js 15 App Router
 // This file MUST include <html> and <body> tags as it's rendered outside the layout hierarchy
+
+// Force dynamic rendering to prevent static generation issues
+export const dynamic = 'force-dynamic'
+
 export default function RootNotFound() {
   return (
     <html lang="en">

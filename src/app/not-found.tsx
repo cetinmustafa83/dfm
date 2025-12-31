@@ -1,14 +1,14 @@
+'use client'
+
+import { useEffect } from 'react'
+import { useRouter } from 'next/navigation'
+
 export default function RootNotFound() {
-  return (
-    <html lang="en">
-      <head>
-        <meta httpEquiv="refresh" content="0;url=/en" />
-      </head>
-      <body>
-        <script dangerouslySetInnerHTML={{
-          __html: `window.location.href = '/en'`
-        }} />
-      </body>
-    </html>
-  )
+  const router = useRouter()
+
+  useEffect(() => {
+    router.replace('/en')
+  }, [router])
+
+  return null
 }

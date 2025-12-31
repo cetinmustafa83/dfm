@@ -1,5 +1,5 @@
-// Root not-found page for Next.js 15
-// This prevents build errors while handling 404s properly
+// Root not-found page for Next.js 15 App Router
+// This file must not include <html> or <body> tags as they are handled by the root layout
 export default function RootNotFound() {
   return (
     <div style={{

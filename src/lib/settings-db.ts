@@ -254,6 +254,12 @@ export interface AllSettings {
 }
 
 async function getSettingByKey(key: string): Promise<any> {
+  // If prisma is not initialized (e.g., no DATABASE_URL), return defaults
+  if (!prisma) {
+    console.warn(`Prisma not initialized, using default settings for ${key}`)
+    return getDefaultSettings(key)
+  }
+
   try {
     const setting = await prisma.settings.findUnique({
       where: { key },
@@ -266,6 +272,12 @@ async function getSettingByKey(key: string): Promise<any> {
 }
 
 async function setSettingByKey(key: string, value: any): Promise<void> {
+  // If prisma is not initialized (e.g., no DATABASE_URL), skip write operation
+  if (!prisma) {
+    console.warn(`Prisma not initialized, cannot write setting ${key}`)
+    return
+  }
+
   try {
     await prisma.settings.upsert({
       where: { key },

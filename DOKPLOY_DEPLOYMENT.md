@@ -52,9 +52,12 @@ MOLLIE_API_KEY="your-mollie-api-key"
 - Branch: main
 
 ### 2. Configure Build Settings
-- **Build Command**: `pnpm install && pnpm build`
+- **Build Command**: `bash scripts/dokploy-deploy.sh` (Recommended - clears all caches)
+- **Alternative Build Command**: `pnpm install && pnpm build` (Standard)
 - **Start Command**: `pnpm start`
 - **Node Version**: 20.x or higher
+
+**Important**: Using `bash scripts/dokploy-deploy.sh` ensures all caches are cleared before each deployment, preventing cache-related build issues.
 
 ### 3. Add Environment Variables
 Copy the required variables above into Dokploy's environment variables section.
@@ -94,12 +97,58 @@ npx prisma migrate deploy
 - Configure AI services
 - Set up email service
 
+## Available Scripts
+
+### Cache Management Scripts
+
+**Clear All Caches** (Local development):
+```bash
+pnpm clean
+# or
+bash scripts/clear-all-caches.sh
+```
+
+**Clean Build** (Local development):
+```bash
+pnpm build:clean
+```
+This will:
+1. Clear all caches (Next.js, node_modules, pnpm, etc.)
+2. Reinstall dependencies
+3. Build the application
+
+**Dokploy Deployment** (Recommended for Dokploy):
+```bash
+bash scripts/dokploy-deploy.sh
+```
+This comprehensive script:
+1. Clears all caches aggressively
+2. Verifies clean state
+3. Installs dependencies
+4. Generates Prisma Client
+5. Builds application
+6. Verifies build output
+
 ## Troubleshooting
 
-### Build Fails
+### Build Fails Due to Cache Issues
+**Solution**: Use the cache-clearing deployment script
+```bash
+# In Dokploy, set Build Command to:
+bash scripts/dokploy-deploy.sh
+```
+
+This ensures:
+- ✅ All caches are cleared before build
+- ✅ Fresh dependency installation
+- ✅ Clean Prisma Client generation
+- ✅ Verified build output
+
+### Build Fails (General)
 - Check Node.js version (must be 20+)
 - Verify pnpm is installed
 - Check build logs in Dokploy
+- Try using `bash scripts/dokploy-deploy.sh` as build command
 
 ### Database Connection Error
 - Verify DATABASE_URL is correct

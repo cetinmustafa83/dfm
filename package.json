@@ -5,9 +5,11 @@
   "scripts": {
     "dev": "next dev -p 3000 2>&1 | tee dev.log",
     "build": "prisma generate && rm -rf .next 2>/dev/null; rm -rf .next 2>/dev/null; next build",
+    "build:clean": "bash scripts/clear-all-caches.sh && pnpm install && pnpm build",
     "start": "NODE_ENV=production next start",
     "lint": "next lint",
     "postinstall": "prisma generate",
+    "clean": "bash scripts/clear-all-caches.sh",
     "db:push": "prisma db push",
     "db:generate": "prisma generate",
     "db:migrate": "prisma migrate dev",

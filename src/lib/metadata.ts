@@ -1,9 +1,25 @@
 import { settingsDb } from './settings-db'
 
+const defaultMetadata = {
+  title: 'Modern Web Agency | Professional Digital Solutions',
+  description: 'We create stunning websites, powerful applications, and strategic digital solutions that drive real business results.',
+  openGraph: {
+    title: 'Modern Web Agency | Professional Digital Solutions',
+    description: 'We create stunning websites, powerful applications, and strategic digital solutions that drive real business results.',
+    url: 'https://modernagency.com',
+    siteName: 'Modern Web Agency',
+  },
+}
+
 export async function generateDynamicMetadata() {
+  // During build time, if database is not available, return default metadata
+  if (!process.env.DATABASE_URL) {
+    return defaultMetadata
+  }
+
   try {
     const settings = await settingsDb.getGeneral()
-    
+
     return {
       title: `${settings.siteName || 'Modern Web Agency'} | Professional Digital Solutions`,
       description: settings.description || 'We create stunning websites, powerful applications, and strategic digital solutions that drive real business results.',
@@ -29,6 +45,6 @@ export async function generateDynamicMetadata() {
     }
   } catch (error) {
     console.error('Error generating metadata:', error)
-    return {}
+    return defaultMetadata
   }
 }

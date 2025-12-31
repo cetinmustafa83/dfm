@@ -23,6 +23,10 @@ const nextConfig: NextConfig = {
   },
   // Output as standalone to avoid static 404 generation
   output: 'standalone',
+  // Disable automatic static optimization
+  experimental: {
+    ppr: false,
+  },
   // Force cache invalidation for deployment
   generateBuildId: async () => {
     return `build-${Date.now()}`

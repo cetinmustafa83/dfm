@@ -1,9 +1,34 @@
-import { redirect } from 'next/navigation'
-
-// This file is required to prevent Next.js from generating a /404 page
-// which causes Html import errors with next-intl middleware.
-// Instead, we redirect all not-found cases to the default locale.
+// Root not-found page for Next.js 15
+// This prevents build errors while handling 404s properly
 export default function RootNotFound() {
-  // Redirect to default locale's not-found page
-  redirect('/en')
+  return (
+    <html lang="en">
+      <body>
+        <div style={{
+          minHeight: '100vh',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          flexDirection: 'column',
+          fontFamily: 'system-ui, sans-serif',
+          padding: '20px'
+        }}>
+          <h1 style={{ fontSize: '4rem', marginBottom: '1rem' }}>404</h1>
+          <p style={{ fontSize: '1.25rem', marginBottom: '2rem' }}>Page not found</p>
+          <a
+            href="/en"
+            style={{
+              padding: '0.75rem 1.5rem',
+              backgroundColor: '#000',
+              color: '#fff',
+              textDecoration: 'none',
+              borderRadius: '0.375rem'
+            }}
+          >
+            Go to Homepage
+          </a>
+        </div>
+      </body>
+    </html>
+  )
 }

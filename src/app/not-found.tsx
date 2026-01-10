@@ -1,8 +1,6 @@
-import Link from 'next/link'
+'use client'
 
-// IMPORTANT: This export forces this page to be dynamic, skipping the static prerendering
-// phase where the "Html should not be imported" error is occurring.
-export const dynamic = 'force-dynamic'
+import Link from 'next/link'
 
 export default function NotFound() {
   return (

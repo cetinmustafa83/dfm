@@ -1,6 +1,16 @@
+'use client'
+
 import Link from 'next/link'
+import { useEffect } from 'react'
 
 export default function NotFound() {
+  useEffect(() => {
+    // Redirect to home after 3 seconds
+    const timer = setTimeout(() => {
+      window.location.href = '/'
+    }, 3000)
+    return () => clearTimeout(timer)
+  }, [])
   return (
     <div style={{
       display: 'flex',

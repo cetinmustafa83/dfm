@@ -20,6 +20,6 @@ export default function middleware(request: NextRequest) {
 
 export const config = {
   // Match only internationalized pathnames
-  // Skip API routes, static files, and Next.js internals
-  matcher: ['/((?!api|_next|_vercel|.*\\..*).*)'],
+  // Skip API routes, static files, Next.js internals, and root not-found
+  matcher: ['/((?!api|_next|_vercel|.*\\..*|not-found).*)'],
 };

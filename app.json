@@ -1,0 +1,20 @@
+{
+    "name": "dfm-solutions",
+    "description": "Next.js application with Tailwind CSS and Shadcn UI",
+    "keywords": [
+        "next.js",
+        "react",
+        "tailwindcss",
+        "shadcn-ui"
+    ],
+    "buildpacks": [
+        {
+            "url": "heroku/nodejs"
+        }
+    ],
+    "env": {
+        "NPM_CONFIG_PRODUCTION": {
+            "value": "false"
+        }
+    }
+}

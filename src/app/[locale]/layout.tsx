@@ -71,24 +71,18 @@ export default async function LocaleLayout({
   const messages = await getMessages();
 
   return (
-    <html suppressHydrationWarning>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-background text-foreground`}
+    <NextIntlClientProvider messages={messages}>
+      <ThemeProvider
+        attribute="class"
+        defaultTheme="system"
+        enableSystem
+        disableTransitionOnChange
       >
-        <NextIntlClientProvider messages={messages}>
-          <ThemeProvider
-            attribute="class"
-            defaultTheme="system"
-            enableSystem
-            disableTransitionOnChange
-          >
-            {children}
-            <Toaster />
-            <AISupportAgentWrapper />
-            <CookieConsentWrapper />
-          </ThemeProvider>
-        </NextIntlClientProvider>
-      </body>
-    </html>
+        {children}
+        <Toaster />
+        <AISupportAgentWrapper />
+        <CookieConsentWrapper />
+      </ThemeProvider>
+    </NextIntlClientProvider>
   );
 }

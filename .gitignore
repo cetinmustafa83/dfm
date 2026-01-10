@@ -49,3 +49,4 @@ prompt
 
 server.log
 node_modules
+.env

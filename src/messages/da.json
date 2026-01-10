@@ -1,0 +1,338 @@
+{
+  "navigation": {
+    "home": "Hjem",
+    "start": "Start",
+    "company": "Virksomhed",
+    "services": "Tjenester",
+    "blog": "Blog",
+    "contact": "Kontakt",
+    "appointment": "Aftale",
+    "career": "Karriere",
+    "training": "Træning",
+    "ticket": "Support Billet",
+    "adminPanel": "Admin Panel",
+    "adminLogin": "Admin Login",
+    "eShopSolutions": "E-Commerce Løsninger",
+    "seo": "SEO",
+    "webSolutions": "Web Løsninger",
+    "eCommerceDesc": "E-handelsløsninger og udvikling af online butikker",
+    "optimizationDesc": "Søgemaskineoptimering og synlighedstjenester",
+    "customWebsitesDesc": "Udvikling og design af brugerdefinerede websites",
+    "needHelp": "Brug for hjælp til at vælge?",
+    "getInTouch": "Kontakt vores eksperter",
+    "scheduleMeeting": "Planlæg møde",
+    "joinTeam": "Bliv en del af vores team",
+    "learnWithUs": "Lær med os",
+    "getSupport": "Få support",
+    "lightMode": "Lys tilstand",
+    "darkMode": "Mørk tilstand",
+    "contactUs": "Contact Us"
+  },
+  "hero": {
+    "badge": "#1 Digitale Bureau 2024",
+    "title": "Vi skaber digitale",
+    "subtitle": "oplevelser, der betyder noget",
+    "description": "Transformer din online tilstedeværelse med imponerende hjemmesider, kraftfulde applikationer og strategiske digitale løsninger, der leverer reelle forretningsresultater.",
+    "getStarted": "Kom i gang",
+    "viewWork": "Se vores arbejde"
+  },
+  "services": {
+    "badge": "Vores Tjenester",
+    "title": "Hvad vi gør bedst",
+    "description": "Omfattende digitale løsninger skræddersyet til dine unikke forretningsbehov",
+    "startingAt": "Fra",
+    "monthly": "Månedlig",
+    "categories": {
+      "eshop": "E-Shop Løsninger",
+      "eshopDesc": "E-Commerce Løsninger",
+      "seo": "SEO",
+      "seoDesc": "Optimeringstjenester",
+      "web": "Web Løsninger",
+      "webDesc": "Brugerdefinerede Websites"
+    },
+    "items": {
+      "onlineShop": "Online Butik",
+      "individualShop": "Individuel Online Butik",
+      "seoOptimization": "Søgemaskineoptimering",
+      "landingPage": "Landingsside",
+      "fullservice": "Full Service Website fra 79€ / Måned",
+      "vcardBasic": "Web V-Kort Basis",
+      "vcardPremium": "Web V-Kort Premium",
+      "businessBasic": "Erhvervswebsite Basis",
+      "businessPremium": "Erhvervswebsite Premium",
+      "individualWebsite": "Individuel Website"
+    },
+    "needHelp": "Brug for hjælp til at vælge?",
+    "getInTouch": "Kontakt vores eksperter",
+    "contactUs": "Kontakt os",
+    "onlineShop": "Online Shop",
+    "individualOnlineShop": "Individual Online Shop",
+    "searchEngineOptimization": "Search Engine Optimization",
+    "landingPage": "Landing Page",
+    "fullServiceWebsite": "Full Service Website",
+    "webVCardBasic": "Web V-Card Basic",
+    "webVCardPremium": "Web V-Card Premium",
+    "businessWebsiteBasic": "Business Website Basic",
+    "businessWebsitePremium": "Business Website Premium",
+    "individualWebsite": "Individual Website"
+  },
+  "portfolio": {
+    "badge": "Vores Portfolio",
+    "title": "Udvalgte Projekter",
+    "description": "Udforsk vores seneste arbejde og se, hvordan vi har hjulpet virksomheder med at succeede",
+    "featured": "Udvalgt"
+  },
+  "blog": {
+    "badge": "Seneste fra vores blog",
+    "title": "Indsigt & Opdateringer",
+    "description": "Hold dig opdateret med de seneste trends og nyheder fra den digitale verden",
+    "by": "Af",
+    "readMore": "Læs mere",
+    "viewAllPosts": "Se alle indlæg",
+    "viewAll": "Se alle"
+  },
+  "contact": {
+    "title": "Kontakt Formular",
+    "description": "Kontakt os i dag for dit næste skridt mod succes!",
+    "firstName": "Fornavn",
+    "lastName": "Efternavn",
+    "email": "E-Mail",
+    "phone": "Telefon",
+    "message": "Besked",
+    "privacyText": "Hermed bekræfter jeg, at jeg har læst",
+    "privacyLink": "privatlivspolitikken",
+    "privacyTextContinued": "og accepterer, at mine personlige data (navn, efternavn, telefonnummer og e-mailadresse) vil blive gemt og behandlet med henblik på behandling af min anmodning.",
+    "privacyAgreement": "Jeg har læst og accepterer privatlivspolitikken",
+    "send": "Send",
+    "sending": "Sender...",
+    "submit": "Indsend",
+    "success": "Besked sendt succesfuldt!",
+    "successTitle": "Succes!",
+    "successDescription": "Vi vender tilbage til dig inden for 24 timer.",
+    "successMessage": "Vi har modtaget din besked. Vi vender tilbage til dig hurtigst muligt.",
+    "error": "Kunne ikke sende besked",
+    "errorTitle": "Fejl!",
+    "errorDescription": "Prøv venligst igen senere.",
+    "errorMessage": "Der opstod en fejl. Prøv venligst igen.",
+    "form": {
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "email": "E-Mail",
+      "phone": "Phone",
+      "message": "Message",
+      "privacyText": "Hermed bekræfter jeg, at jeg har læst",
+      "privacyPolicy": "privacy policy",
+      "privacyAgreement": "Jeg har læsit privatlivspolitikken og accepterer den",
+      "submit": "Submit"
+    }
+  },
+  "footer": {
+    "description": "Skabelse af digitale oplevelser, der leverer resultater og inspirerer vækst.",
+    "ourServices": "Vores Tjenester",
+    "company": "Virksomhed",
+    "findUs": "Find os",
+    "workingHours": "Åbningstider",
+    "mondayFriday": "Mandag - Fredag: 09:00 - 17:00",
+    "copyright": "Alle rettigheder forbeholdes.",
+    "aboutUs": "Om os",
+    "bookAppointment": "Book Aftale",
+    "imprint": "Fodnote",
+    "privacyPolicy": "Privatlivspolitik",
+    "workPrinciples": "Arbejdsprincipper",
+    "workingTime": "Mandag - Fredag: 09:00 - 17:00",
+    "allRightsReserved": "All rights reserved.",
+    "supportTicket": "Support Ticket"
+  },
+  "cta": {
+    "readyTitle": "Klar til at starte dit projekt?",
+    "readyDescription": "Lad os drøfte, hvordan vi kan hjælpe dig med at nå dine digitale mål."
+  },
+  "theme": {
+    "toggle": "Skift tema",
+    "lightMode": "Lys tilstand",
+    "darkMode": "Mørk tilstand"
+  },
+  "language": {
+    "switch": "Skift sprog",
+    "current": "Nuværende sprog"
+  },
+  "common": {
+    "search": "Søg",
+    "searchServices": "Søg efter services...",
+    "noResults": "Ingen services fundet, der matcher din søgning.",
+    "loading": "Indlæser...",
+    "prioritySupport": "Prioriteretet Support"
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "welcome": "Velkommen",
+    "userDashboard": "Bruger Dashboard",
+    "adminPanel": "Admin Panel",
+    "logout": "Log ud",
+    "website": "Hjemmeside",
+    "navigation": {
+      "dashboard": "Dashboard",
+      "projectRequests": "Projekt Forespørgsler",
+      "tickets": "Sager",
+      "payments": "Betalinger",
+      "purchases": "Køb",
+      "templates": "Skabelon Markedsplads"
+    },
+    "stats": {
+      "totalTickets": "Samlede Sager",
+      "openTickets": "Åbne Sager",
+      "activeProjects": "Aktive Projekter",
+      "totalSpent": "Samlet Udgifter"
+    },
+    "tickets": {
+      "title": "Support Sager",
+      "description": "Administrer dine support sager og få hjælp fra vores team",
+      "createTicket": "Opret Sag",
+      "newTicket": "Ny Sag",
+      "subject": "Emne",
+      "category": "Kategori",
+      "priority": "Prioritet",
+      "message": "Besked",
+      "status": "Status",
+      "createdAt": "Oprettet den",
+      "lastUpdate": "Sidste Opdatering",
+      "viewDetails": "Se Detaljer",
+      "closeTicket": "Luk Sag",
+      "reopenTicket": "Genåbn Sag",
+      "addResponse": "Tilføj Svar",
+      "submit": "Indsend",
+      "cancel": "Annuller",
+      "categories": {
+        "support": "Support",
+        "billing": "Fakturering",
+        "technical": "Teknisk",
+        "feature": "Funktionsanmodning"
+      },
+      "priorities": {
+        "low": "Lav",
+        "medium": "Medium",
+        "high": "Høj"
+      },
+      "statuses": {
+        "open": "Åben",
+        "in_progress": "I Gang",
+        "resolved": "Løst",
+        "closed": "Lukket"
+      },
+      "noTickets": "Ingen sager endnu",
+      "noTicketsDesc": "Opret din første support sag for at komme i gang",
+      "ticketCreated": "Sag oprettet succesfuldt",
+      "ticketUpdated": "Sag opdateret succesfuldt",
+      "responseAdded": "Svar tilføjet succesfuldt"
+    },
+    "packages": {
+      "title": "Support Pakker",
+      "description": "Opgrader din support pakke for bedre service",
+      "currentPackage": "Nuværende Pakke",
+      "upgrade": "Opgrader",
+      "downgrade": "Nedgrader",
+      "features": {
+        "monthlyTickets": "Månedlige Sager",
+        "responseTime": "Responstid",
+        "supportChannels": "Support Kanaler",
+        "prioritySupport": "Prioriteret Support",
+        "dedicatedManager": "Dedikeret Manager"
+      },
+      "tiers": {
+        "free": "Gratis",
+        "standard": "Standard",
+        "professional": "Professionel",
+        "corporate": "Erhverv"
+      }
+    }
+  },
+  "admin": {
+    "title": "Admin",
+    "welcome": "Velkommen",
+    "navigation": {
+      "dashboard": "Dashboard",
+      "frontend": "Frontend",
+      "customers": "Kunder",
+      "projectRequests": "Projekt Forespørgsler",
+      "packages": "Pakker",
+      "payments": "Betalinger og Fakturaer",
+      "marketplace": "Markedsplads",
+      "messages": "Beskeder",
+      "settings": "Indstillinger",
+      "blog": "Blog",
+      "team": "Team",
+      "templates": "Skabeloner",
+      "refunds": "Refunderinger",
+      "services": "Tjenester"
+    },
+    "stats": {
+      "totalCustomers": "Samlede Kunder",
+      "activeProjects": "Aktive Projekter",
+      "pendingRequests": "Afventende Forespørgsler",
+      "totalRevenue": "Samlede Indtægter",
+      "openTickets": "Åbne Sager",
+      "newMessages": "Nye Beskeder"
+    },
+    "customers": {
+      "title": "Kunder",
+      "description": "Administrer dine kunder",
+      "addCustomer": "Tilføj Kunde",
+      "editCustomer": "Rediger Kunde",
+      "deleteCustomer": "Slet Kunde",
+      "customerDetails": "Kundedetaljer",
+      "name": "Navn",
+      "email": "E-mail",
+      "phone": "Telefon",
+      "company": "Firma",
+      "status": "Status",
+      "joined": "Tilmeldt",
+      "actions": "Handlinger"
+    },
+    "projects": {
+      "title": "Projekt Forespørgsler",
+      "description": "Administrer projekt forespørgsler fra kunder",
+      "viewProject": "Se Projekt",
+      "updateStatus": "Opdater Status",
+      "assignProject": "Tildel Projekt",
+      "deleteProject": "Slet Projekt"
+    },
+    "messages": {
+      "title": "Beskeder",
+      "description": "Se og besvar kundebeskeder",
+      "markAsRead": "Markér som Læst",
+      "reply": "Svar",
+      "delete": "Slet"
+    },
+    "settings": {
+      "title": "Indstillinger",
+      "description": "Administrer dine indstillinger på hjemmesiden",
+      "general": "Generelt",
+      "legal": "Juridisk",
+      "seo": "SEO",
+      "social": "Sociale Medier",
+      "save": "Gem Ændringer",
+      "cancel": "Annuller"
+    }
+  },
+  "login": {
+    "title": "Log ind",
+    "description": "Få adgang til dit dashboard",
+    "user": "Bruger",
+    "admin": "Admin",
+    "email": "E-mail",
+    "username": "Brugernavn",
+    "password": "Adgangskode",
+    "signIn": "Log ind",
+    "signingIn": "Logger ind...",
+    "emailPlaceholder": "dig@eksempel.dk",
+    "usernamePlaceholder": "Indtast brugernavn...",
+    "passwordPlaceholder": "Indtast adgangskode...",
+    "demoCredentials": "Demo Login Oplysninger:",
+    "loginSuccessful": "Login Succesfuld!",
+    "loginFailed": "Login Mislykket",
+    "redirectingDashboard": "Omdirigerer til dit dashboard...",
+    "redirectingAdminDashboard": "Omdirigerer til admin dashboard...",
+    "invalidEmailPassword": "Ugyldig e-mail eller adgangskode.",
+    "invalidUsernamePassword": "Ugyldigt brugernavn eller adgangskode."
+  }
+}

@@ -1,0 +1,338 @@
+{
+  "navigation": {
+    "home": "Acasă",
+    "start": "Start",
+    "company": "Companie",
+    "services": "Servicii",
+    "blog": "Blog",
+    "contact": "Contact",
+    "appointment": "Programare",
+    "career": "Carieră",
+    "training": "Instruire",
+    "ticket": "Bilet de Support",
+    "adminPanel": "Panel Admin",
+    "adminLogin": "Login Admin",
+    "eShopSolutions": "Soluții E-Commerce",
+    "seo": "SEO",
+    "webSolutions": "Soluții Web",
+    "eCommerceDesc": "Soluții de comerț electronic și dezvoltare de magazine online",
+    "optimizationDesc": "Optimizare pentru motoarele de căutare și servicii de vizibilitate",
+    "customWebsitesDesc": "Dezvoltare și design de site-uri web personalizate",
+    "needHelp": "Aveți nevoie de ajutor la alegere?",
+    "getInTouch": "Contactați experții noștri",
+    "scheduleMeeting": "Programați o întâlnire",
+    "joinTeam": "Alăturați-vă echipei noastre",
+    "learnWithUs": "Învațați cu noi",
+    "getSupport": "Obțineți suport",
+    "lightMode": "Mod luminos",
+    "darkMode": "Mod întunecat",
+    "contactUs": "Contact Us"
+  },
+  "hero": {
+    "badge": "#1 Agenție Digitală 2024",
+    "title": "Creăm experiențe digitale",
+    "subtitle": "care contează",
+    "description": "Transformați-vă prezența online cu site-uri web impresionante, aplicații puternice și soluții digitale strategice care aduc rezultate comerciale reale.",
+    "getStarted": "Începeți",
+    "viewWork": "Vezi munca noastră"
+  },
+  "services": {
+    "badge": "Serviciile noastre",
+    "title": "Ce facem cel mai bine",
+    "description": "Soluții digitale cuprinzătoare adaptate nevoilor dvs. unice de afaceri",
+    "startingAt": "De la",
+    "monthly": "Lunar",
+    "categories": {
+      "eshop": "Soluții E-Magazin",
+      "eshopDesc": "Soluții E-Commerce",
+      "seo": "SEO",
+      "seoDesc": "Servicii de optimizare",
+      "web": "Soluții Web",
+      "webDesc": "Site-uri web personalizate"
+    },
+    "items": {
+      "onlineShop": "Magazin online",
+      "individualShop": "Magazin online individual",
+      "seoOptimization": "Optimizare pentru motoarele de căutare",
+      "landingPage": "Pagină de aterizare",
+      "fullservice": "Site web cu servicii complete de la 79€ / Lună",
+      "vcardBasic": "Web V-Card Basic",
+      "vcardPremium": "Web V-Card Premium",
+      "businessBasic": "Site web de afaceri Basic",
+      "businessPremium": "Site web de afaceri Premium",
+      "individualWebsite": "Site web individual"
+    },
+    "needHelp": "Aveți nevoie de ajutor la alegere?",
+    "getInTouch": "Contactați experții noștri",
+    "contactUs": "Contactați-ne",
+    "onlineShop": "Online Shop",
+    "individualOnlineShop": "Individual Online Shop",
+    "searchEngineOptimization": "Search Engine Optimization",
+    "landingPage": "Landing Page",
+    "fullServiceWebsite": "Full Service Website",
+    "webVCardBasic": "Web V-Card Basic",
+    "webVCardPremium": "Web V-Card Premium",
+    "businessWebsiteBasic": "Business Website Basic",
+    "businessWebsitePremium": "Business Website Premium",
+    "individualWebsite": "Individual Website"
+  },
+  "portfolio": {
+    "badge": "Portofoliul nostru",
+    "title": "Proiecte prezentate",
+    "description": "Explorați cea mai recentă muncă a noastră și vedeți cum am ajutat companiile să aibă succes",
+    "featured": "Prezentat"
+  },
+  "blog": {
+    "badge": "Cele mai recente de pe blogul nostru",
+    "title": "Perspective și actualizări",
+    "description": "Rămâneți la curent cu cele mai recente tendințe și știri din lumea digitală",
+    "by": "De",
+    "readMore": "Citiți mai mult",
+    "viewAllPosts": "Vezi toate postările",
+    "viewAll": "Vezi tot"
+  },
+  "contact": {
+    "title": "Formular de contact",
+    "description": "Contactați-ne astăzi pentru următorul pas către succes!",
+    "firstName": "Prenume",
+    "lastName": "Nume",
+    "email": "E-Mail",
+    "phone": "Telefon",
+    "message": "Mesaj",
+    "privacyText": "Prin prezenta confirm că am citit",
+    "privacyLink": "politica de confidențialitate",
+    "privacyTextContinued": "și accept că datele mele personale (nume, prenume, număr de telefon și adresă de email) vor fi stocate și procesate în scopul procesării solicitării mele.",
+    "privacyAgreement": "Am citit și sunt de acord cu politica de confidențialitate",
+    "send": "Trimite",
+    "sending": "Trimitere...",
+    "submit": "Trimite",
+    "success": "Mesaj trimis cu succes!",
+    "successTitle": "Succes!",
+    "successDescription": "Vă vom contacta în termen de 24 de ore.",
+    "successMessage": "Am primit mesajul dvs. Vă vom contacta cât mai curând posibil.",
+    "error": "Nu s-a putut trimite mesajul",
+    "errorTitle": "Eroare!",
+    "errorDescription": "Vă rugăm să încercați din nou mai târziu.",
+    "errorMessage": "A apărut o eroare. Vă rugăm să încercați din nou.",
+    "form": {
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "email": "E-Mail",
+      "phone": "Phone",
+      "message": "Message",
+      "privacyText": "Prin prezenta confirm că am citit",
+      "privacyPolicy": "privacy policy",
+      "privacyAgreement": "Am citit politica de confidențialitate și sunt de acord",
+      "submit": "Submit"
+    }
+  },
+  "footer": {
+    "description": "Crearea de experiențe digitale care generează rezultate și inspiră creșterea.",
+    "ourServices": "Serviciile noastre",
+    "company": "Companie",
+    "findUs": "Găsiți-ne",
+    "workingHours": "Program de lucru",
+    "mondayFriday": "Luni - Vineri: 09:00 - 17:00",
+    "copyright": "Toate drepturile rezervate.",
+    "aboutUs": "Despre noi",
+    "bookAppointment": "Rezervați o programare",
+    "imprint": "Amprentă",
+    "privacyPolicy": "Politica de confidențialitate",
+    "workPrinciples": "Principii de muncă",
+    "workingTime": "Luni - Vineri: 09:00 - 17:00",
+    "allRightsReserved": "All rights reserved.",
+    "supportTicket": "Support Ticket"
+  },
+  "cta": {
+    "readyTitle": "Sunteți gata să începeți proiectul?",
+    "readyDescription": "Să discutăm cum vă putem ajuta să vă atingeți obiectivele digitale."
+  },
+  "theme": {
+    "toggle": "Schimbare temă",
+    "lightMode": "Mod luminos",
+    "darkMode": "Mod întunecat"
+  },
+  "language": {
+    "switch": "Schimbare limbă",
+    "current": "Limba curentă"
+  },
+  "common": {
+    "search": "Căutare",
+    "searchServices": "Căutați servicii...",
+    "noResults": "Nu au fost găsite servicii care să corespundă căutării dvs.",
+    "loading": "Se încarcă...",
+    "prioritySupport": "Asistență Prioritară"
+  },
+  "dashboard": {
+    "title": "Tablou de Bord",
+    "welcome": "Bine ați venit",
+    "userDashboard": "Tablou de Bord Utilizator",
+    "adminPanel": "Panou Administrare",
+    "logout": "Deconectare",
+    "website": "Site Web",
+    "navigation": {
+      "dashboard": "Tablou de Bord",
+      "projectRequests": "Cereri de Proiect",
+      "tickets": "Tichete",
+      "payments": "Plăți",
+      "purchases": "Achiziții",
+      "templates": "Piața de Șabloane"
+    },
+    "stats": {
+      "totalTickets": "Total Tichete",
+      "openTickets": "Tichete Deschise",
+      "activeProjects": "Proiecte Active",
+      "totalSpent": "Total Cheltuit"
+    },
+    "tickets": {
+      "title": "Tichete de Suport",
+      "description": "Gestionați tichetele de suport și primiți ajutor de la echipa noastră",
+      "createTicket": "Creați Tichet",
+      "newTicket": "Tichet Nou",
+      "subject": "Subiect",
+      "category": "Categorie",
+      "priority": "Prioritate",
+      "message": "Mesaj",
+      "status": "Stare",
+      "createdAt": "Creat la",
+      "lastUpdate": "Ultima Actualizare",
+      "viewDetails": "Vizualizați Detalii",
+      "closeTicket": "Închideți Tichetul",
+      "reopenTicket": "Redeschideți Tichetul",
+      "addResponse": "Adăugați Răspuns",
+      "submit": "Trimiteți",
+      "cancel": "Anulați",
+      "categories": {
+        "support": "Suport",
+        "billing": "Facturare",
+        "technical": "Tehnic",
+        "feature": "Cerere de Funcționalitate"
+      },
+      "priorities": {
+        "low": "Scăzut",
+        "medium": "Mediu",
+        "high": "Ridicat"
+      },
+      "statuses": {
+        "open": "Deschis",
+        "in_progress": "În curs",
+        "resolved": "Rezolvat",
+        "closed": "Închis"
+      },
+      "noTickets": "Încă nu există tichete",
+      "noTicketsDesc": "Creați primul tichet de suport pentru a începe",
+      "ticketCreated": "Tichet creat cu succes",
+      "ticketUpdated": "Tichet actualizat cu succes",
+      "responseAdded": "Răspuns adăugat cu succes"
+    },
+    "packages": {
+      "title": "Pachete de Suport",
+      "description": "Actualizați-vă pachetul de suport pentru un serviciu mai bun",
+      "currentPackage": "Pachetul Curent",
+      "upgrade": "Upgrade",
+      "downgrade": "Downgrade",
+      "features": {
+        "monthlyTickets": "Tichete Lunare",
+        "responseTime": "Timp de Răspuns",
+        "supportChannels": "Canale de Suport",
+        "prioritySupport": "Suport Prioritar",
+        "dedicatedManager": "Manager Dedicat"
+      },
+      "tiers": {
+        "free": "Gratuit",
+        "standard": "Standard",
+        "professional": "Profesional",
+        "corporate": "Corporatist"
+      }
+    }
+  },
+  "admin": {
+    "title": "Admin",
+    "welcome": "Bine ați venit",
+    "navigation": {
+      "dashboard": "Tablou de Bord",
+      "frontend": "Frontend",
+      "customers": "Clienți",
+      "projectRequests": "Cereri de Proiect",
+      "packages": "Pachete",
+      "payments": "Plăți și Facturi",
+      "marketplace": "Piață",
+      "messages": "Mesaje",
+      "settings": "Setări",
+      "blog": "Blog",
+      "team": "Echipă",
+      "templates": "Șabloane",
+      "refunds": "Rambursări",
+      "services": "Servicii"
+    },
+    "stats": {
+      "totalCustomers": "Total Clienți",
+      "activeProjects": "Proiecte Active",
+      "pendingRequests": "Cereri în Așteptare",
+      "totalRevenue": "Venit Total",
+      "openTickets": "Tichete Deschise",
+      "newMessages": "Mesaje Noi"
+    },
+    "customers": {
+      "title": "Clienți",
+      "description": "Gestionați-vă clienții",
+      "addCustomer": "Adăugați Client",
+      "editCustomer": "Editați Client",
+      "deleteCustomer": "Ștergeți Client",
+      "customerDetails": "Detalii Client",
+      "name": "Nume",
+      "email": "E-mail",
+      "phone": "Telefon",
+      "company": "Companie",
+      "status": "Stare",
+      "joined": "S-a Alăturat",
+      "actions": "Acțiuni"
+    },
+    "projects": {
+      "title": "Cereri de Proiect",
+      "description": "Gestionați cererile de proiect ale clienților",
+      "viewProject": "Vizualizați Proiect",
+      "updateStatus": "Actualizați Starea",
+      "assignProject": "Atribuiți Proiect",
+      "deleteProject": "Ștergeți Proiect"
+    },
+    "messages": {
+      "title": "Mesaje",
+      "description": "Vizualizați și răspundeți la mesajele clienților",
+      "markAsRead": "Marcați ca Citit",
+      "reply": "Răspundeți",
+      "delete": "Ștergeți"
+    },
+    "settings": {
+      "title": "Setări",
+      "description": "Gestionați setările site-ului web",
+      "general": "General",
+      "legal": "Legal",
+      "seo": "SEO",
+      "social": "Social Media",
+      "save": "Salvați Modificările",
+      "cancel": "Anulați"
+    }
+  },
+  "login": {
+    "title": "Autentificare",
+    "description": "Accesați tabloul de bord",
+    "user": "Utilizator",
+    "admin": "Admin",
+    "email": "E-mail",
+    "username": "Nume Utilizator",
+    "password": "Parolă",
+    "signIn": "Autentificare",
+    "signingIn": "Se autentifică...",
+    "emailPlaceholder": "dvs@exemplu.ro",
+    "usernamePlaceholder": "Introduceți numele de utilizator...",
+    "passwordPlaceholder": "Introduceți parola...",
+    "demoCredentials": "Credențiale Demo:",
+    "loginSuccessful": "Autentificare reușită!",
+    "loginFailed": "Autentificare eșuată",
+    "redirectingDashboard": "Redirecționare către tabloul de bord...",
+    "redirectingAdminDashboard": "Redirecționare către tabloul de administrare...",
+    "invalidEmailPassword": "E-mail sau parolă invalidă.",
+    "invalidUsernamePassword": "Nume de utilizator sau parolă invalidă."
+  }
+}

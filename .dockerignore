@@ -1,0 +1,11 @@
+Dockerfile
+.dockerignore
+node_modules
+npm-debug.log
+README.md
+.next
+.git
+test
+*.log
+local-*
+# Force rebuild - Wed Dec 31 12:56:32 CET 2025

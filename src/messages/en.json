@@ -1,0 +1,338 @@
+{
+  "navigation": {
+    "home": "Home",
+    "start": "Start",
+    "company": "Company",
+    "services": "Services",
+    "blog": "Blog",
+    "contact": "Contact",
+    "contactUs": "Contact Us",
+    "appointment": "Appointment",
+    "career": "Career",
+    "training": "Training",
+    "ticket": "Support Ticket",
+    "adminPanel": "Admin Panel",
+    "adminLogin": "Admin Login",
+    "eShopSolutions": "E-Commerce Solutions",
+    "seo": "SEO",
+    "webSolutions": "Web Solutions",
+    "eCommerceDesc": "E-commerce solutions and online store development",
+    "optimizationDesc": "Search engine optimization and visibility services",
+    "customWebsitesDesc": "Custom website development and design",
+    "needHelp": "Need help choosing?",
+    "getInTouch": "Get in touch with our experts",
+    "scheduleMeeting": "Schedule Meeting",
+    "joinTeam": "Join Our Team",
+    "learnWithUs": "Learn With Us",
+    "getSupport": "Get Support",
+    "lightMode": "Light Mode",
+    "darkMode": "Dark Mode"
+  },
+  "hero": {
+    "badge": "#1 Digital Agency 2024",
+    "title": "We Create Digital",
+    "subtitle": "Experiences That Matter",
+    "description": "Transform your online presence with stunning websites, powerful applications, and strategic digital solutions that drive real business results.",
+    "getStarted": "Get Started",
+    "viewWork": "View Our Work"
+  },
+  "services": {
+    "badge": "Our Services",
+    "title": "What We Do Best",
+    "description": "Comprehensive digital solutions tailored to your unique business needs",
+    "startingAt": "Starting at",
+    "monthly": "Monthly",
+    "onlineShop": "Online Shop",
+    "individualOnlineShop": "Individual Online Shop",
+    "searchEngineOptimization": "Search Engine Optimization",
+    "landingPage": "Landing Page",
+    "fullServiceWebsite": "Full Service Website",
+    "webVCardBasic": "Web V-Card Basic",
+    "webVCardPremium": "Web V-Card Premium",
+    "businessWebsiteBasic": "Business Website Basic",
+    "businessWebsitePremium": "Business Website Premium",
+    "individualWebsite": "Individual Website",
+    "categories": {
+      "eshop": "E-Shop Solutions",
+      "eshopDesc": "E-Commerce Solutions",
+      "seo": "SEO",
+      "seoDesc": "Optimization Services",
+      "web": "Web Solutions",
+      "webDesc": "Custom Websites"
+    },
+    "items": {
+      "onlineShop": "Online Shop",
+      "individualShop": "Individual Online Shop",
+      "seoOptimization": "Search Engine Optimization",
+      "landingPage": "Landing Page",
+      "fullservice": "Full Service Website from 79€ / Month",
+      "vcardBasic": "Web V-Card Basic",
+      "vcardPremium": "Web V-Card Premium",
+      "businessBasic": "Business Website Basic",
+      "businessPremium": "Business Website Premium",
+      "individualWebsite": "Individual Website"
+    },
+    "needHelp": "Need help choosing?",
+    "getInTouch": "Get in touch with our experts",
+    "contactUs": "Contact Us"
+  },
+  "portfolio": {
+    "badge": "Our Portfolio",
+    "title": "Featured Projects",
+    "description": "Explore our latest work and see how we have helped businesses succeed",
+    "featured": "Featured"
+  },
+  "blog": {
+    "badge": "Latest from Our Blog",
+    "title": "Insights & Updates",
+    "description": "Stay updated with the latest trends and news from the digital world",
+    "by": "By",
+    "readMore": "Read More",
+    "viewAllPosts": "View All Posts",
+    "viewAll": "View All"
+  },
+  "contact": {
+    "title": "Contact Form",
+    "description": "Contact us today for your next step to success!",
+    "form": {
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "email": "E-Mail",
+      "phone": "Phone",
+      "message": "Message",
+      "privacyText": "I hereby confirm that I have read the",
+      "privacyPolicy": "privacy policy",
+      "privacyAgreement": "I have read and agree to the privacy policy",
+      "submit": "Submit"
+    },
+    "firstName": "First Name",
+    "lastName": "Last Name",
+    "email": "E-Mail",
+    "phone": "Phone",
+    "message": "Message",
+    "privacyText": "I hereby confirm that I have read the",
+    "privacyLink": "privacy policy",
+    "privacyTextContinued": "and that my personal data (name, first name, telephone number and email address) will be stored and processed for the purpose of handling my request.",
+    "privacyAgreement": "I have read and agree to the privacy policy",
+    "send": "Send",
+    "sending": "Sending...",
+    "submit": "Submit",
+    "success": "Message sent successfully!",
+    "successTitle": "Success!",
+    "successDescription": "We will get back to you within 24 hours.",
+    "successMessage": "We received your message. We'll get back to you shortly.",
+    "error": "Failed to send message",
+    "errorTitle": "Error!",
+    "errorDescription": "Please try again later.",
+    "errorMessage": "An error occurred. Please try again."
+  },
+  "footer": {
+    "description": "Creating digital experiences that drive results and inspire growth.",
+    "ourServices": "Our Services",
+    "company": "Company",
+    "findUs": "Find Us",
+    "workingHours": "Working Hours",
+    "mondayFriday": "Monday - Friday: 09:00 - 17:00",
+    "workingTime": "Monday - Friday: 09:00 - 17:00",
+    "copyright": "All rights reserved.",
+    "allRightsReserved": "All rights reserved.",
+    "supportTicket": "Support Ticket",
+    "aboutUs": "About Us",
+    "bookAppointment": "Book Appointment",
+    "imprint": "Imprint",
+    "privacyPolicy": "Privacy Policy",
+    "workPrinciples": "Work Principles"
+  },
+  "cta": {
+    "readyTitle": "Ready to Start Your Project?",
+    "readyDescription": "Let's discuss how we can help you achieve your digital goals."
+  },
+  "theme": {
+    "toggle": "Toggle theme",
+    "lightMode": "Light Mode",
+    "darkMode": "Dark Mode"
+  },
+  "language": {
+    "switch": "Switch language",
+    "current": "Current language"
+  },
+  "common": {
+    "search": "Search",
+    "searchServices": "Search services...",
+    "noResults": "No services found matching your search.",
+    "loading": "Loading...",
+    "prioritySupport": "Priority Support"
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "welcome": "Welcome",
+    "userDashboard": "User Dashboard",
+    "adminPanel": "Admin Panel",
+    "logout": "Logout",
+    "website": "Website",
+    "navigation": {
+      "dashboard": "Dashboard",
+      "projectRequests": "Project Requests",
+      "tickets": "Tickets",
+      "payments": "Payments",
+      "purchases": "Purchases",
+      "templates": "Template Marketplace"
+    },
+    "stats": {
+      "totalTickets": "Total Tickets",
+      "openTickets": "Open Tickets",
+      "activeProjects": "Active Projects",
+      "totalSpent": "Total Spent"
+    },
+    "tickets": {
+      "title": "Support Tickets",
+      "description": "Manage your support tickets and get help from our team",
+      "createTicket": "Create Ticket",
+      "newTicket": "New Ticket",
+      "subject": "Subject",
+      "category": "Category",
+      "priority": "Priority",
+      "message": "Message",
+      "status": "Status",
+      "createdAt": "Created At",
+      "lastUpdate": "Last Update",
+      "viewDetails": "View Details",
+      "closeTicket": "Close Ticket",
+      "reopenTicket": "Reopen Ticket",
+      "addResponse": "Add Response",
+      "submit": "Submit",
+      "cancel": "Cancel",
+      "categories": {
+        "support": "Support",
+        "billing": "Billing",
+        "technical": "Technical",
+        "feature": "Feature Request"
+      },
+      "priorities": {
+        "low": "Low",
+        "medium": "Medium",
+        "high": "High"
+      },
+      "statuses": {
+        "open": "Open",
+        "in_progress": "In Progress",
+        "resolved": "Resolved",
+        "closed": "Closed"
+      },
+      "noTickets": "No tickets yet",
+      "noTicketsDesc": "Create your first support ticket to get started",
+      "ticketCreated": "Ticket created successfully",
+      "ticketUpdated": "Ticket updated successfully",
+      "responseAdded": "Response added successfully"
+    },
+    "packages": {
+      "title": "Support Packages",
+      "description": "Upgrade your support package for better service",
+      "currentPackage": "Current Package",
+      "upgrade": "Upgrade",
+      "downgrade": "Downgrade",
+      "features": {
+        "monthlyTickets": "Monthly Tickets",
+        "responseTime": "Response Time",
+        "supportChannels": "Support Channels",
+        "prioritySupport": "Priority Support",
+        "dedicatedManager": "Dedicated Manager"
+      },
+      "tiers": {
+        "free": "Free",
+        "standard": "Standard",
+        "professional": "Professional",
+        "corporate": "Corporate"
+      }
+    }
+  },
+  "admin": {
+    "title": "Admin",
+    "welcome": "Welcome",
+    "navigation": {
+      "dashboard": "Dashboard",
+      "frontend": "Frontend",
+      "customers": "Customers",
+      "projectRequests": "Project Requests",
+      "packages": "Packages",
+      "payments": "Payments & Invoices",
+      "marketplace": "Marketplace",
+      "messages": "Messages",
+      "settings": "Settings",
+      "blog": "Blog",
+      "team": "Team",
+      "templates": "Templates",
+      "refunds": "Refunds",
+      "services": "Services"
+    },
+    "stats": {
+      "totalCustomers": "Total Customers",
+      "activeProjects": "Active Projects",
+      "pendingRequests": "Pending Requests",
+      "totalRevenue": "Total Revenue",
+      "openTickets": "Open Tickets",
+      "newMessages": "New Messages"
+    },
+    "customers": {
+      "title": "Customers",
+      "description": "Manage your customers",
+      "addCustomer": "Add Customer",
+      "editCustomer": "Edit Customer",
+      "deleteCustomer": "Delete Customer",
+      "customerDetails": "Customer Details",
+      "name": "Name",
+      "email": "Email",
+      "phone": "Phone",
+      "company": "Company",
+      "status": "Status",
+      "joined": "Joined",
+      "actions": "Actions"
+    },
+    "projects": {
+      "title": "Project Requests",
+      "description": "Manage project requests from customers",
+      "viewProject": "View Project",
+      "updateStatus": "Update Status",
+      "assignProject": "Assign Project",
+      "deleteProject": "Delete Project"
+    },
+    "messages": {
+      "title": "Messages",
+      "description": "View and respond to customer messages",
+      "markAsRead": "Mark as Read",
+      "reply": "Reply",
+      "delete": "Delete"
+    },
+    "settings": {
+      "title": "Settings",
+      "description": "Manage your website settings",
+      "general": "General",
+      "legal": "Legal",
+      "seo": "SEO",
+      "social": "Social Media",
+      "save": "Save Changes",
+      "cancel": "Cancel"
+    }
+  },
+  "login": {
+    "title": "Login",
+    "description": "Access your dashboard",
+    "user": "User",
+    "admin": "Admin",
+    "email": "Email",
+    "username": "Username",
+    "password": "Password",
+    "signIn": "Sign In",
+    "signingIn": "Signing in...",
+    "emailPlaceholder": "you@example.com",
+    "usernamePlaceholder": "Enter username...",
+    "passwordPlaceholder": "Enter password...",
+    "demoCredentials": "Demo Login Credentials:",
+    "loginSuccessful": "Login Successful!",
+    "loginFailed": "Login Failed",
+    "redirectingDashboard": "Redirecting to your dashboard...",
+    "redirectingAdminDashboard": "Redirecting to admin dashboard...",
+    "invalidEmailPassword": "Invalid email or password.",
+    "invalidUsernamePassword": "Invalid username or password."
+  }
+}

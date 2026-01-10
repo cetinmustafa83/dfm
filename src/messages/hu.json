@@ -1,0 +1,338 @@
+{
+  "navigation": {
+    "home": "Főoldal",
+    "start": "Indítás",
+    "company": "Cég",
+    "services": "Szolgáltatások",
+    "blog": "Blog",
+    "contact": "Kapcsolat",
+    "appointment": "Időpontfoglalás",
+    "career": "Karrier",
+    "training": "Képzés",
+    "ticket": "Support Jegy",
+    "adminPanel": "Admin Panel",
+    "adminLogin": "Admin Login",
+    "eShopSolutions": "E-Commerce megoldások",
+    "seo": "SEO",
+    "webSolutions": "Web megoldások",
+    "eCommerceDesc": "E-kereskedelmi megoldások és online áruházak fejlesztése",
+    "optimizationDesc": "Keresőoptimalizálás és láthatósági szolgáltatások",
+    "customWebsitesDesc": "Egyedi weboldalak fejlesztése és tervezése",
+    "needHelp": "Segítség szükséges a választáshoz?",
+    "getInTouch": "Lépjen kapcsolatba szakértőinkkel",
+    "scheduleMeeting": "Találkozó ütemezése",
+    "joinTeam": "Csatlakozzon csapatunkhoz",
+    "learnWithUs": "Tanuljon velünk",
+    "getSupport": "Támogatás kérése",
+    "lightMode": "Világos mód",
+    "darkMode": "Sötét mód",
+    "contactUs": "Contact Us"
+  },
+  "hero": {
+    "badge": "#1 Digitális Ügynökség 2024",
+    "title": "Digitális élményeket",
+    "subtitle": "teremtünk",
+    "description": "Alakítsa át online jelenlétét lenyűgöző weboldalakkal, hatékony alkalmazásokkal és stratégiai digitális megoldásokkal, amelyek valós üzleti eredményeket nyújtanak.",
+    "getStarted": "Kezdje",
+    "viewWork": "Nézze meg munkánkat"
+  },
+  "services": {
+    "badge": "Szolgáltatásaink",
+    "title": "Amiben a legjobbak vagyunk",
+    "description": "Átfogó digitális megoldások egyedi üzleti igényekre szabva",
+    "startingAt": "Től",
+    "monthly": "Havi",
+    "categories": {
+      "eshop": "E-Shop megoldások",
+      "eshopDesc": "E-Commerce megoldások",
+      "seo": "SEO",
+      "seoDesc": "Optimalizálási szolgáltatások",
+      "web": "Web megoldások",
+      "webDesc": "Egyedi weboldalak"
+    },
+    "items": {
+      "onlineShop": "Online Áruház",
+      "individualShop": "Egyedi Online Áruház",
+      "seoOptimization": "Keresőoptimalizálás",
+      "landingPage": "Landing oldal",
+      "fullservice": "Teljes szolgáltatású weboldal 79€-tól / Hónap",
+      "vcardBasic": "Web V-Kártya Alap",
+      "vcardPremium": "Web V-Kártya Prémium",
+      "businessBasic": "Üzleti weboldal Alap",
+      "businessPremium": "Üzleti weboldal Prémium",
+      "individualWebsite": "Egyedi weboldal"
+    },
+    "needHelp": "Segítség szükséges a választáshoz?",
+    "getInTouch": "Lépjen kapcsolatba szakértőinkkel",
+    "contactUs": "Lépjen velünk kapcsolatba",
+    "onlineShop": "Online Shop",
+    "individualOnlineShop": "Individual Online Shop",
+    "searchEngineOptimization": "Search Engine Optimization",
+    "landingPage": "Landing Page",
+    "fullServiceWebsite": "Full Service Website",
+    "webVCardBasic": "Web V-Card Basic",
+    "webVCardPremium": "Web V-Card Premium",
+    "businessWebsiteBasic": "Business Website Basic",
+    "businessWebsitePremium": "Business Website Premium",
+    "individualWebsite": "Individual Website"
+  },
+  "portfolio": {
+    "badge": "Portfóliónk",
+    "title": "Kiemelt projektek",
+    "description": "Fedezze fel legújabb munkánkat és nézze meg, hogyan segítettünk a vállalkozásoknak sikeresen",
+    "featured": "Kiemelt"
+  },
+  "blog": {
+    "badge": "Legújabb blogunkból",
+    "title": "Betekintés és frissítések",
+    "description": "Tartsa magát naprakészen a legújabb trendekkel és hírekkel a digitális világból",
+    "by": "Szerző:",
+    "readMore": "Olvasson tovább",
+    "viewAllPosts": "Összes bejegyzés megtekintése",
+    "viewAll": "Összes megtekintése"
+  },
+  "contact": {
+    "title": "Kapcsolatfelvételi űrlap",
+    "description": "Lépjen velünk kapcsolatba még ma a sikerhez vezető következő lépéséért!",
+    "firstName": "Keresztnév",
+    "lastName": "Vezetéknév",
+    "email": "E-Mail",
+    "phone": "Telefon",
+    "message": "Üzenet",
+    "privacyText": "Ezenn megerősítem, hogy elolvastam az",
+    "privacyLink": "adatvédelmi irányelveket",
+    "privacyTextContinued": "és elfogadom, hogy személyes adataim (név, vezetéknév, telefonszám és e-mail cím) a kérelmem kezelése érdekében tárolásra és feldolgozásra kerüljenek.",
+    "privacyAgreement": "Elolvastam és elfogadom az adatvédelmi irányelveket",
+    "send": "Küldés",
+    "sending": "Küldés...",
+    "submit": "Beküldés",
+    "success": "Üzenet sikeresen elküldve!",
+    "successTitle": "Siker!",
+    "successDescription": "24 órán belül felvesszük Önnel a kapcsolatot.",
+    "successMessage": "Megkaptuk az üzenetét. Hamarosan felvesszük Önnel a kapcsolatot.",
+    "error": "Nem sikerült elküldeni az üzenetet",
+    "errorTitle": "Hiba!",
+    "errorDescription": "Kérjük, próbálja újra később.",
+    "errorMessage": "Hiba történt. Kérjük, próbálja újra.",
+    "form": {
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "email": "E-Mail",
+      "phone": "Phone",
+      "message": "Message",
+      "privacyText": "Ezenn megerősítem, hogy elolvastam az",
+      "privacyPolicy": "privacy policy",
+      "privacyAgreement": "Elolvastam az adatvédelmi szabályzatot és elfogadom",
+      "submit": "Submit"
+    }
+  },
+  "footer": {
+    "description": "Digitális élmények teremtése, amelyek eredményeket szállítanak és növekedést inspirálnak.",
+    "ourServices": "Szolgáltatásaink",
+    "company": "Cég",
+    "findUs": "Találjon minket",
+    "workingHours": "Nyitvatartási idő",
+    "mondayFriday": "Hétfő - Péntek: 09:00 - 17:00",
+    "copyright": "Minden jog fenntartva.",
+    "aboutUs": "Rólunk",
+    "bookAppointment": "Időpont foglalása",
+    "imprint": "Impresszum",
+    "privacyPolicy": "Adatvédelmi irányelvek",
+    "workPrinciples": "Munkaelvek",
+    "workingTime": "Hétfő - Péntek: 09:00 - 17:00",
+    "allRightsReserved": "All rights reserved.",
+    "supportTicket": "Support Ticket"
+  },
+  "cta": {
+    "readyTitle": "Készen áll a projekt elindítására?",
+    "readyDescription": "Beszéljük meg, hogyan segíthetünk digitális céljai elérésében."
+  },
+  "theme": {
+    "toggle": "Téma váltása",
+    "lightMode": "Világos mód",
+    "darkMode": "Sötét mód"
+  },
+  "language": {
+    "switch": "Nyelv váltása",
+    "current": "Jelenlegi nyelv"
+  },
+  "common": {
+    "search": "Keresés",
+    "searchServices": "Szolgáltatások keresése...",
+    "noResults": "Nincsenek a keresésnek megfelelő szolgáltatások.",
+    "loading": "Betöltés...",
+    "prioritySupport": "Prioritásos Támogatás"
+  },
+  "dashboard": {
+    "title": "Vezérlőpult",
+    "welcome": "Üdvözöljük",
+    "userDashboard": "Felhasználói Vezérlőpult",
+    "adminPanel": "Admin Panel",
+    "logout": "Kijelentkezés",
+    "website": "Weboldal",
+    "navigation": {
+      "dashboard": "Vezérlőpult",
+      "projectRequests": "Projekt Kérések",
+      "tickets": "Jegyek",
+      "payments": "Fizetések",
+      "purchases": "Vásárlások",
+      "templates": "Sablon Piactér"
+    },
+    "stats": {
+      "totalTickets": "Összes Jegy",
+      "openTickets": "Nyitott Jegyek",
+      "activeProjects": "Aktív Projektek",
+      "totalSpent": "Összes Elköltött"
+    },
+    "tickets": {
+      "title": "Támogatási Jegyek",
+      "description": "Kezelje támogatási jegyeit és kap segítséget csapatunktól",
+      "createTicket": "Jegy Létrehozása",
+      "newTicket": "Új Jegy",
+      "subject": "Tárgy",
+      "category": "Kategória",
+      "priority": "Prioritás",
+      "message": "Üzenet",
+      "status": "Státusz",
+      "createdAt": "Létrehozva",
+      "lastUpdate": "Utolsó Frissítés",
+      "viewDetails": "Részletek Megtekintése",
+      "closeTicket": "Jegy Lezárása",
+      "reopenTicket": "Jegy Újranyitása",
+      "addResponse": "Válasz Hozzáadása",
+      "submit": "Beküldés",
+      "cancel": "Mégse",
+      "categories": {
+        "support": "Támogatás",
+        "billing": "Számlázás",
+        "technical": "Technikai",
+        "feature": "Funkció Kérés"
+      },
+      "priorities": {
+        "low": "Alacsony",
+        "medium": "Közepes",
+        "high": "Magas"
+      },
+      "statuses": {
+        "open": "Nyitott",
+        "in_progress": "Folyamatban",
+        "resolved": "Megoldott",
+        "closed": "Lezárt"
+      },
+      "noTickets": "Még nincsenek jegyek",
+      "noTicketsDesc": "Hozza létre első támogatási jegyét a kezdéshez",
+      "ticketCreated": "Jegy sikeresen létrehozva",
+      "ticketUpdated": "Jegy sikeresen frissítve",
+      "responseAdded": "Válasz sikeresen hozzáadva"
+    },
+    "packages": {
+      "title": "Támogatási Csomagok",
+      "description": "Frissítse támogatási csomagját jobb szolgáltatásért",
+      "currentPackage": "Jelenlegi Csomag",
+      "upgrade": "Frissítés",
+      "downgrade": "Leminősítés",
+      "features": {
+        "monthlyTickets": "Havi Jegyek",
+        "responseTime": "Válaszidő",
+        "supportChannels": "Támogatási Csatornák",
+        "prioritySupport": "Prioritásos Támogatás",
+        "dedicatedManager": "Dedikált Menedzser"
+      },
+      "tiers": {
+        "free": "Ingyenes",
+        "standard": "Szabvány",
+        "professional": "Professzionális",
+        "corporate": "Vállalati"
+      }
+    }
+  },
+  "admin": {
+    "title": "Admin",
+    "welcome": "Üdvözöljük",
+    "navigation": {
+      "dashboard": "Vezérlőpult",
+      "frontend": "Frontend",
+      "customers": "Ügyfelek",
+      "projectRequests": "Projekt Kérések",
+      "packages": "Csomagok",
+      "payments": "Fizetések és Számlák",
+      "marketplace": "Piac",
+      "messages": "Üzenetek",
+      "settings": "Beállítások",
+      "blog": "Blog",
+      "team": "Csapat",
+      "templates": "Sablonok",
+      "refunds": "Visszatérítések",
+      "services": "Szolgáltatások"
+    },
+    "stats": {
+      "totalCustomers": "Összes Ügyfél",
+      "activeProjects": "Aktív Projektek",
+      "pendingRequests": "Függő Kérések",
+      "totalRevenue": "Teljes Bevétel",
+      "openTickets": "Nyitott Jegyek",
+      "newMessages": "Új Üzenetek"
+    },
+    "customers": {
+      "title": "Ügyfelek",
+      "description": "Kezelje ügyfeleit",
+      "addCustomer": "Ügyfél Hozzáadása",
+      "editCustomer": "Ügyfél Szerkesztése",
+      "deleteCustomer": "Ügyfél Törlése",
+      "customerDetails": "Ügyfél Részletei",
+      "name": "Név",
+      "email": "E-mail",
+      "phone": "Telefon",
+      "company": "Cég",
+      "status": "Státusz",
+      "joined": "Csatlakozott",
+      "actions": "Műveletek"
+    },
+    "projects": {
+      "title": "Projekt Kérések",
+      "description": "Kezelje az ügyfelek projekt kéréseit",
+      "viewProject": "Projekt Megtekintése",
+      "updateStatus": "Státusz Frissítése",
+      "assignProject": "Projekt Hozzárendelése",
+      "deleteProject": "Projekt Törlése"
+    },
+    "messages": {
+      "title": "Üzenetek",
+      "description": "Megtekintése és válaszolás az ügyfél üzenetekre",
+      "markAsRead": "Olvasottként Megjelölés",
+      "reply": "Válasz",
+      "delete": "Törlés"
+    },
+    "settings": {
+      "title": "Beállítások",
+      "description": "Kezelje weboldala beállításait",
+      "general": "Általános",
+      "legal": "Jogi",
+      "seo": "SEO",
+      "social": "Közösségi Média",
+      "save": "Változtatások Mentése",
+      "cancel": "Mégse"
+    }
+  },
+  "login": {
+    "title": "Bejelentkezés",
+    "description": "Hozzáférés a vezérlőpulthoz",
+    "user": "Felhasználó",
+    "admin": "Admin",
+    "email": "E-mail",
+    "username": "Felhasználónév",
+    "password": "Jelszó",
+    "signIn": "Bejelentkezés",
+    "signingIn": "Bejelentkezés...",
+    "emailPlaceholder": "te@pelda.hu",
+    "usernamePlaceholder": "Felhasználónév megadása...",
+    "passwordPlaceholder": "Jelszó megadása...",
+    "demoCredentials": "Demo Bejelentkezési Adatok:",
+    "loginSuccessful": "Sikeres Bejelentkezés!",
+    "loginFailed": "Sikertelen Bejelentkezés",
+    "redirectingDashboard": "Átirányítás a vezérlőpultra...",
+    "redirectingAdminDashboard": "Átirányítás az admin panelre...",
+    "invalidEmailPassword": "Érvénytelen e-mail vagy jelszó.",
+    "invalidUsernamePassword": "Érvénytelen felhasználónév vagy jelszó."
+  }
+}

@@ -1,0 +1,338 @@
+{
+  "navigation": {
+    "home": "Inicio",
+    "start": "Inicio",
+    "company": "Empresa",
+    "services": "Servicios",
+    "blog": "Blog",
+    "contact": "Contacto",
+    "appointment": "Cita",
+    "career": "Carrera",
+    "training": "Formación",
+    "ticket": "Ticket de Soporte",
+    "adminPanel": "Panel de Administración",
+    "adminLogin": "Login de Admin",
+    "eShopSolutions": "Soluciones E-Commerce",
+    "seo": "SEO",
+    "webSolutions": "Soluciones Web",
+    "eCommerceDesc": "Soluciones de comercio electrónico y desarrollo de tiendas en línea",
+    "optimizationDesc": "Optimización de motores de búsqueda y servicios de visibilidad",
+    "customWebsitesDesc": "Desarrollo y diseño de sitios web personalizados",
+    "needHelp": "¿Necesita ayuda para elegir?",
+    "getInTouch": "Póngase en contacto con nuestros expertos",
+    "scheduleMeeting": "Programar reunión",
+    "joinTeam": "Únase a nuestro equipo",
+    "learnWithUs": "Aprenda con nosotros",
+    "getSupport": "Obtener soporte",
+    "lightMode": "Modo claro",
+    "darkMode": "Modo oscuro",
+    "contactUs": "Contact Us"
+  },
+  "hero": {
+    "badge": "#1 Agencia Digital 2024",
+    "title": "Creamos experiencias digitales",
+    "subtitle": "que importan",
+    "description": "Transforme su presencia en línea con sitios web impresionantes, aplicaciones potentes y soluciones digitales estratégicas que generan resultados comerciales reales.",
+    "getStarted": "Comenzar",
+    "viewWork": "Ver nuestro trabajo"
+  },
+  "services": {
+    "badge": "Nuestros Servicios",
+    "title": "Lo que hacemos mejor",
+    "description": "Soluciones digitales integrales adaptadas a sus necesidades comerciales únicas",
+    "startingAt": "A partir de",
+    "monthly": "Mensual",
+    "categories": {
+      "eshop": "Soluciones E-Tienda",
+      "eshopDesc": "Soluciones E-Commerce",
+      "seo": "SEO",
+      "seoDesc": "Servicios de Optimización",
+      "web": "Soluciones Web",
+      "webDesc": "Sitios Web Personalizados"
+    },
+    "items": {
+      "onlineShop": "Tienda en Línea",
+      "individualShop": "Tienda en Línea Individual",
+      "seoOptimization": "Optimización de Motores de Búsqueda",
+      "landingPage": "Página de Aterrizaje",
+      "fullservice": "Sitio Web de Servicio Completo desde 79€ / Mes",
+      "vcardBasic": "Web V-Tarjeta Básica",
+      "vcardPremium": "Web V-Tarjeta Premium",
+      "businessBasic": "Sitio Web de Negocios Básico",
+      "businessPremium": "Sitio Web de Negocios Premium",
+      "individualWebsite": "Sitio Web Individual"
+    },
+    "needHelp": "¿Necesita ayuda para elegir?",
+    "getInTouch": "Póngase en contacto con nuestros expertos",
+    "contactUs": "Contáctenos",
+    "onlineShop": "Online Shop",
+    "individualOnlineShop": "Individual Online Shop",
+    "searchEngineOptimization": "Search Engine Optimization",
+    "landingPage": "Landing Page",
+    "fullServiceWebsite": "Full Service Website",
+    "webVCardBasic": "Web V-Card Basic",
+    "webVCardPremium": "Web V-Card Premium",
+    "businessWebsiteBasic": "Business Website Basic",
+    "businessWebsitePremium": "Business Website Premium",
+    "individualWebsite": "Individual Website"
+  },
+  "portfolio": {
+    "badge": "Nuestro Portafolio",
+    "title": "Proyectos Destacados",
+    "description": "Explore nuestro último trabajo y vea cómo hemos ayudado a las empresas a tener éxito",
+    "featured": "Destacado"
+  },
+  "blog": {
+    "badge": "Lo último de nuestro blog",
+    "title": "Perspectivas y Actualizaciones",
+    "description": "Manténgase actualizado con las últimas tendencias y noticias del mundo digital",
+    "by": "Por",
+    "readMore": "Leer más",
+    "viewAllPosts": "Ver todas las publicaciones",
+    "viewAll": "Ver todo"
+  },
+  "contact": {
+    "title": "Formulario de Contacto",
+    "description": "¡Contáctenos hoy para su próximo paso hacia el éxito!",
+    "firstName": "Nombre",
+    "lastName": "Apellido",
+    "email": "Correo Electrónico",
+    "phone": "Teléfono",
+    "message": "Mensaje",
+    "privacyText": "Por la presente confirmo que he leído la",
+    "privacyLink": "política de privacidad",
+    "privacyTextContinued": "y acepto que mis datos personales (nombre, apellido, número de teléfono y dirección de correo electrónico) se almacenen y procesen con el fin de procesar mi solicitud.",
+    "privacyAgreement": "He leído y acepto la política de privacidad",
+    "send": "Enviar",
+    "sending": "Enviando...",
+    "submit": "Enviar",
+    "success": "¡Mensaje enviado con éxito!",
+    "successTitle": "¡Éxito!",
+    "successDescription": "Nos pondremos en contacto con usted dentro de 24 horas.",
+    "successMessage": "Hemos recibido su mensaje. Nos pondremos en contacto con usted lo antes posible.",
+    "error": "Error al enviar mensaje",
+    "errorTitle": "¡Error!",
+    "errorDescription": "Por favor, inténtelo de nuevo más tarde.",
+    "errorMessage": "Se ha producido un error. Por favor, inténtelo de nuevo.",
+    "form": {
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "email": "E-Mail",
+      "phone": "Phone",
+      "message": "Message",
+      "privacyText": "Por la presente confirmo que he leído la",
+      "privacyPolicy": "privacy policy",
+      "privacyAgreement": "He leído la política de privacidad y acepto",
+      "submit": "Submit"
+    }
+  },
+  "footer": {
+    "description": "Crear experiencias digitales que generan resultados e inspiran crecimiento.",
+    "ourServices": "Nuestros Servicios",
+    "company": "Empresa",
+    "findUs": "Encuéntranos",
+    "workingHours": "Horario de atención",
+    "mondayFriday": "Lunes - Viernes: 09:00 - 17:00",
+    "copyright": "Todos los derechos reservados.",
+    "aboutUs": "Sobre nosotros",
+    "bookAppointment": "Reservar Cita",
+    "imprint": "Imprimir",
+    "privacyPolicy": "Política de Privacidad",
+    "workPrinciples": "Principios de trabajo",
+    "workingTime": "Lunes - Viernes: 09:00 - 17:00",
+    "allRightsReserved": "All rights reserved.",
+    "supportTicket": "Support Ticket"
+  },
+  "cta": {
+    "readyTitle": "¿Listo para comenzar tu proyecto?",
+    "readyDescription": "Hablemos de cómo podemos ayudarte a alcanzar tus objetivos digitales."
+  },
+  "theme": {
+    "toggle": "Cambiar tema",
+    "lightMode": "Modo claro",
+    "darkMode": "Modo oscuro"
+  },
+  "language": {
+    "switch": "Cambiar idioma",
+    "current": "Idioma actual"
+  },
+  "common": {
+    "search": "Buscar",
+    "searchServices": "Buscar servicios...",
+    "noResults": "No se encontraron servicios que coincidan con su búsqueda.",
+    "loading": "Cargando...",
+    "prioritySupport": "Soporte Prioritario"
+  },
+  "dashboard": {
+    "title": "Panel",
+    "welcome": "Bienvenido",
+    "userDashboard": "Panel de Usuario",
+    "adminPanel": "Panel de Administración",
+    "logout": "Cerrar Sesión",
+    "website": "Sitio Web",
+    "navigation": {
+      "dashboard": "Panel",
+      "projectRequests": "Solicitudes de Proyecto",
+      "tickets": "Tickets",
+      "payments": "Pagos",
+      "purchases": "Compras",
+      "templates": "Mercado de Plantillas"
+    },
+    "stats": {
+      "totalTickets": "Total de Tickets",
+      "openTickets": "Tickets Abiertos",
+      "activeProjects": "Proyectos Activos",
+      "totalSpent": "Total Gastado"
+    },
+    "tickets": {
+      "title": "Tickets de Soporte",
+      "description": "Gestiona tus tickets de soporte y obtén ayuda de nuestro equipo",
+      "createTicket": "Crear Ticket",
+      "newTicket": "Nuevo Ticket",
+      "subject": "Asunto",
+      "category": "Categoría",
+      "priority": "Prioridad",
+      "message": "Mensaje",
+      "status": "Estado",
+      "createdAt": "Creado en",
+      "lastUpdate": "Última Actualización",
+      "viewDetails": "Ver Detalles",
+      "closeTicket": "Cerrar Ticket",
+      "reopenTicket": "Reabrir Ticket",
+      "addResponse": "Añadir Respuesta",
+      "submit": "Enviar",
+      "cancel": "Cancelar",
+      "categories": {
+        "support": "Soporte",
+        "billing": "Facturación",
+        "technical": "Técnico",
+        "feature": "Solicitud de Característica"
+      },
+      "priorities": {
+        "low": "Bajo",
+        "medium": "Medio",
+        "high": "Alto"
+      },
+      "statuses": {
+        "open": "Abierto",
+        "in_progress": "En Progreso",
+        "resolved": "Resuelto",
+        "closed": "Cerrado"
+      },
+      "noTickets": "Aún no hay tickets",
+      "noTicketsDesc": "Crea tu primer ticket de soporte para comenzar",
+      "ticketCreated": "Ticket creado exitosamente",
+      "ticketUpdated": "Ticket actualizado exitosamente",
+      "responseAdded": "Respuesta añadida exitosamente"
+    },
+    "packages": {
+      "title": "Paquetes de Soporte",
+      "description": "Mejora tu paquete de soporte para un mejor servicio",
+      "currentPackage": "Paquete Actual",
+      "upgrade": "Actualizar",
+      "downgrade": "Degradar",
+      "features": {
+        "monthlyTickets": "Tickets Mensuales",
+        "responseTime": "Tiempo de Respuesta",
+        "supportChannels": "Canales de Soporte",
+        "prioritySupport": "Soporte Prioritario",
+        "dedicatedManager": "Gerente Dedicado"
+      },
+      "tiers": {
+        "free": "Gratis",
+        "standard": "Estándar",
+        "professional": "Profesional",
+        "corporate": "Corporativo"
+      }
+    }
+  },
+  "admin": {
+    "title": "Admin",
+    "welcome": "Bienvenido",
+    "navigation": {
+      "dashboard": "Panel",
+      "frontend": "Frontend",
+      "customers": "Clientes",
+      "projectRequests": "Solicitudes de Proyecto",
+      "packages": "Paquetes",
+      "payments": "Pagos y Facturas",
+      "marketplace": "Mercado",
+      "messages": "Mensajes",
+      "settings": "Configuración",
+      "blog": "Blog",
+      "team": "Equipo",
+      "templates": "Plantillas",
+      "refunds": "Reembolsos",
+      "services": "Servicios"
+    },
+    "stats": {
+      "totalCustomers": "Total de Clientes",
+      "activeProjects": "Proyectos Activos",
+      "pendingRequests": "Solicitudes Pendientes",
+      "totalRevenue": "Ingresos Totales",
+      "openTickets": "Tickets Abiertos",
+      "newMessages": "Nuevos Mensajes"
+    },
+    "customers": {
+      "title": "Clientes",
+      "description": "Gestiona tus clientes",
+      "addCustomer": "Añadir Cliente",
+      "editCustomer": "Editar Cliente",
+      "deleteCustomer": "Eliminar Cliente",
+      "customerDetails": "Detalles del Cliente",
+      "name": "Nombre",
+      "email": "Correo Electrónico",
+      "phone": "Teléfono",
+      "company": "Empresa",
+      "status": "Estado",
+      "joined": "Se unió",
+      "actions": "Acciones"
+    },
+    "projects": {
+      "title": "Solicitudes de Proyecto",
+      "description": "Gestionar solicitudes de proyecto de clientes",
+      "viewProject": "Ver Proyecto",
+      "updateStatus": "Actualizar Estado",
+      "assignProject": "Asignar Proyecto",
+      "deleteProject": "Eliminar Proyecto"
+    },
+    "messages": {
+      "title": "Mensajes",
+      "description": "Ver y responder a mensajes de clientes",
+      "markAsRead": "Marcar como Leído",
+      "reply": "Responder",
+      "delete": "Eliminar"
+    },
+    "settings": {
+      "title": "Configuración",
+      "description": "Gestiona la configuración de tu sitio web",
+      "general": "General",
+      "legal": "Legal",
+      "seo": "SEO",
+      "social": "Redes Sociales",
+      "save": "Guardar Cambios",
+      "cancel": "Cancelar"
+    }
+  },
+  "login": {
+    "title": "Iniciar Sesión",
+    "description": "Acceda a su panel",
+    "user": "Usuario",
+    "admin": "Admin",
+    "email": "Correo Electrónico",
+    "username": "Nombre de Usuario",
+    "password": "Contraseña",
+    "signIn": "Iniciar Sesión",
+    "signingIn": "Iniciando sesión...",
+    "emailPlaceholder": "usted@ejemplo.com",
+    "usernamePlaceholder": "Ingrese nombre de usuario...",
+    "passwordPlaceholder": "Ingrese contraseña...",
+    "demoCredentials": "Credenciales de Demo:",
+    "loginSuccessful": "¡Inicio de Sesión Exitoso!",
+    "loginFailed": "Inicio de Sesión Fallido",
+    "redirectingDashboard": "Redirigiendo a su panel...",
+    "redirectingAdminDashboard": "Redirigiendo al panel de administración...",
+    "invalidEmailPassword": "Correo electrónico o contraseña inválidos.",
+    "invalidUsernamePassword": "Nombre de usuario o contraseña inválidos."
+  }
+}

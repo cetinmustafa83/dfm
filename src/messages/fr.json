@@ -1,0 +1,338 @@
+{
+  "navigation": {
+    "home": "Accueil",
+    "start": "Démarrer",
+    "company": "Entreprise",
+    "services": "Services",
+    "blog": "Blog",
+    "contact": "Contact",
+    "appointment": "Rendez-vous",
+    "career": "Carrière",
+    "training": "Formation",
+    "ticket": "Ticket de Support",
+    "adminPanel": "Panneau d'administration",
+    "adminLogin": "Connexion Admin",
+    "eShopSolutions": "Solutions E-Commerce",
+    "seo": "SEO",
+    "webSolutions": "Solutions Web",
+    "eCommerceDesc": "Solutions e-commerce et développement de boutiques en ligne",
+    "optimizationDesc": "Optimisation pour les moteurs de recherche et services de visibilité",
+    "customWebsitesDesc": "Développement et conception de sites web sur mesure",
+    "needHelp": "Besoin d'aide pour choisir?",
+    "getInTouch": "Contactez nos experts",
+    "scheduleMeeting": "Planifier une réunion",
+    "joinTeam": "Rejoignez notre équipe",
+    "learnWithUs": "Apprenez avec nous",
+    "getSupport": "Obtenir du support",
+    "lightMode": "Mode clair",
+    "darkMode": "Mode sombre",
+    "contactUs": "Contact Us"
+  },
+  "hero": {
+    "badge": "#1 Agence Numérique 2024",
+    "title": "Nous créons des expériences",
+    "subtitle": "numériques qui comptent",
+    "description": "Transformez votre présence en ligne avec des sites web époustouflants, des applications puissantes et des solutions numériques stratégiques qui génèrent de vrais résultats commerciaux.",
+    "getStarted": "Commencer",
+    "viewWork": "Voir notre travail"
+  },
+  "services": {
+    "badge": "Nos Services",
+    "title": "Ce que nous faisons de mieux",
+    "description": "Solutions numériques complètes adaptées à vos besoins commerciaux uniques",
+    "startingAt": "À partir de",
+    "monthly": "Mensuel",
+    "categories": {
+      "eshop": "Solutions E-Boutique",
+      "eshopDesc": "Solutions E-Commerce",
+      "seo": "SEO",
+      "seoDesc": "Services d'Optimisation",
+      "web": "Solutions Web",
+      "webDesc": "Sites Web Sur Mesure"
+    },
+    "items": {
+      "onlineShop": "Boutique en Ligne",
+      "individualShop": "Boutique en Ligne Individuelle",
+      "seoOptimization": "Optimisation pour les Moteurs de Recherche",
+      "landingPage": "Page d'Atterrissage",
+      "fullservice": "Site Web Full Service à partir de 79€ / Mois",
+      "vcardBasic": "Web V-Card Basic",
+      "vcardPremium": "Web V-Card Premium",
+      "businessBasic": "Site Web Entreprise Basic",
+      "businessPremium": "Site Web Entreprise Premium",
+      "individualWebsite": "Site Web Individuel"
+    },
+    "needHelp": "Besoin d'aide pour choisir?",
+    "getInTouch": "Contactez nos experts",
+    "contactUs": "Contactez-nous",
+    "onlineShop": "Online Shop",
+    "individualOnlineShop": "Individual Online Shop",
+    "searchEngineOptimization": "Search Engine Optimization",
+    "landingPage": "Landing Page",
+    "fullServiceWebsite": "Full Service Website",
+    "webVCardBasic": "Web V-Card Basic",
+    "webVCardPremium": "Web V-Card Premium",
+    "businessWebsiteBasic": "Business Website Basic",
+    "businessWebsitePremium": "Business Website Premium",
+    "individualWebsite": "Individual Website"
+  },
+  "portfolio": {
+    "badge": "Notre Portfolio",
+    "title": "Projets en Vedette",
+    "description": "Explorez nos derniers travaux et voyez comment nous avons aidé les entreprises à réussir",
+    "featured": "En vedette"
+  },
+  "blog": {
+    "badge": "Derniers articles de notre blog",
+    "title": "Perspectives & Mises à jour",
+    "description": "Restez informé des dernières tendances et actualités du monde numérique",
+    "by": "Par",
+    "readMore": "Lire la suite",
+    "viewAllPosts": "Voir tous les articles",
+    "viewAll": "Voir tout"
+  },
+  "contact": {
+    "title": "Formulaire de Contact",
+    "description": "Contactez-nous dès aujourd'hui pour votre prochaine étape vers le succès!",
+    "firstName": "Prénom",
+    "lastName": "Nom",
+    "email": "E-Mail",
+    "phone": "Téléphone",
+    "message": "Message",
+    "privacyText": "Je confirme par la présente que j'ai lu la",
+    "privacyLink": "politique de confidentialité",
+    "privacyTextContinued": "et j'accepte que mes données personnelles (nom, prénom, numéro de téléphone et adresse e-mail) soient stockées et traitées aux fins de traitement de ma demande.",
+    "privacyAgreement": "J'ai lu et j'accepte la politique de confidentialité",
+    "send": "Envoyer",
+    "sending": "Envoi en cours...",
+    "submit": "Soumettre",
+    "success": "Message envoyé avec succès!",
+    "successTitle": "Succès!",
+    "successDescription": "Nous vous répondrons dans les 24 heures.",
+    "successMessage": "Nous avons reçu votre message. Nous vous répondrons dans les plus brefs délais.",
+    "error": "Échec de l'envoi du message",
+    "errorTitle": "Erreur!",
+    "errorDescription": "Veuillez réessayer plus tard.",
+    "errorMessage": "Une erreur s'est produite. Veuillez réessayer.",
+    "form": {
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "email": "E-Mail",
+      "phone": "Phone",
+      "message": "Message",
+      "privacyText": "Je confirme par la présente que j'ai lu la",
+      "privacyPolicy": "privacy policy",
+      "privacyAgreement": "J'ai lu la politique de confidentialité et j'accepte",
+      "submit": "Submit"
+    }
+  },
+  "footer": {
+    "description": "Créer des expériences numériques qui génèrent des résultats et inspirent la croissance.",
+    "ourServices": "Nos Services",
+    "company": "Entreprise",
+    "findUs": "Nous trouver",
+    "workingHours": "Heures d'ouverture",
+    "mondayFriday": "Lundi - Vendredi: 09:00 - 17:00",
+    "copyright": "Tous droits réservés.",
+    "aboutUs": "À propos de nous",
+    "bookAppointment": "Prendre rendez-vous",
+    "imprint": "Mentions légales",
+    "privacyPolicy": "Politique de confidentialité",
+    "workPrinciples": "Principes de travail",
+    "workingTime": "Lundi - Vendredi: 09:00 - 17:00",
+    "allRightsReserved": "All rights reserved.",
+    "supportTicket": "Support Ticket"
+  },
+  "cta": {
+    "readyTitle": "Prêt à démarrer votre projet?",
+    "readyDescription": "Discutons de la manière dont nous pouvons vous aider à atteindre vos objectifs numériques."
+  },
+  "theme": {
+    "toggle": "Changer de thème",
+    "lightMode": "Mode clair",
+    "darkMode": "Mode sombre"
+  },
+  "language": {
+    "switch": "Changer de langue",
+    "current": "Langue actuelle"
+  },
+  "common": {
+    "search": "Rechercher",
+    "searchServices": "Rechercher des services...",
+    "noResults": "Aucun service trouvé correspondant à votre recherche.",
+    "loading": "Chargement...",
+    "prioritySupport": "Support Prioritaire"
+  },
+  "dashboard": {
+    "title": "Tableau de bord",
+    "welcome": "Bienvenue",
+    "userDashboard": "Tableau de bord utilisateur",
+    "adminPanel": "Panneau d'administration",
+    "logout": "Déconnexion",
+    "website": "Site Web",
+    "navigation": {
+      "dashboard": "Tableau de bord",
+      "projectRequests": "Demandes de projet",
+      "tickets": "Tickets",
+      "payments": "Paiements",
+      "purchases": "Achats",
+      "templates": "Place de marché des modèles"
+    },
+    "stats": {
+      "totalTickets": "Total des tickets",
+      "openTickets": "Tickets ouverts",
+      "activeProjects": "Projets actifs",
+      "totalSpent": "Total dépensé"
+    },
+    "tickets": {
+      "title": "Tickets de support",
+      "description": "Gérez vos tickets de support et obtenez de l'aide de notre équipe",
+      "createTicket": "Créer un ticket",
+      "newTicket": "Nouveau ticket",
+      "subject": "Sujet",
+      "category": "Catégorie",
+      "priority": "Priorité",
+      "message": "Message",
+      "status": "Statut",
+      "createdAt": "Créé le",
+      "lastUpdate": "Dernière mise à jour",
+      "viewDetails": "Voir les détails",
+      "closeTicket": "Fermer le ticket",
+      "reopenTicket": "Rouvrir le ticket",
+      "addResponse": "Ajouter une réponse",
+      "submit": "Soumettre",
+      "cancel": "Annuler",
+      "categories": {
+        "support": "Support",
+        "billing": "Facturation",
+        "technical": "Technique",
+        "feature": "Demande de fonctionnalité"
+      },
+      "priorities": {
+        "low": "Faible",
+        "medium": "Moyen",
+        "high": "Élevé"
+      },
+      "statuses": {
+        "open": "Ouvert",
+        "in_progress": "En cours",
+        "resolved": "Résolu",
+        "closed": "Fermé"
+      },
+      "noTickets": "Aucun ticket pour le moment",
+      "noTicketsDesc": "Créez votre premier ticket de support pour commencer",
+      "ticketCreated": "Ticket créé avec succès",
+      "ticketUpdated": "Ticket mis à jour avec succès",
+      "responseAdded": "Réponse ajoutée avec succès"
+    },
+    "packages": {
+      "title": "Forfaits de support",
+      "description": "Améliorez votre forfait de support pour un meilleur service",
+      "currentPackage": "Forfait actuel",
+      "upgrade": "Mettre à niveau",
+      "downgrade": "Rétrograder",
+      "features": {
+        "monthlyTickets": "Tickets mensuels",
+        "responseTime": "Temps de réponse",
+        "supportChannels": "Canaux de support",
+        "prioritySupport": "Support prioritaire",
+        "dedicatedManager": "Manager dédié"
+      },
+      "tiers": {
+        "free": "Gratuit",
+        "standard": "Standard",
+        "professional": "Professionnel",
+        "corporate": "Entreprise"
+      }
+    }
+  },
+  "admin": {
+    "title": "Admin",
+    "welcome": "Bienvenue",
+    "navigation": {
+      "dashboard": "Tableau de bord",
+      "frontend": "Frontend",
+      "customers": "Clients",
+      "projectRequests": "Demandes de projet",
+      "packages": "Forfaits",
+      "payments": "Paiements & Factures",
+      "marketplace": "Place de marché",
+      "messages": "Messages",
+      "settings": "Paramètres",
+      "blog": "Blog",
+      "team": "Équipe",
+      "templates": "Modèles",
+      "refunds": "Remboursements",
+      "services": "Services"
+    },
+    "stats": {
+      "totalCustomers": "Total des clients",
+      "activeProjects": "Projets actifs",
+      "pendingRequests": "Demandes en attente",
+      "totalRevenue": "Revenu total",
+      "openTickets": "Tickets ouverts",
+      "newMessages": "Nouveaux messages"
+    },
+    "customers": {
+      "title": "Clients",
+      "description": "Gérez vos clients",
+      "addCustomer": "Ajouter un client",
+      "editCustomer": "Modifier le client",
+      "deleteCustomer": "Supprimer le client",
+      "customerDetails": "Détails du client",
+      "name": "Nom",
+      "email": "E-mail",
+      "phone": "Téléphone",
+      "company": "Entreprise",
+      "status": "Statut",
+      "joined": "Rejoint",
+      "actions": "Actions"
+    },
+    "projects": {
+      "title": "Demandes de projet",
+      "description": "Gérer les demandes de projet des clients",
+      "viewProject": "Voir le projet",
+      "updateStatus": "Mettre à jour le statut",
+      "assignProject": "Assigner le projet",
+      "deleteProject": "Supprimer le projet"
+    },
+    "messages": {
+      "title": "Messages",
+      "description": "Voir et répondre aux messages des clients",
+      "markAsRead": "Marquer comme lu",
+      "reply": "Répondre",
+      "delete": "Supprimer"
+    },
+    "settings": {
+      "title": "Paramètres",
+      "description": "Gérer les paramètres de votre site web",
+      "general": "Général",
+      "legal": "Juridique",
+      "seo": "SEO",
+      "social": "Médias sociaux",
+      "save": "Enregistrer les modifications",
+      "cancel": "Annuler"
+    }
+  },
+  "login": {
+    "title": "Connexion",
+    "description": "Accéder à votre tableau de bord",
+    "user": "Utilisateur",
+    "admin": "Admin",
+    "email": "E-mail",
+    "username": "Nom d'utilisateur",
+    "password": "Mot de passe",
+    "signIn": "Se connecter",
+    "signingIn": "Connexion...",
+    "emailPlaceholder": "vous@exemple.fr",
+    "usernamePlaceholder": "Entrez le nom d'utilisateur...",
+    "passwordPlaceholder": "Entrez le mot de passe...",
+    "demoCredentials": "Identifiants de démo :",
+    "loginSuccessful": "Connexion réussie !",
+    "loginFailed": "Échec de la connexion",
+    "redirectingDashboard": "Redirection vers votre tableau de bord...",
+    "redirectingAdminDashboard": "Redirection vers le tableau d'administration...",
+    "invalidEmailPassword": "E-mail ou mot de passe invalide.",
+    "invalidUsernamePassword": "Nom d'utilisateur ou mot de passe invalide."
+  }
+}

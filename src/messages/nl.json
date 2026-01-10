@@ -1,0 +1,338 @@
+{
+  "navigation": {
+    "home": "Home",
+    "start": "Start",
+    "company": "Bedrijf",
+    "services": "Diensten",
+    "blog": "Blog",
+    "contact": "Contact",
+    "contactUs": "Neem contact op",
+    "appointment": "Afspraak",
+    "career": "Carrière",
+    "training": "Training",
+    "ticket": "Support Ticket",
+    "adminPanel": "Admin Paneel",
+    "adminLogin": "Admin Login",
+    "eShopSolutions": "E-Commerce Oplossingen",
+    "seo": "SEO",
+    "webSolutions": "Web Oplossingen",
+    "eCommerceDesc": "E-commerce oplossingen en ontwikkeling van online winkels",
+    "optimizationDesc": "Zoekmachineoptimalisatie en zichtbaarheidsdiensten",
+    "customWebsitesDesc": "Ontwikkeling en ontwerp van maatwerk websites",
+    "needHelp": "Hulp nodig bij het kiezen?",
+    "getInTouch": "Neem contact op met onze experts",
+    "scheduleMeeting": "Afspraak plannen",
+    "joinTeam": "Word lid van ons team",
+    "learnWithUs": "Leer met ons",
+    "getSupport": "Ondersteuning krijgen",
+    "lightMode": "Lichte modus",
+    "darkMode": "Donkere modus"
+  },
+  "hero": {
+    "badge": "#1 Digitaal Bureau 2024",
+    "title": "Wij creëren digitale",
+    "subtitle": "Ervaringen die ertoe doen",
+    "description": "Transformeer uw online aanwezigheid met verbluffende websites, krachtige applicaties en strategische digitale oplossingen die echte bedrijfsresultaten opleveren.",
+    "getStarted": "Start nu",
+    "viewWork": "Bekijk ons werk"
+  },
+  "services": {
+    "badge": "Onze Diensten",
+    "title": "Wat wij het beste doen",
+    "description": "Uitgebreide digitale oplossingen op maat voor uw unieke zakelijke behoeften",
+    "startingAt": "Vanaf",
+    "monthly": "Maandelijks",
+    "onlineShop": "Online Winkel",
+    "individualOnlineShop": "Individuele Online Winkel",
+    "searchEngineOptimization": "Zoekmachineoptimalisatie",
+    "landingPage": "Landingspagina",
+    "fullServiceWebsite": "Full Service Website",
+    "webVCardBasic": "Web V-Kaart Basis",
+    "webVCardPremium": "Web V-Kaart Premium",
+    "businessWebsiteBasic": "Zakelijke Website Basis",
+    "businessWebsitePremium": "Zakelijke Website Premium",
+    "individualWebsite": "Individuele Website",
+    "categories": {
+      "eshop": "E-Shop Oplossingen",
+      "eshopDesc": "E-Commerce Oplossingen",
+      "seo": "SEO",
+      "seoDesc": "Optimalisatie Diensten",
+      "web": "Web Oplossingen",
+      "webDesc": "Maatwerk Websites"
+    },
+    "items": {
+      "onlineShop": "Online Winkel",
+      "individualShop": "Individuele Online Winkel",
+      "seoOptimization": "Zoekmachineoptimalisatie",
+      "landingPage": "Landingspagina",
+      "fullservice": "Full Service Website vanaf 79€ / Maand",
+      "vcardBasic": "Web V-Kaart Basis",
+      "vcardPremium": "Web V-Kaart Premium",
+      "businessBasic": "Zakelijke Website Basis",
+      "businessPremium": "Zakelijke Website Premium",
+      "individualWebsite": "Individuele Website"
+    },
+    "needHelp": "Hulp nodig bij het kiezen?",
+    "getInTouch": "Neem contact op met onze experts",
+    "contactUs": "Neem contact op"
+  },
+  "portfolio": {
+    "badge": "Onze Portfolio",
+    "title": "Uitgelichte Projecten",
+    "description": "Ontdek ons laatste werk en zie hoe wij bedrijven hebben geholpen slagen",
+    "featured": "Uitgelicht"
+  },
+  "blog": {
+    "badge": "Laatste van onze Blog",
+    "title": "Inzichten & Updates",
+    "description": "Blijf op de hoogte van de laatste trends en nieuws uit de digitale wereld",
+    "by": "Door",
+    "readMore": "Lees Meer",
+    "viewAllPosts": "Alle Berichten Bekijken",
+    "viewAll": "Alles bekijken"
+  },
+  "contact": {
+    "title": "Contactformulier",
+    "description": "Neem vandaag nog contact met ons op voor uw volgende stap naar succes!",
+    "form": {
+      "firstName": "Voornaam",
+      "lastName": "Achternaam",
+      "email": "E-Mail",
+      "phone": "Telefoon",
+      "message": "Bericht",
+      "privacyText": "Hierbij bevestig ik dat ik de",
+      "privacyPolicy": "privacybeleid",
+      "privacyAgreement": "Ik heb het privacybeleid gelezen en ga ermee akkoord",
+      "submit": "Indienen"
+    },
+    "firstName": "Voornaam",
+    "lastName": "Achternaam",
+    "email": "E-Mail",
+    "phone": "Telefoon",
+    "message": "Bericht",
+    "privacyText": "Hierbij bevestig ik dat ik de",
+    "privacyLink": "privacybeleid",
+    "privacyTextContinued": "heb gelezen en dat mijn persoonlijke gegevens (naam, voornaam, telefoonnummer en e-mailadres) worden opgeslagen en verwerkt voor de verwerking van mijn verzoek.",
+    "privacyAgreement": "Ik heb het privacybeleid gelezen en ga ermee akkoord",
+    "send": "Versturen",
+    "sending": "Versturen...",
+    "submit": "Indienen",
+    "success": "Bericht succesvol verzonden!",
+    "successTitle": "Succes!",
+    "successDescription": "Wij nemen binnen 24 uur contact met u op.",
+    "successMessage": "Wij hebben uw bericht ontvangen. Wij nemen zo snel mogelijk contact met u op.",
+    "error": "Kan bericht niet verzenden",
+    "errorTitle": "Fout!",
+    "errorDescription": "Probeer het later opnieuw.",
+    "errorMessage": "Er is een fout opgetreden. Probeer het opnieuw."
+  },
+  "footer": {
+    "description": "Het creëren van digitale ervaringen die resultaten opleveren en groei inspireren.",
+    "ourServices": "Onze Diensten",
+    "company": "Bedrijf",
+    "findUs": "Vind ons",
+    "workingHours": "Openingstijden",
+    "mondayFriday": "Maandag - Vrijdag: 09:00 - 17:00",
+    "workingTime": "Maandag - Vrijdag: 09:00 - 17:00",
+    "copyright": "Alle rechten voorbehouden.",
+    "allRightsReserved": "Alle rechten voorbehouden.",
+    "supportTicket": "Support Ticket",
+    "aboutUs": "Over ons",
+    "bookAppointment": "Afspraak Maken",
+    "imprint": "Colofon",
+    "privacyPolicy": "Privacybeleid",
+    "workPrinciples": "Werkprincipes"
+  },
+  "cta": {
+    "readyTitle": "Klaar om uw project te starten?",
+    "readyDescription": "Laten we bespreken hoe wij u kunnen helpen uw digitale doelen te bereiken."
+  },
+  "theme": {
+    "toggle": "Thema wisselen",
+    "lightMode": "Lichte modus",
+    "darkMode": "Donkere modus"
+  },
+  "language": {
+    "switch": "Taal wisselen",
+    "current": "Huidige taal"
+  },
+  "common": {
+    "search": "Zoeken",
+    "searchServices": "Diensten zoeken...",
+    "noResults": "Geen diensten gevonden die overeenkomen met uw zoekopdracht.",
+    "loading": "Laden...",
+    "prioritySupport": "Prioritaire Support"
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "welcome": "Welkom",
+    "userDashboard": "Gebruikersdashboard",
+    "adminPanel": "Admin Paneel",
+    "logout": "Uitloggen",
+    "website": "Website",
+    "navigation": {
+      "dashboard": "Dashboard",
+      "projectRequests": "Projectaanvragen",
+      "tickets": "Tickets",
+      "payments": "Betalingen",
+      "purchases": "Aankopen",
+      "templates": "Template Marktplaats"
+    },
+    "stats": {
+      "totalTickets": "Totaal Tickets",
+      "openTickets": "Open Tickets",
+      "activeProjects": "Actieve Projecten",
+      "totalSpent": "Totaal Uitgegeven"
+    },
+    "tickets": {
+      "title": "Support Tickets",
+      "description": "Beheer uw support tickets en krijg hulp van ons team",
+      "createTicket": "Ticket Aanmaken",
+      "newTicket": "Nieuw Ticket",
+      "subject": "Onderwerp",
+      "category": "Categorie",
+      "priority": "Prioriteit",
+      "message": "Bericht",
+      "status": "Status",
+      "createdAt": "Aangemaakt op",
+      "lastUpdate": "Laatste Update",
+      "viewDetails": "Details Bekijken",
+      "closeTicket": "Ticket Sluiten",
+      "reopenTicket": "Ticket Heropenen",
+      "addResponse": "Reactie Toevoegen",
+      "submit": "Indienen",
+      "cancel": "Annuleren",
+      "categories": {
+        "support": "Support",
+        "billing": "Facturering",
+        "technical": "Technisch",
+        "feature": "Feature Verzoek"
+      },
+      "priorities": {
+        "low": "Laag",
+        "medium": "Gemiddeld",
+        "high": "Hoog"
+      },
+      "statuses": {
+        "open": "Open",
+        "in_progress": "In Behandeling",
+        "resolved": "Opgelost",
+        "closed": "Gesloten"
+      },
+      "noTickets": "Nog geen tickets",
+      "noTicketsDesc": "Maak uw eerste support ticket om te beginnen",
+      "ticketCreated": "Ticket succesvol aangemaakt",
+      "ticketUpdated": "Ticket succesvol bijgewerkt",
+      "responseAdded": "Reactie succesvol toegevoegd"
+    },
+    "packages": {
+      "title": "Support Pakketten",
+      "description": "Upgrade uw support pakket voor betere service",
+      "currentPackage": "Huidig Paket",
+      "upgrade": "Upgrade",
+      "downgrade": "Downgrade",
+      "features": {
+        "monthlyTickets": "Maandelijkse Tickets",
+        "responseTime": "Reactietijd",
+        "supportChannels": "Support Kanalen",
+        "prioritySupport": "Prioriteit Support",
+        "dedicatedManager": "Dedicated Manager"
+      },
+      "tiers": {
+        "free": "Gratis",
+        "standard": "Standaard",
+        "professional": "Professioneel",
+        "corporate": "Corporate"
+      }
+    }
+  },
+  "admin": {
+    "title": "Admin",
+    "welcome": "Welkom",
+    "navigation": {
+      "dashboard": "Dashboard",
+      "frontend": "Frontend",
+      "customers": "Klanten",
+      "projectRequests": "Projectaanvragen",
+      "packages": "Pakketten",
+      "payments": "Betalingen & Facturen",
+      "marketplace": "Marktplaats",
+      "messages": "Berichten",
+      "settings": "Instellingen",
+      "blog": "Blog",
+      "team": "Team",
+      "templates": "Templates",
+      "refunds": "Restituties",
+      "services": "Diensten"
+    },
+    "stats": {
+      "totalCustomers": "Totaal Klanten",
+      "activeProjects": "Actieve Projecten",
+      "pendingRequests": "In Behandeling zijnde Aanvragen",
+      "totalRevenue": "Totale Omzet",
+      "openTickets": "Open Tickets",
+      "newMessages": "Nieuwe Berichten"
+    },
+    "customers": {
+      "title": "Klanten",
+      "description": "Beheer uw klanten",
+      "addCustomer": "Klant Toevoegen",
+      "editCustomer": "Klant Bewerken",
+      "deleteCustomer": "Klant Verwijderen",
+      "customerDetails": "Klant Details",
+      "name": "Naam",
+      "email": "E-Mail",
+      "phone": "Telefoon",
+      "company": "Bedrijf",
+      "status": "Status",
+      "joined": "Lid geworden",
+      "actions": "Acties"
+    },
+    "projects": {
+      "title": "Projectaanvragen",
+      "description": "Beheer projectaanvragen van klanten",
+      "viewProject": "Project Bekijken",
+      "updateStatus": "Status Update",
+      "assignProject": "Project Toewijzen",
+      "deleteProject": "Project Verwijderen"
+    },
+    "messages": {
+      "title": "Berichten",
+      "description": "Bekijk en reageer op klantberichten",
+      "markAsRead": "Markeer als Gelezen",
+      "reply": "Reageer",
+      "delete": "Verwijderen"
+    },
+    "settings": {
+      "title": "Instellingen",
+      "description": "Beheer uw website instellingen",
+      "general": "Algemeen",
+      "legal": "Juridisch",
+      "seo": "SEO",
+      "social": "Sociale Media",
+      "save": "Wijzigingen Opslaan",
+      "cancel": "Annuleren"
+    }
+  },
+  "login": {
+    "title": "Inloggen",
+    "description": "Toegang tot uw dashboard",
+    "user": "Gebruiker",
+    "admin": "Admin",
+    "email": "E-Mail",
+    "username": "Gebruikersnaam",
+    "password": "Wachtwoord",
+    "signIn": "Inloggen",
+    "signingIn": "Inloggen...",
+    "emailPlaceholder": "u@voorbeeld.nl",
+    "usernamePlaceholder": "Voer gebruikersnaam in...",
+    "passwordPlaceholder": "Voer wachtwoord in...",
+    "demoCredentials": "Demo Inloggegevens:",
+    "loginSuccessful": "Inloggen Geslaagd!",
+    "loginFailed": "Inloggen Mislukt",
+    "redirectingDashboard": "Doorsturen naar uw dashboard...",
+    "redirectingAdminDashboard": "Doorsturen naar admin dashboard...",
+    "invalidEmailPassword": "Ongeldige e-mail of wachtwoord.",
+    "invalidUsernamePassword": "Ongeldige gebruikersnaam of wachtwoord."
+  }
+}

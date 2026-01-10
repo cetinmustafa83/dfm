@@ -1,0 +1,338 @@
+{
+  "navigation": {
+    "home": "Начало",
+    "start": "Старт",
+    "company": "Компания",
+    "services": "Услуги",
+    "blog": "Блог",
+    "contact": "Контакт",
+    "appointment": "Назначаване",
+    "career": "Кариера",
+    "training": "Обучение",
+    "ticket": "Support Билет",
+    "adminPanel": "Админ панел",
+    "adminLogin": "Админ вход",
+    "eShopSolutions": "E-Commerce решения",
+    "seo": "SEO",
+    "webSolutions": "Уеб решения",
+    "eCommerceDesc": "E-commerce решения и разработка на онлайн магазини",
+    "optimizationDesc": "Оптимизация за търсачки и услуги за видимост",
+    "customWebsitesDesc": "Разработка и дизайн на потребителски дефинирани уебсайтове",
+    "needHelp": "Нуждаете се от помощ при избора?",
+    "getInTouch": "Свържете се с нашите експерти",
+    "scheduleMeeting": " насрочване на среща",
+    "joinTeam": "Присъединете се към нашия екип",
+    "learnWithUs": "Научете с нас",
+    "getSupport": "Получете подкрепа",
+    "lightMode": "Светъл режим",
+    "darkMode": "Тъмен режим",
+    "contactUs": "Contact Us"
+  },
+  "hero": {
+    "badge": "#1 Дигитална агенция 2024",
+    "title": "Създаваме дигитални",
+    "subtitle": "изживания, които имат значение",
+    "description": "Трансформирайте своето онлайн присъствие с впечатляващи уебсайти, мощни приложения и стратегически дигитални решения, които доставят реални бизнес резултати.",
+    "getStarted": "Започнете",
+    "viewWork": "Вижте нашата работа"
+  },
+  "services": {
+    "badge": "Нашите услуги",
+    "title": "Това, което правим най-добре",
+    "description": "Всеобхватни дигитални решения, адаптирани към вашите уникални бизнес нужди",
+    "startingAt": "От",
+    "monthly": "Месечно",
+    "categories": {
+      "eshop": "E-Shop решения",
+      "eshopDesc": "E-Commerce решения",
+      "seo": "SEO",
+      "seoDesc": "Услуги за оптимизация",
+      "web": "Уеб решения",
+      "webDesc": "Персонализирани уебсайтове"
+    },
+    "items": {
+      "onlineShop": "Онлайн магазин",
+      "individualShop": "Индивидуален онлайн магазин",
+      "seoOptimization": "Оптимизация за търсачки",
+      "landingPage": "Лендинг страница",
+      "fullservice": "Full Service уебсайт от 79€ / Месец",
+      "vcardBasic": "Уеб V-Карта Основна",
+      "vcardPremium": "Уеб V-Карта Премиум",
+      "businessBasic": "Бизнес уебсайт Основна",
+      "businessPremium": "Бизнес уебсайт Премиум",
+      "individualWebsite": "Индивидуален уебсайт"
+    },
+    "needHelp": "Нуждаете се от помощ при избора?",
+    "getInTouch": "Свържете се с нашите експерти",
+    "contactUs": "Свържете се с нас",
+    "onlineShop": "Online Shop",
+    "individualOnlineShop": "Individual Online Shop",
+    "searchEngineOptimization": "Search Engine Optimization",
+    "landingPage": "Landing Page",
+    "fullServiceWebsite": "Full Service Website",
+    "webVCardBasic": "Web V-Card Basic",
+    "webVCardPremium": "Web V-Card Premium",
+    "businessWebsiteBasic": "Business Website Basic",
+    "businessWebsitePremium": "Business Website Premium",
+    "individualWebsite": "Individual Website"
+  },
+  "portfolio": {
+    "badge": "Нашето портфолио",
+    "title": "Избрани проекти",
+    "description": "Разгледайте нашата най-нова работа и вижте как сме помогнали на бизнеса да успее",
+    "featured": "Избрани"
+  },
+  "blog": {
+    "badge": "Най-новото от нашия блог",
+    "title": "Прозрения и актуализации",
+    "description": "Бъдете актуални с последните тенденции и новини от дигиталния свят",
+    "by": "От",
+    "readMore": "Прочетете повече",
+    "viewAllPosts": "Вижте всички публикации",
+    "viewAll": "Вижте всички"
+  },
+  "contact": {
+    "title": "Контактна форма",
+    "description": "Свържете се с нас днес за следващата стъпка към успеха!",
+    "firstName": "Име",
+    "lastName": "Фамилия",
+    "email": "E-Mail",
+    "phone": "Телефон",
+    "message": "Съобщение",
+    "privacyText": "С настоящим потвърждавам, че съм прочел",
+    "privacyLink": "политиката за поверителност",
+    "privacyTextContinued": "и съгласявам личните ми данни (име, фамилия, телефонен номер и имейл адрес) да бъдат съхранявани и обработвани с цел обработване на заявката ми.",
+    "privacyAgreement": "Прочетох и приемам политиката за поверителност",
+    "send": "Изпрати",
+    "sending": "Изпращане...",
+    "submit": "Изпрати",
+    "success": "Съобщението е изпратено успешно!",
+    "successTitle": "Успех!",
+    "successDescription": "Ще се свържем с вас в рамките на 24 часа.",
+    "successMessage": "Получихме вашето съобщение. Ще се свържем с вас възможно най-скоро.",
+    "error": "Неуспешно изпращане на съобщение",
+    "errorTitle": "Грешка!",
+    "errorDescription": "Моля, опитайте отново по-късно.",
+    "errorMessage": "Възникна грешка. Моля, опитайте отново.",
+    "form": {
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "email": "E-Mail",
+      "phone": "Phone",
+      "message": "Message",
+      "privacyText": "С настоящим потвърждавам, че съм прочел",
+      "privacyPolicy": "privacy policy",
+      "privacyAgreement": "Прочетох политиката за поверителност и приемам",
+      "submit": "Submit"
+    }
+  },
+  "footer": {
+    "description": "Създаване на дигитални изживания, които генерират резултати и вдъхновяват растеж.",
+    "ourServices": "Нашите услуги",
+    "company": "Компания",
+    "findUs": "Намерете ни",
+    "workingHours": "Работно време",
+    "mondayFriday": "Понеделник - Петък: 09:00 - 17:00",
+    "copyright": "Всички права запазени.",
+    "aboutUs": "За нас",
+    "bookAppointment": "Резервирайте среща",
+    "imprint": "Отпечатък",
+    "privacyPolicy": "Политика за поверителност",
+    "workPrinciples": "Работни принципи",
+    "workingTime": "Понеделник - Петък: 09:00 - 17:00",
+    "allRightsReserved": "All rights reserved.",
+    "supportTicket": "Support Ticket"
+  },
+  "cta": {
+    "readyTitle": "Готови ли сте да стартирате проекта си?",
+    "readyDescription": "Нека обсъдим как можем да ви помогнем да постигнете дигиталните си цели."
+  },
+  "theme": {
+    "toggle": "Смяна на темата",
+    "lightMode": "Светла тема",
+    "darkMode": "Тъмна тема"
+  },
+  "language": {
+    "switch": "Смяна на езика",
+    "current": "Текущ език"
+  },
+  "common": {
+    "search": "Търсене",
+    "searchServices": "Търсене на услуги...",
+    "noResults": "Не са намерени услуги, отговарящи на търсенето ви.",
+    "loading": "Зареждане...",
+    "prioritySupport": "Приоритетна Подкрепа"
+  },
+  "dashboard": {
+    "title": "Табло",
+    "welcome": "Добре дошли",
+    "userDashboard": "Потребителско Табло",
+    "adminPanel": "Админ Панел",
+    "logout": "Изход",
+    "website": "Уебсайт",
+    "navigation": {
+      "dashboard": "Табло",
+      "projectRequests": "Заявки за Проекти",
+      "tickets": "Билети",
+      "payments": "Плащания",
+      "purchases": "Покупки",
+      "templates": "Пазар на Шаблони"
+    },
+    "stats": {
+      "totalTickets": "Общо Билети",
+      "openTickets": "Отворени Билети",
+      "activeProjects": "Активни Проекти",
+      "totalSpent": "Общо Харчено"
+    },
+    "tickets": {
+      "title": "Поддръжка Билети",
+      "description": "Управлявайте своите билети за поддръжка и получете помощ от нашия екип",
+      "createTicket": "Създаване на Билет",
+      "newTicket": "Нов Билет",
+      "subject": "Тема",
+      "category": "Категория",
+      "priority": "Приоритет",
+      "message": "Съобщение",
+      "status": "Статус",
+      "createdAt": "Създадено на",
+      "lastUpdate": "Последна Актуализация",
+      "viewDetails": "Преглед на Детайлите",
+      "closeTicket": "Затваряне на Билет",
+      "reopenTicket": "Повторно Отваряне на Билет",
+      "addResponse": "Добавяне на Отговор",
+      "submit": "Изпращане",
+      "cancel": "Отказ",
+      "categories": {
+        "support": "Поддръжка",
+        "billing": "Фактуриране",
+        "technical": "Технически",
+        "feature": "Заявка за Функционалност"
+      },
+      "priorities": {
+        "low": "Нисък",
+        "medium": "Среден",
+        "high": "Висок"
+      },
+      "statuses": {
+        "open": "Отворен",
+        "in_progress": "В процес",
+        "resolved": "Решен",
+        "closed": "Затворен"
+      },
+      "noTickets": "Все още няма билети",
+      "noTicketsDesc": "Създайте първия си билет за поддръжка, за да започнете",
+      "ticketCreated": "Билетът е създаден успешно",
+      "ticketUpdated": "Билетът е актуализиран успешно",
+      "responseAdded": "Отговорът е добавен успешно"
+    },
+    "packages": {
+      "title": "Пакети Поддръжка",
+      "description": "Надградете пакета си за поддръжка за по-добро обслужване",
+      "currentPackage": "Текущ Пакет",
+      "upgrade": "Надграждане",
+      "downgrade": "Понижаване",
+      "features": {
+        "monthlyTickets": "Месечни Билети",
+        "responseTime": "Време за Отговор",
+        "supportChannels": "Канали за Поддръжка",
+        "prioritySupport": "Приоритетна Поддръжка",
+        "dedicatedManager": "Посветен Мениджър"
+      },
+      "tiers": {
+        "free": "Безплатно",
+        "standard": "Стандартен",
+        "professional": "Професионален",
+        "corporate": "Корпоративен"
+      }
+    }
+  },
+  "admin": {
+    "title": "Админ",
+    "welcome": "Добре дошли",
+    "navigation": {
+      "dashboard": "Табло",
+      "frontend": "Frontend",
+      "customers": "Клиенти",
+      "projectRequests": "Заявки за Проекти",
+      "packages": "Пакети",
+      "payments": "Плащания и Фактури",
+      "marketplace": "Пазар",
+      "messages": "Съобщения",
+      "settings": "Настройки",
+      "blog": "Блог",
+      "team": "Екип",
+      "templates": "Шаблони",
+      "refunds": "Възстановявания",
+      "services": "Услуги"
+    },
+    "stats": {
+      "totalCustomers": "Общо Клиенти",
+      "activeProjects": "Активни Проекти",
+      "pendingRequests": "Чакащи Заявки",
+      "totalRevenue": "Общ Приход",
+      "openTickets": "Отворени Билети",
+      "newMessages": "Нови Съобщения"
+    },
+    "customers": {
+      "title": "Клиенти",
+      "description": "Управлявайте своите клиенти",
+      "addCustomer": "Добавяне на Клиент",
+      "editCustomer": "Редактиране на Клиент",
+      "deleteCustomer": "Изтриване на Клиент",
+      "customerDetails": "Детайли за Клиента",
+      "name": "Име",
+      "email": "Имейл",
+      "phone": "Телефон",
+      "company": "Компания",
+      "status": "Статус",
+      "joined": "Присъединен",
+      "actions": "Действия"
+    },
+    "projects": {
+      "title": "Заявки за Проекти",
+      "description": "Управлявайте заявките за проекти на клиенти",
+      "viewProject": "Преглед на Проект",
+      "updateStatus": "Актуализиране на Статус",
+      "assignProject": "Възлагане на Проект",
+      "deleteProject": "Изтриване на Проект"
+    },
+    "messages": {
+      "title": "Съобщения",
+      "description": "Преглед и отговор на съобщенията от клиенти",
+      "markAsRead": "Маркиране като Прочетено",
+      "reply": "Отговор",
+      "delete": "Изтриване"
+    },
+    "settings": {
+      "title": "Настройки",
+      "description": "Управлявайте настройките на вашия уебсайт",
+      "general": "Общи",
+      "legal": "Правни",
+      "seo": "SEO",
+      "social": "Социални Мрежи",
+      "save": "Запазване на Промените",
+      "cancel": "Отказ"
+    }
+  },
+  "login": {
+    "title": "Вход",
+    "description": "Достъп до вашето табло",
+    "user": "Потребител",
+    "admin": "Админ",
+    "email": "Имейл",
+    "username": "Потребителско име",
+    "password": "Парола",
+    "signIn": "Вход",
+    "signingIn": "Влизане...",
+    "emailPlaceholder": "vas@primer.bg",
+    "usernamePlaceholder": "Въведете потребителско име...",
+    "passwordPlaceholder": "Въведете парола...",
+    "demoCredentials": "Демонстрационни данни за вход:",
+    "loginSuccessful": "Успешен вход!",
+    "loginFailed": "Неуспешен вход",
+    "redirectingDashboard": "Пренасочване към вашето табло...",
+    "redirectingAdminDashboard": "Пренасочване към админ таблото...",
+    "invalidEmailPassword": "Невалиден имейл или парола.",
+    "invalidUsernamePassword": "Невалидно потребителско име или парола."
+  }
+}

@@ -1,0 +1,338 @@
+{
+  "navigation": {
+    "home": "Ana Sayfa",
+    "start": "Başla",
+    "company": "Şirket",
+    "services": "Hizmetler",
+    "blog": "Blog",
+    "contact": "İletişim",
+    "contactUs": "Bize Ulaşın",
+    "appointment": "Randevu",
+    "career": "Kariyer",
+    "training": "Eğitim",
+    "ticket": "Destek Talebi",
+    "adminPanel": "Yönetici Paneli",
+    "adminLogin": "Yönetici Girişi",
+    "eShopSolutions": "E-Ticaret Çözümleri",
+    "seo": "SEO",
+    "webSolutions": "Web Çözümleri",
+    "eCommerceDesc": "E-ticaret çözümleri ve online mağaza geliştirme",
+    "optimizationDesc": "Arama motoru optimizasyonu ve görünürlük hizmetleri",
+    "customWebsitesDesc": "Özel web sitesi geliştirme ve tasarım",
+    "needHelp": "Seçim yaparken yardıma mı ihtiyacınız var?",
+    "getInTouch": "Uzmanlarımızla iletişime geçin",
+    "scheduleMeeting": "Toplantı Planlayın",
+    "joinTeam": "Ekibimize Katılın",
+    "learnWithUs": "Bizimle Çalışın",
+    "getSupport": "Destek Alın",
+    "lightMode": "Açık Tema",
+    "darkMode": "Koyu Tema"
+  },
+  "hero": {
+    "badge": "#1 Dijital Ajans 2024",
+    "title": "Dijital Deneyimler",
+    "subtitle": "Yaratıyoruz",
+    "description": "Etkileyici web siteleri, güçlü uygulamalar ve gerçek iş sonuçları sunan stratejik dijital çözümlerle çevrimiçi varlığınızı dönüştürün.",
+    "getStarted": "Hemen Başlayın",
+    "viewWork": "Çalışmalarımızı Görün"
+  },
+  "services": {
+    "badge": "Hizmetlerimiz",
+    "title": "En İyi Yaptıklarımız",
+    "description": "Benzersiz iş ihtiyaçlarınıza göre uyarlanmış kapsamlı dijital çözümler",
+    "startingAt": "Başlangıç",
+    "monthly": "Aylık",
+    "onlineShop": "Online Mağaza",
+    "individualOnlineShop": "Bireysel Online Mağaza",
+    "searchEngineOptimization": "Arama Motoru Optimizasyonu",
+    "landingPage": "Açılış Sayfası",
+    "fullServiceWebsite": "Tam Hizmet Web Sitesi",
+    "webVCardBasic": "Web V-Kart Temel",
+    "webVCardPremium": "Web V-Kart Premium",
+    "businessWebsiteBasic": "İş Web Sitesi Temel",
+    "businessWebsitePremium": "İş Web Sitesi Premium",
+    "individualWebsite": "Özel Web Sitesi",
+    "categories": {
+      "eshop": "E-Ticaret Çözümleri",
+      "eshopDesc": "E-Ticaret Çözümleri",
+      "seo": "SEO",
+      "seoDesc": "Optimizasyon Hizmetleri",
+      "web": "Web Çözümleri",
+      "webDesc": "Özel Web Siteleri"
+    },
+    "items": {
+      "onlineShop": "Online Mağaza",
+      "individualShop": "Bireysel Online Mağaza",
+      "seoOptimization": "Arama Motoru Optimizasyonu",
+      "landingPage": "Açılış Sayfası",
+      "fullservice": "79€'dan Başlayan Tam Hizmet Web Sitesi",
+      "vcardBasic": "Web V-Kart Temel",
+      "vcardPremium": "Web V-Kart Premium",
+      "businessBasic": "İş Web Sitesi Temel",
+      "businessPremium": "İş Web Sitesi Premium",
+      "individualWebsite": "Özel Web Sitesi"
+    },
+    "needHelp": "Seçim yaparken yardıma mı ihtiyacınız var?",
+    "getInTouch": "Uzmanlarımızla iletişime geçin",
+    "contactUs": "Bize Ulaşın"
+  },
+  "portfolio": {
+    "badge": "Portföyümüz",
+    "title": "Öne Çıkan Projeler",
+    "description": "Son çalışmalarımızı keşfedin ve işletmelerin başarılı olmasına nasıl yardımcı olduğumuzu görün",
+    "featured": "Öne Çıkan"
+  },
+  "blog": {
+    "badge": "Blogumuzdan Son Yazılar",
+    "title": "Bilgi ve Güncellemeler",
+    "description": "Dijital dünyadaki son trendler ve haberlerle güncel kalın",
+    "by": "Yazan",
+    "readMore": "Devamını Oku",
+    "viewAllPosts": "Tüm Yazıları Görüntüle",
+    "viewAll": "Tümünü Görüntüle"
+  },
+  "contact": {
+    "title": "İletişim Formu",
+    "description": "Başarıya giden bir sonraki adımınız için bugün bize ulaşın!",
+    "form": {
+      "firstName": "Ad",
+      "lastName": "Soyad",
+      "email": "E-Posta",
+      "phone": "Telefon",
+      "message": "Mesaj",
+      "privacyText": "Buradan onaylıyorum bahwa",
+      "privacyPolicy": "gizlilik politikasını",
+      "privacyAgreement": "Gizlilik politikasını okudum ve kabul ediyorum",
+      "submit": "Gönder"
+    },
+    "firstName": "Ad",
+    "lastName": "Soyad",
+    "email": "E-Posta",
+    "phone": "Telefon",
+    "message": "Mesaj",
+    "privacyText": "Buradan onaylıyorum bahwa",
+    "privacyLink": "gizlilik politikasını",
+    "privacyTextContinued": "okudum ve kişisel verilerimin (ad, soyad, telefon numarası ve e-posta adresim) talebimi işlemek amacıyla saklanacağını ve işleneceğini kabul ediyorum.",
+    "privacyAgreement": "Gizlilik politikasını okudum ve kabul ediyorum",
+    "send": "Gönder",
+    "sending": "Gönderiliyor...",
+    "submit": "Gönder",
+    "success": "Mesaj başarıyla gönderildi!",
+    "successTitle": "Başarılı!",
+    "successDescription": "24 saat içinde size dönüş yapacağız.",
+    "successMessage": "Mesajınızı aldık. En kısa sürede size dönüş yapacağız.",
+    "error": "Mesaj gönderilemedi",
+    "errorTitle": "Hata!",
+    "errorDescription": "Lütfen daha sonra tekrar deneyin.",
+    "errorMessage": "Bir hata oluştu. Lütfen tekrar deneyin."
+  },
+  "footer": {
+    "description": "Sonuçları destekleyen ve büyümeyi ilhamlandıran dijital deneyimler yaratıyoruz.",
+    "ourServices": "Hizmetlerimiz",
+    "company": "Şirket",
+    "findUs": "Bizi Bulun",
+    "workingHours": "Çalışma Saatleri",
+    "mondayFriday": "Pazartesi - Cuma: 09:00 - 17:00",
+    "workingTime": "Pazartesi - Cuma: 09:00 - 17:00",
+    "copyright": "Tüm hakları saklıdır.",
+    "allRightsReserved": "Tüm hakları saklıdır.",
+    "supportTicket": "Destek Talebi",
+    "aboutUs": "Hakkımızda",
+    "bookAppointment": "Randevu Al",
+    "imprint": "Künye",
+    "privacyPolicy": "Gizlilik Politikası",
+    "workPrinciples": "Çalışma İlkeleri"
+  },
+  "cta": {
+    "readyTitle": "Projenizi Başlatmaya Hazır mısınız?",
+    "readyDescription": "Dijital hedeflerinize nasıl ulaşmanıza yardımcı olabileceğimizi konuşalım."
+  },
+  "theme": {
+    "toggle": "Tema değiştir",
+    "lightMode": "Açık Tema",
+    "darkMode": "Koyu Tema"
+  },
+  "language": {
+    "switch": "Dil değiştir",
+    "current": "Mevcut dil"
+  },
+  "common": {
+    "search": "Ara",
+    "searchServices": "Hizmet ara...",
+    "noResults": "Aramanızla eşleşen hizmet bulunamadı.",
+    "loading": "Yükleniyor...",
+    "prioritySupport": "Öncelikli Destek"
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "welcome": "Hoş Geldiniz",
+    "userDashboard": "Kullanıcı Paneli",
+    "adminPanel": "Yönetici Paneli",
+    "logout": "Çıkış",
+    "website": "Web Sitesi",
+    "navigation": {
+      "dashboard": "Panel",
+      "projectRequests": "Proje Talepleri",
+      "tickets": "Destek Talepleri",
+      "payments": "Ödemeler",
+      "purchases": "Satın Almalar",
+      "templates": "Şablon Mağazası"
+    },
+    "stats": {
+      "totalTickets": "Toplam Talep",
+      "openTickets": "Açık Talepler",
+      "activeProjects": "Aktif Projeler",
+      "totalSpent": "Toplam Harcama"
+    },
+    "tickets": {
+      "title": "Destek Talepleri",
+      "description": "Destek taleplerinizi yönetin ve ekibimizden yardım alın",
+      "createTicket": "Talep Oluştur",
+      "newTicket": "Yeni Talep",
+      "subject": "Konu",
+      "category": "Kategori",
+      "priority": "Öncelik",
+      "message": "Mesaj",
+      "status": "Durum",
+      "createdAt": "Oluşturulma Tarihi",
+      "lastUpdate": "Son Güncelleme",
+      "viewDetails": "Detayları Görüntüle",
+      "closeTicket": "Talebi Kapat",
+      "reopenTicket": "Talebi Yeniden Aç",
+      "addResponse": "Yanıt Ekle",
+      "submit": "Gönder",
+      "cancel": "İptal",
+      "categories": {
+        "support": "Destek",
+        "billing": "Faturalandırma",
+        "technical": "Teknik",
+        "feature": "Özellik Talebi"
+      },
+      "priorities": {
+        "low": "Düşük",
+        "medium": "Orta",
+        "high": "Yüksek"
+      },
+      "statuses": {
+        "open": "Açık",
+        "in_progress": "İşleniyor",
+        "resolved": "Çözüldü",
+        "closed": "Kapalı"
+      },
+      "noTickets": "Henüz talep yok",
+      "noTicketsDesc": "Başlamak için ilk destek talebinizi oluşturun",
+      "ticketCreated": "Talep başarıyla oluşturuldu",
+      "ticketUpdated": "Talep başarıyla güncellendi",
+      "responseAdded": "Yanıt başarıyla eklendi"
+    },
+    "packages": {
+      "title": "Destek Paketleri",
+      "description": "Daha iyi hizmet için destek paketinizi yükseltin",
+      "currentPackage": "Mevcut Paket",
+      "upgrade": "Yükselt",
+      "downgrade": "Düşür",
+      "features": {
+        "monthlyTickets": "Aylık Talepler",
+        "responseTime": "Yanıt Süresi",
+        "supportChannels": "Destek Kanalları",
+        "prioritySupport": "Öncelikli Destek",
+        "dedicatedManager": "Özel Yönetici"
+      },
+      "tiers": {
+        "free": "Ücretsiz",
+        "standard": "Standart",
+        "professional": "Profesyonel",
+        "corporate": "Kurumsal"
+      }
+    }
+  },
+  "admin": {
+    "title": "Yönetici",
+    "welcome": "Hoş Geldiniz",
+    "navigation": {
+      "dashboard": "Panel",
+      "frontend": "Ön Yüz",
+      "customers": "Müşteriler",
+      "projectRequests": "Proje Talepleri",
+      "packages": "Paketler",
+      "payments": "Ödemeler & Faturalar",
+      "marketplace": "Pazar Yeri",
+      "messages": "Mesajlar",
+      "settings": "Ayarlar",
+      "blog": "Blog",
+      "team": "Takım",
+      "templates": "Şablonlar",
+      "refunds": "İadeler",
+      "services": "Hizmetler"
+    },
+    "stats": {
+      "totalCustomers": "Toplam Müşteri",
+      "activeProjects": "Aktif Projeler",
+      "pendingRequests": "Bekleyen Talepler",
+      "totalRevenue": "Toplam Gelir",
+      "openTickets": "Açık Talepler",
+      "newMessages": "Yeni Mesajlar"
+    },
+    "customers": {
+      "title": "Müşteriler",
+      "description": "Müşterilerinizi yönetin",
+      "addCustomer": "Müşteri Ekle",
+      "editCustomer": "Müşteri Düzenle",
+      "deleteCustomer": "Müşteri Sil",
+      "customerDetails": "Müşteri Detayları",
+      "name": "İsim",
+      "email": "E-Posta",
+      "phone": "Telefon",
+      "company": "Şirket",
+      "status": "Durum",
+      "joined": "Katılım",
+      "actions": "İşlemler"
+    },
+    "projects": {
+      "title": "Proje Talepleri",
+      "description": "Müşteri proje taleplerini yönetin",
+      "viewProject": "Projeyi Görüntüle",
+      "updateStatus": "Durumu Güncelle",
+      "assignProject": "Proje Ata",
+      "deleteProject": "Projeyi Sil"
+    },
+    "messages": {
+      "title": "Mesajlar",
+      "description": "Müşteri mesajlarını görüntüleyin ve yanıt verin",
+      "markAsRead": "Okundu Olarak İşaretle",
+      "reply": "Yanıtla",
+      "delete": "Sil"
+    },
+    "settings": {
+      "title": "Ayarlar",
+      "description": "Web sitesi ayarlarınızı yönetin",
+      "general": "Genel",
+      "legal": "Yasal",
+      "seo": "SEO",
+      "social": "Sosyal Medya",
+      "save": "Değişiklikleri Kaydet",
+      "cancel": "İptal"
+    }
+  },
+  "login": {
+    "title": "Giriş Yap",
+    "description": "Panelinize erişin",
+    "user": "Kullanıcı",
+    "admin": "Yönetici",
+    "email": "E-Posta",
+    "username": "Kullanıcı Adı",
+    "password": "Şifre",
+    "signIn": "Giriş Yap",
+    "signingIn": "Giriş yapılıyor...",
+    "emailPlaceholder": "sizin@ornek.com",
+    "usernamePlaceholder": "Kullanıcı adı girin...",
+    "passwordPlaceholder": "Şifre girin...",
+    "demoCredentials": "Demo Giriş Bilgileri:",
+    "loginSuccessful": "Giriş Başarılı!",
+    "loginFailed": "Giriş Başarısız",
+    "redirectingDashboard": "Panelinize yönlendiriliyorsunuz...",
+    "redirectingAdminDashboard": "Yönetici paneline yönlendiriliyorsunuz...",
+    "invalidEmailPassword": "Geçersiz e-posta veya şifre.",
+    "invalidUsernamePassword": "Geçersiz kullanıcı adı veya şifre."
+  }
+}

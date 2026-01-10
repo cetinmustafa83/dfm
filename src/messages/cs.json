@@ -1,0 +1,338 @@
+{
+  "navigation": {
+    "home": "Domů",
+    "start": "Start",
+    "company": "Společnost",
+    "services": "Služby",
+    "blog": "Blog",
+    "contact": "Kontakt",
+    "appointment": "Schůzka",
+    "career": "Kariéra",
+    "training": "Školení",
+    "ticket": "Support Ticket",
+    "adminPanel": "Admin Panel",
+    "adminLogin": "Admin Login",
+    "eShopSolutions": "E-Commerce řešení",
+    "seo": "SEO",
+    "webSolutions": "Webová řešení",
+    "eCommerceDesc": "E-commerce řešení a vývoj online obchodů",
+    "optimizationDesc": "Optimalizace pro vyhledávače a služby viditelnosti",
+    "customWebsitesDesc": "Vývoj a design uživatelsky definovaných webů",
+    "needHelp": "Potřebujete pomoc s výběrem?",
+    "getInTouch": "Kontaktujte naše experty",
+    "scheduleMeeting": "Plánovat schůzku",
+    "joinTeam": "Přidejte se k našemu týmu",
+    "learnWithUs": "Učte se s námi",
+    "getSupport": "Získat podporu",
+    "lightMode": "Světlý režim",
+    "darkMode": "Tmavý režim",
+    "contactUs": "Contact Us"
+  },
+  "hero": {
+    "badge": "#1 Digitální agentura 2024",
+    "title": "Tvoříme digitální",
+    "subtitle": "zážitky, které mají význam",
+    "description": "Transformujte svou online přítomnost úchvatnými webovými stránkami, výkonnými aplikacemi a strategickými digitálními řešeními, která přinášejí skutečné obchodní výsledky.",
+    "getStarted": "Začít",
+    "viewWork": "Zobrazit naši práci"
+  },
+  "services": {
+    "badge": "Naše služby",
+    "title": "Co děláme nejlépe",
+    "description": "Komplexní digitální řešení přizpůsobená vašim jedinečným obchodním potřebám",
+    "startingAt": "Od",
+    "monthly": "Měsíčně",
+    "categories": {
+      "eshop": "E-Shop řešení",
+      "eshopDesc": "E-Commerce řešení",
+      "seo": "SEO",
+      "seoDesc": "Optimalizační služby",
+      "web": "Webová řešení",
+      "webDesc": "Uživatelsky definované weby"
+    },
+    "items": {
+      "onlineShop": "Online obchod",
+      "individualShop": "Individuální online obchod",
+      "seoOptimization": "Optimalizace pro vyhledávače",
+      "landingPage": "Vstupní stránka",
+      "fullservice": "Full Service webové stránky od 79€ / Měsíc",
+      "vcardBasic": "Web V-Karta Základní",
+      "vcardPremium": "Web V-Karta Premium",
+      "businessBasic": "Obchodní web Základní",
+      "businessPremium": "Obchodní web Premium",
+      "individualWebsite": "Individuální web"
+    },
+    "needHelp": "Potřebujete pomoc s výběrem?",
+    "getInTouch": "Kontaktujte naše experty",
+    "contactUs": "Kontaktujte nás",
+    "onlineShop": "Online Shop",
+    "individualOnlineShop": "Individual Online Shop",
+    "searchEngineOptimization": "Search Engine Optimization",
+    "landingPage": "Landing Page",
+    "fullServiceWebsite": "Full Service Website",
+    "webVCardBasic": "Web V-Card Basic",
+    "webVCardPremium": "Web V-Card Premium",
+    "businessWebsiteBasic": "Business Website Basic",
+    "businessWebsitePremium": "Business Website Premium",
+    "individualWebsite": "Individual Website"
+  },
+  "portfolio": {
+    "badge": "Naše portfolio",
+    "title": "Vybrané projekty",
+    "description": "Prozkoumejte naši nejnovější práci a podívejte se, jak jsme pomohli firmám uspět",
+    "featured": "Vybrané"
+  },
+  "blog": {
+    "badge": "Nejnovější z našeho blogu",
+    "title": "Pohledy a aktualizace",
+    "description": "Zůstaňte v obraze s nejnovějšími trendy a novinkami z digitálního světa",
+    "by": "Od",
+    "readMore": "Číst více",
+    "viewAllPosts": "Zobrazit všechny příspěvky",
+    "viewAll": "Zobrazit vše"
+  },
+  "contact": {
+    "title": "Kontaktní formulář",
+    "description": "Kontaktujte nás ještě dnes pro svůj další krok k úspěchu!",
+    "firstName": "Jméno",
+    "lastName": "Příjmení",
+    "email": "E-Mail",
+    "phone": "Telefon",
+    "message": "Zpráva",
+    "privacyText": "Tímto potvrzuji, že jsem přečetl",
+    "privacyLink": "zásady ochrany soukromí",
+    "privacyTextContinued": "a souhlasím s tím, že mé osobní údaje (jméno, příjmení, telefonní číslo a e-mailová adresa) budou uloženy a zpracovány za účelem zpracování mého požadavku.",
+    "privacyAgreement": "Přečetl/a jsem a souhlasím se zásadami ochrany soukromí",
+    "send": "Odeslat",
+    "sending": "Odesílání...",
+    "submit": "Odeslat",
+    "success": "Zpráva úspěšně odeslána!",
+    "successTitle": "Úspěch!",
+    "successDescription": "Ozveme se vám do 24 hodin.",
+    "successMessage": "Obdrželi jsme vaši zprávu. Ozveme se vám co nejdříve.",
+    "error": "Nepodařilo se odeslat zprávu",
+    "errorTitle": "Chyba!",
+    "errorDescription": "Prosím, zkuste to znovu později.",
+    "errorMessage": "Došlo k chybě. Prosím, zkuste to znovu.",
+    "form": {
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "email": "E-Mail",
+      "phone": "Phone",
+      "message": "Message",
+      "privacyText": "Tímto potvrzuji, že jsem přečetl",
+      "privacyPolicy": "privacy policy",
+      "privacyAgreement": "Přečetl jsem zásady ochrany osobních údajů a souhlasím",
+      "submit": "Submit"
+    }
+  },
+  "footer": {
+    "description": "Tvoření digitálních zážitků, které přinášejí výsledky a inspirují růst.",
+    "ourServices": "Naše služby",
+    "company": "Společnost",
+    "findUs": "Najděte nás",
+    "workingHours": "Otevírací doba",
+    "mondayFriday": "Pondělí - Pátek: 09:00 - 17:00",
+    "copyright": "Všechna práva vyhrazena.",
+    "aboutUs": "O nás",
+    "bookAppointment": "Rezervovat schůzku",
+    "imprint": "Tisk",
+    "privacyPolicy": "Zásady ochrany soukromí",
+    "workPrinciples": "Principy práce",
+    "workingTime": "Pondělí - Pátek: 09:00 - 17:00",
+    "allRightsReserved": "All rights reserved.",
+    "supportTicket": "Support Ticket"
+  },
+  "cta": {
+    "readyTitle": "Jste připraveni začít svůj projekt?",
+    "readyDescription": "Pojďme si promluvit o tom, jak vám můžeme pomoci dosáhnout vašich digitálních cílů."
+  },
+  "theme": {
+    "toggle": "Změnit téma",
+    "lightMode": "Světlý režim",
+    "darkMode": "Tmavý režim"
+  },
+  "language": {
+    "switch": "Změnit jazyk",
+    "current": "Aktuální jazyk"
+  },
+  "common": {
+    "search": "Hledat",
+    "searchServices": "Hledat služby...",
+    "noResults": "Nebyly nalezeny žádné služby odpovídající vašemu vyhledávání.",
+    "loading": "Načítání...",
+    "prioritySupport": "Prioritární Podpora"
+  },
+  "dashboard": {
+    "title": "Přehled",
+    "welcome": "Vítejte",
+    "userDashboard": "Uživatelský Přehled",
+    "adminPanel": "Admin Panel",
+    "logout": "Odhlásit se",
+    "website": "Webová stránka",
+    "navigation": {
+      "dashboard": "Přehled",
+      "projectRequests": "Žádosti o Projekty",
+      "tickets": "Tickety",
+      "payments": "Platby",
+      "purchases": "Nákupy",
+      "templates": "Trh se Šablonami"
+    },
+    "stats": {
+      "totalTickets": "Celkem Ticketů",
+      "openTickets": "Otevřené Tickety",
+      "activeProjects": "Aktivní Projekty",
+      "totalSpent": "Celkem Utraceno"
+    },
+    "tickets": {
+      "title": "Support Tickety",
+      "description": "Spravujte své support tickety a získejte pomoc od našeho týmu",
+      "createTicket": "Vytvořit Ticket",
+      "newTicket": "Nový Ticket",
+      "subject": "Předmět",
+      "category": "Kategorie",
+      "priority": "Priorita",
+      "message": "Zpráva",
+      "status": "Stav",
+      "createdAt": "Vytvořeno",
+      "lastUpdate": "Poslední Aktualizace",
+      "viewDetails": "Zobrazit Detaily",
+      "closeTicket": "Zavřít Ticket",
+      "reopenTicket": "Znovu Otevřít Ticket",
+      "addResponse": "Přidat Odpověď",
+      "submit": "Odeslat",
+      "cancel": "Zrušit",
+      "categories": {
+        "support": "Support",
+        "billing": "Fakturace",
+        "technical": "Technický",
+        "feature": "Požadavek na Funkci"
+      },
+      "priorities": {
+        "low": "Nízká",
+        "medium": "Střední",
+        "high": "Vysoká"
+      },
+      "statuses": {
+        "open": "Otevřeno",
+        "in_progress": "V Průběhu",
+        "resolved": "Vyřešeno",
+        "closed": "Zavřeno"
+      },
+      "noTickets": "Zatím žádné tickety",
+      "noTicketsDesc": "Vytvořte svůj první support ticket pro začátek",
+      "ticketCreated": "Ticket úspěšně vytvořen",
+      "ticketUpdated": "Ticket úspěšně aktualizován",
+      "responseAdded": "Odpověď úspěšně přidána"
+    },
+    "packages": {
+      "title": "Support Balíčky",
+      "description": "Upgradujte svůj support balíček pro lepší služby",
+      "currentPackage": "Aktuální Balíček",
+      "upgrade": "Upgrade",
+      "downgrade": "Downgrade",
+      "features": {
+        "monthlyTickets": "Měsíční Tickety",
+        "responseTime": "Čás Odpovědi",
+        "supportChannels": "Support Kanály",
+        "prioritySupport": "Prioritní Support",
+        "dedicatedManager": "Věnovaný Manažer"
+      },
+      "tiers": {
+        "free": "Zdarma",
+        "standard": "Standardní",
+        "professional": "Profesionální",
+        "corporate": "Korporátní"
+      }
+    }
+  },
+  "admin": {
+    "title": "Admin",
+    "welcome": "Vítejte",
+    "navigation": {
+      "dashboard": "Přehled",
+      "frontend": "Frontend",
+      "customers": "Zákazníci",
+      "projectRequests": "Žádosti o Projekty",
+      "packages": "Balíčky",
+      "payments": "Platby a Faktury",
+      "marketplace": "Tržiště",
+      "messages": "Zprávy",
+      "settings": "Nastavení",
+      "blog": "Blog",
+      "team": "Tým",
+      "templates": "Šablony",
+      "refunds": "Refundace",
+      "services": "Služby"
+    },
+    "stats": {
+      "totalCustomers": "Celkem Zákazníků",
+      "activeProjects": "Aktivní Projekty",
+      "pendingRequests": "Čekající Žádosti",
+      "totalRevenue": "Celkové Příjmy",
+      "openTickets": "Otevřené Tickety",
+      "newMessages": "Nové Zprávy"
+    },
+    "customers": {
+      "title": "Zákazníci",
+      "description": "Spravujte své zákazníky",
+      "addCustomer": "Přidat Zákazníka",
+      "editCustomer": "Upravit Zákazníka",
+      "deleteCustomer": "Smazat Zákazníka",
+      "customerDetails": "Detaily Zákazníka",
+      "name": "Jméno",
+      "email": "E-mail",
+      "phone": "Telefon",
+      "company": "Společnost",
+      "status": "Stav",
+      "joined": "Připojen",
+      "actions": "Akce"
+    },
+    "projects": {
+      "title": "Žádosti o Projekty",
+      "description": "Spravujte žádosti o projekty od zákazníků",
+      "viewProject": "Zobrazit Projekt",
+      "updateStatus": "Aktualizovat Stav",
+      "assignProject": "Přiřadit Projekt",
+      "deleteProject": "Smazat Projekt"
+    },
+    "messages": {
+      "title": "Zprávy",
+      "description": "Zobrazte a odpovězte na zprávy zákazníků",
+      "markAsRead": "Označit jako Přečtené",
+      "reply": "Odpovědět",
+      "delete": "Smazat"
+    },
+    "settings": {
+      "title": "Nastavení",
+      "description": "Spravujte nastavení svého webu",
+      "general": "Obecné",
+      "legal": "Právní",
+      "seo": "SEO",
+      "social": "Sociální Sítě",
+      "save": "Uložit Změny",
+      "cancel": "Zrušit"
+    }
+  },
+  "login": {
+    "title": "Přihlásit se",
+    "description": "Přístup k vašemu panelu",
+    "user": "Uživatel",
+    "admin": "Admin",
+    "email": "E-mail",
+    "username": "Uživatelské jméno",
+    "password": "Heslo",
+    "signIn": "Přihlásit se",
+    "signingIn": "Přihlašování...",
+    "emailPlaceholder": "vy@priklad.cz",
+    "usernamePlaceholder": "Zadejte uživatelské jméno...",
+    "passwordPlaceholder": "Zadejte heslo...",
+    "demoCredentials": "Demo Přihlašovací Údaje:",
+    "loginSuccessful": "Úspěšné přihlášení!",
+    "loginFailed": "Přihlášení selhalo",
+    "redirectingDashboard": "Přesměrování na váš panel...",
+    "redirectingAdminDashboard": "Přesměrování na admin panel...",
+    "invalidEmailPassword": "Neplatný e-mail nebo heslo.",
+    "invalidUsernamePassword": "Neplatné uživatelské jméno nebo heslo."
+  }
+}

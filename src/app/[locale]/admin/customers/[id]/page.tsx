@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { useParams, useRouter } from 'next/navigation'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
@@ -23,7 +23,7 @@ interface ProjectRequest {
   id: string
   type: string
   budget: string
-  status: 'pending' | 'approved' | 'rejected' | 'completed'
+  status: 'pending' | 'approved' | 'rejected' | 'completed' | 'in_progress'
   submittedDate: string
 }
 
@@ -68,109 +68,52 @@ export default function CustomerDetailPage() {
   const router = useRouter()
   const [activeTab, setActiveTab] = useState<'projects' | 'licenses' | 'invoices' | 'support_packages' | 'marketplace'>('projects')
 
-  // Mock data - in real app, fetch from API
-  const customer: CustomerDetail = {
-    id: params.id || '1',
-    name: 'Ahmet Yılmaz',
-    email: 'ahmet@example.com',
-    phone: '+90 555 123 4567',
-    company: 'Yılmaz A.Ş.',
-    address: 'İstanbul, Turkey',
-    joinedDate: '2024-01-15',
-    status: 'active',
+  // State for data
+  const [customer, setCustomer] = useState<CustomerDetail | null>(null)
+  const [projects, setProjects] = useState<ProjectRequest[]>([])
+  const [licenses, setLicenses] = useState<License[]>([])
+  const [invoices, setInvoices] = useState<Invoice[]>([])
+  const [supportPackages, setSupportPackages] = useState<SupportPackage[]>([])
+  const [purchases, setPurchases] = useState<Purchase[]>([])
+  const [loading, setLoading] = useState(true)
+
+  useEffect(() => {
+    async function fetchCustomerData() {
+      try {
+        const id = Array.isArray(params.id) ? params.id[0] : params.id
+        if (!id) return
+
+        const response = await fetch(`/api/admin/customers/${id}`)
+        const result = await response.json()
+
+        if (result.success) {
+          setCustomer(result.data)
+          // Since API currently returns empty arrays for relations (pending implementation),
+          // we use the data from API. In future, API will return populated arrays.
+          setProjects(result.data.projects || [])
+          setInvoices(result.data.invoices || [])
+          setLicenses(result.data.licenses || [])
+          setSupportPackages(result.data.supportPackages || [])
+          // Purchases/Marketplace could be separate or part of customer order history
+          setPurchases([])
+        }
+      } catch (error) {
+        console.error('Failed to fetch customer:', error)
+      } finally {
+        setLoading(false)
+      }
+    }
+
+    fetchCustomerData()
+  }, [params.id])
+
+  if (loading) {
+    return <div className="p-8 text-center">Loading customer details...</div>
   }
 
-  const [projects, setProjects] = useState<ProjectRequest[]>([
-    {
-      id: '1',
-      type: 'E-commerce Platform',
-      budget: '75,000 - 100,000 €',
-      status: 'completed',
-      submittedDate: '2024-11-20',
-    },
-    {
-      id: '2',
-      type: 'Corporate Website',
-      budget: '45,000 - 60,000 €',
-      status: 'in_progress',
-      submittedDate: '2024-12-05',
-    },
-  ])
-
-  const [licenses, setLicenses] = useState<License[]>([
-    {
-      id: '1',
-      packageName: 'E-commerce V1 + SEO Module',
-      domain: 'sitem.com',
-      status: 'active',
-      purchaseDate: '2024-06-15',
-      expiryDate: '2025-06-15',
-    },
-    {
-      id: '2',
-      packageName: 'Blog Module',
-      domain: 'sitem.com',
-      status: 'active',
-      purchaseDate: '2024-08-20',
-      expiryDate: '2025-08-20',
-    },
-  ])
-
-  const [invoices, setInvoices] = useState<Invoice[]>([
-    {
-      id: '1',
-      invoiceNumber: 'INV-2024-001',
-      amount: '2,988 €',
-      status: 'paid',
-      dueDate: '2024-12-25',
-      paymentDate: '2024-12-24',
-    },
-    {
-      id: '2',
-      invoiceNumber: 'INV-2024-002',
-      amount: '5,988 €',
-      status: 'paid',
-      dueDate: '2024-11-25',
-      paymentDate: '2024-11-23',
-    },
-  ])
-
-  const [supportPackages, setSupportPackages] = useState<SupportPackage[]>([
-    {
-      id: '1',
-      name: 'Standard Package',
-      price: '299 €/month',
-      purchaseDate: '2024-09-15',
-      renewalDate: '2025-09-15',
-      status: 'active',
-    },
-    {
-      id: '2',
-      name: 'Professional Package',
-      price: '599 €/month',
-      purchaseDate: '2024-10-20',
-      renewalDate: '2025-10-20',
-      status: 'active',
-    },
-  ])
-
-  const [purchases, setPurchases] = useState<Purchase[]>([
-    {
-      id: '1',
-      itemName: 'E-commerce V1 Template',
-      category: 'Template',
-      price: '499 €',
-      purchaseDate: '2024-11-20',
-      downloadLink: '/downloads/ecommerce-v1.zip',
-    },
-    {
-      id: '2',
-      itemName: 'Standard Support Package',
-      category: 'Support Package',
-      price: '299 €',
-      purchaseDate: '2024-09-15',
-    },
-  ])
+  if (!customer) {
+    return <div className="p-8 text-center">Customer not found</div>
+  }
 
   return (
     <div className="space-y-6">
@@ -190,11 +133,10 @@ export default function CustomerDetailPage() {
             </div>
             <div className="flex items-center gap-2">
               <div
-                className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${
-                  customer.status === 'active'
-                    ? 'bg-green-100 text-green-800'
-                    : 'bg-gray-100 text-gray-800'
-                }`}
+                className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${customer.status === 'active'
+                  ? 'bg-green-100 text-green-800'
+                  : 'bg-gray-100 text-gray-800'
+                  }`}
               >
                 {customer.status === 'active' ? 'Active' : 'Inactive'}
               </div>
@@ -262,11 +204,10 @@ export default function CustomerDetailPage() {
                 <button
                   key={tab.key}
                   onClick={() => setActiveTab(tab.key as any)}
-                  className={`flex-1 min-w-max px-6 py-4 text-sm font-medium transition-colors border-b-2 ${
-                    activeTab === tab.key
-                      ? 'border-primary text-primary'
-                      : 'border-transparent text-muted-foreground hover:text-foreground'
-                  }`}
+                  className={`flex-1 min-w-max px-6 py-4 text-sm font-medium transition-colors border-b-2 ${activeTab === tab.key
+                    ? 'border-primary text-primary'
+                    : 'border-transparent text-muted-foreground hover:text-foreground'
+                    }`}
                 >
                   <tab.icon className="h-4 w-4 mr-2" />
                   {tab.label}
@@ -310,15 +251,14 @@ export default function CustomerDetailPage() {
                             <TableCell>{project.submittedDate}</TableCell>
                             <TableCell>
                               <span
-                                className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${
-                                  project.status === 'completed'
-                                    ? 'bg-green-100 text-green-800'
-                                    : project.status === 'in_progress'
-                                      ? 'bg-blue-100 text-blue-800'
-                                      : project.status === 'approved'
-                                        ? 'bg-purple-100 text-purple-800'
-                                        : 'bg-red-100 text-red-800'
-                                }`}
+                                className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${project.status === 'completed'
+                                  ? 'bg-green-100 text-green-800'
+                                  : project.status === 'in_progress'
+                                    ? 'bg-blue-100 text-blue-800'
+                                    : project.status === 'approved'
+                                      ? 'bg-purple-100 text-purple-800'
+                                      : 'bg-red-100 text-red-800'
+                                  }`}
                               >
                                 {project.status === 'completed' && 'Completed'}
                                 {project.status === 'in_progress' && 'In Progress'}
@@ -377,13 +317,12 @@ export default function CustomerDetailPage() {
                             <TableCell>{license.expiryDate}</TableCell>
                             <TableCell>
                               <span
-                                className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${
-                                  license.status === 'active'
-                                    ? 'bg-green-100 text-green-800'
-                                    : license.status === 'expired'
-                                      ? 'bg-red-100 text-red-800'
-                                      : 'bg-gray-100 text-gray-800'
-                                }`}
+                                className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${license.status === 'active'
+                                  ? 'bg-green-100 text-green-800'
+                                  : license.status === 'expired'
+                                    ? 'bg-red-100 text-red-800'
+                                    : 'bg-gray-100 text-gray-800'
+                                  }`}
                               >
                                 {license.status === 'active' && 'Active'}
                                 {license.status === 'expired' && 'Expired'}
@@ -439,13 +378,12 @@ export default function CustomerDetailPage() {
                             <TableCell>{invoice.paymentDate}</TableCell>
                             <TableCell>
                               <span
-                                className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${
-                                  invoice.status === 'paid'
-                                    ? 'bg-green-100 text-green-800'
-                                    : invoice.status === 'overdue'
-                                      ? 'bg-red-100 text-red-800'
-                                      : 'bg-yellow-100 text-yellow-800'
-                                }`}
+                                className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${invoice.status === 'paid'
+                                  ? 'bg-green-100 text-green-800'
+                                  : invoice.status === 'overdue'
+                                    ? 'bg-red-100 text-red-800'
+                                    : 'bg-yellow-100 text-yellow-800'
+                                  }`}
                               >
                                 {invoice.status === 'paid' && 'Paid'}
                                 {invoice.status === 'pending' && 'Pending'}

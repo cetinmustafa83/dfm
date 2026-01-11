@@ -3,11 +3,12 @@ import { prisma } from '@/lib/db'
 
 export async function POST(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
   try {
+    const { id } = await params
     const message = await prisma.message.update({
-      where: { id: params.id },
+      where: { id },
       data: {
         deleted: false,
         deletedAt: null

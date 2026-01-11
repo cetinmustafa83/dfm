@@ -13,6 +13,7 @@ interface RefundableItem {
   amount: number
   date: string
   status: string
+  note?: string
 }
 
 function readUserData() {
@@ -73,11 +74,11 @@ export async function GET(request: NextRequest) {
     // Once project status is 'in_progress' or 'draft_approved', the 30% deposit is non-refundable
     const userProjects = userData.projectRequests?.filter(
       (pr: any) => pr.userId === userId &&
-      (pr.status === 'pending' || pr.status === 'approved') &&
-      pr.status !== 'in_progress' &&
-      pr.status !== 'draft_approved' &&
-      pr.status !== 'completed' &&
-      pr.status !== 'cancelled'
+        (pr.status === 'pending' || pr.status === 'approved') &&
+        pr.status !== 'in_progress' &&
+        pr.status !== 'draft_approved' &&
+        pr.status !== 'completed' &&
+        pr.status !== 'cancelled'
     ) || []
 
     userProjects.forEach((project: any) => {
@@ -129,7 +130,7 @@ export async function GET(request: NextRequest) {
     ) || []
 
     const filteredItems = refundableItems.filter(item => {
-      return !existingRefunds.some((refund: any) => 
+      return !existingRefunds.some((refund: any) =>
         refund.orderId === item.id
       )
     })

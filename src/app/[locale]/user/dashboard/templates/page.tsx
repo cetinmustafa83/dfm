@@ -37,7 +37,7 @@ export default function UserTemplates() {
       setLoading(true)
       const response = await fetch('/api/templates')
       const result = await response.json()
-      
+
       if (result.success && result.data) {
         const transformedTemplates = result.data.map((t: any) => ({
           id: t.id,
@@ -53,14 +53,14 @@ export default function UserTemplates() {
           downloadUrl: t.downloadUrl
         }))
         setTemplates(transformedTemplates)
-        
+
         // Extract unique categories
         const uniqueCategories = ['all', ...new Set(result.data.map((t: any) => t.category))]
         const categoryOptions = uniqueCategories.map(cat => ({
           name: cat === 'all' ? 'All' : cat,
           value: cat
         }))
-        setCategories(categoryOptions)
+        setCategories(categoryOptions as { name: string; value: string }[])
       }
     } catch (error) {
       console.error('Error fetching templates:', error)

@@ -359,3 +359,13 @@ model MarketplaceItem {
   createdAt         DateTime @default(now())
   updatedAt         DateTime @updatedAt
 }
+
+model ErrorLog {
+  id        String   @id @default(cuid())
+  level     String   // DEBUG, INFO, WARN, ERROR, FATAL
+  type      String   // PAYMENT, AI, DATABASE, VALIDATION, AUTHENTICATION, NETWORK, UNKNOWN
+  message   String
+  stack     String?
+  context   String?  // JSON string
+  timestamp DateTime @default(now())
+}

@@ -3,11 +3,12 @@ import { prisma } from '@/lib/db'
 
 export async function GET(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
   try {
+    const { id } = await params
     const message = await prisma.message.findUnique({
-      where: { id: params.id }
+      where: { id }
     })
     if (!message) {
       return NextResponse.json(
@@ -27,12 +28,13 @@ export async function GET(
 
 export async function PUT(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
   try {
+    const { id } = await params
     const body = await request.json()
     const message = await prisma.message.update({
-      where: { id: params.id },
+      where: { id },
       data: body
     })
     return NextResponse.json(message)
@@ -47,21 +49,22 @@ export async function PUT(
 
 export async function DELETE(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
   try {
+    const { id } = await params
     const { searchParams } = new URL(request.url)
     const permanent = searchParams.get('permanent') === 'true'
-    
+
     if (permanent) {
       // Permanent delete
       await prisma.message.delete({
-        where: { id: params.id }
+        where: { id }
       })
     } else {
       // Soft delete
       await prisma.message.update({
-        where: { id: params.id },
+        where: { id },
         data: {
           deleted: true,
           deletedAt: new Date()

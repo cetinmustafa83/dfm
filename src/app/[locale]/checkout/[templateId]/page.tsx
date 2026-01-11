@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react'
 import { useParams, useRouter } from 'next/navigation'
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
+import { useSession } from 'next-auth/react'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { Input } from '@/components/ui/input'
@@ -78,6 +79,8 @@ export default function CheckoutPage() {
     fetchData()
   }, [itemId])
 
+  const { data: session } = useSession()
+
   async function fetchData() {
     try {
       setLoading(true)
@@ -100,11 +103,22 @@ export default function CheckoutPage() {
       setItem(foundItem)
 
       // Fetch wallet balance
-      const userId = 'user_123' // Mock - would come from auth
-      const walletRes = await fetch(`/api/user/wallet?userId=${userId}`)
-      const walletData = await walletRes.json()
-      if (walletData.success) {
-        setWalletBalance(walletData.data.balance || 0)
+      // const userId = 'user_123' // Mock - would come from auth
+      // In a real app, we get this from the session
+      // const walletRes = await fetch(`/api/user/wallet?userId=${userId}`)
+      // For now, if no session, we skip wallet check or redirect
+      // But since we are in a client component, we can use useSession
+      // However, we need to handle the async nature of session
+
+      // We will skip wallet fetch here and let specific API calls handle it via session on server
+      // OR we fetch if we have a session
+
+      const walletRes = await fetch(`/api/user/wallet`) // API should infer user from session
+      if (walletRes.ok) {
+        const walletData = await walletRes.json()
+        if (walletData.success) {
+          setWalletBalance(walletData.data.balance || 0)
+        }
       }
 
       // Fetch payment settings
@@ -116,7 +130,9 @@ export default function CheckoutPage() {
         setBankAccounts(paymentData.data.bankAccounts || [])
 
         // Auto-select payment method based on priority: wallet > gateway > bank
-        if (walletData.success && walletData.data.balance >= foundItem.price) {
+        const canPayWithWallet = walletBalance >= foundItem.price
+
+        if (canPayWithWallet) {
           setSelectedPaymentMethod('wallet')
         } else if (paymentData.data.paymentGateways?.length > 0) {
           setSelectedPaymentMethod(`gateway-${paymentData.data.paymentGateways[0].id}`)
@@ -165,13 +181,22 @@ export default function CheckoutPage() {
           return
         }
 
+        if (!session?.user?.email) {
+          toast({
+            title: 'Authentication required',
+            description: 'Please sign in to make a purchase',
+            variant: 'destructive',
+          })
+          setProcessing(false)
+          return
+        }
+
         // Process wallet payment
-        const userId = 'user_123' // Mock - would come from auth
         const response = await fetch('/api/user/wallet', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
-            userId,
+            userId: session.user.email,
             type: 'debit',
             amount: item.price,
             description: `Purchase: ${item.name}`,
@@ -197,7 +222,7 @@ export default function CheckoutPage() {
       if (type === 'gateway') {
         // Find the selected gateway
         const gateway = paymentGateways.find(g => g.id === id)
-        
+
         if (gateway) {
           if (gateway.type === 'paypal') {
             toast({
@@ -389,21 +414,18 @@ export default function CheckoutPage() {
                   {/* Wallet Payment (Priority) */}
                   <div
                     onClick={() => walletBalance >= item.price && setSelectedPaymentMethod('wallet')}
-                    className={`border-2 rounded-lg p-4 cursor-pointer transition-colors ${
-                      selectedPaymentMethod === 'wallet'
-                        ? 'border-primary bg-primary/5'
-                        : walletBalance < item.price
+                    className={`border-2 rounded-lg p-4 cursor-pointer transition-colors ${selectedPaymentMethod === 'wallet'
+                      ? 'border-primary bg-primary/5'
+                      : walletBalance < item.price
                         ? 'border-border opacity-50 cursor-not-allowed'
                         : 'border-border hover:border-primary/50'
-                    }`}
+                      }`}
                   >
                     <div className="flex items-center gap-3">
-                      <div className={`w-10 h-10 rounded-lg flex items-center justify-center ${
-                        selectedPaymentMethod === 'wallet' ? 'bg-primary/20' : 'bg-muted'
-                      }`}>
-                        <Wallet className={`h-5 w-5 ${
-                          selectedPaymentMethod === 'wallet' ? 'text-primary' : 'text-muted-foreground'
-                        }`} />
+                      <div className={`w-10 h-10 rounded-lg flex items-center justify-center ${selectedPaymentMethod === 'wallet' ? 'bg-primary/20' : 'bg-muted'
+                        }`}>
+                        <Wallet className={`h-5 w-5 ${selectedPaymentMethod === 'wallet' ? 'text-primary' : 'text-muted-foreground'
+                          }`} />
                       </div>
                       <div className="flex-1">
                         <h4 className="font-semibold">Wallet Balance</h4>
@@ -443,19 +465,16 @@ export default function CheckoutPage() {
                         <div
                           key={gateway.id}
                           onClick={() => setSelectedPaymentMethod(`gateway-${gateway.id}`)}
-                          className={`border-2 rounded-lg p-4 cursor-pointer transition-colors ${
-                            selectedPaymentMethod === `gateway-${gateway.id}`
-                              ? 'border-primary bg-primary/5'
-                              : 'border-border hover:border-primary/50'
-                          }`}
+                          className={`border-2 rounded-lg p-4 cursor-pointer transition-colors ${selectedPaymentMethod === `gateway-${gateway.id}`
+                            ? 'border-primary bg-primary/5'
+                            : 'border-border hover:border-primary/50'
+                            }`}
                         >
                           <div className="flex items-center gap-3">
-                            <div className={`w-10 h-10 rounded-lg flex items-center justify-center ${
-                              selectedPaymentMethod === `gateway-${gateway.id}` ? 'bg-primary/20' : 'bg-muted'
-                            }`}>
-                              <CreditCard className={`h-5 w-5 ${
-                                selectedPaymentMethod === `gateway-${gateway.id}` ? 'text-primary' : 'text-muted-foreground'
-                              }`} />
+                            <div className={`w-10 h-10 rounded-lg flex items-center justify-center ${selectedPaymentMethod === `gateway-${gateway.id}` ? 'bg-primary/20' : 'bg-muted'
+                              }`}>
+                              <CreditCard className={`h-5 w-5 ${selectedPaymentMethod === `gateway-${gateway.id}` ? 'text-primary' : 'text-muted-foreground'
+                                }`} />
                             </div>
                             <div className="flex-1">
                               <h4 className="font-semibold">{gateway.name}</h4>
@@ -475,19 +494,16 @@ export default function CheckoutPage() {
                         <div
                           key={bank.id}
                           onClick={() => setSelectedPaymentMethod(`bank-${bank.id}`)}
-                          className={`border-2 rounded-lg p-4 cursor-pointer transition-colors ${
-                            selectedPaymentMethod === `bank-${bank.id}`
-                              ? 'border-primary bg-primary/5'
-                              : 'border-border hover:border-primary/50'
-                          }`}
+                          className={`border-2 rounded-lg p-4 cursor-pointer transition-colors ${selectedPaymentMethod === `bank-${bank.id}`
+                            ? 'border-primary bg-primary/5'
+                            : 'border-border hover:border-primary/50'
+                            }`}
                         >
                           <div className="flex items-center gap-3">
-                            <div className={`w-10 h-10 rounded-lg flex items-center justify-center ${
-                              selectedPaymentMethod === `bank-${bank.id}` ? 'bg-primary/20' : 'bg-muted'
-                            }`}>
-                              <Building2 className={`h-5 w-5 ${
-                                selectedPaymentMethod === `bank-${bank.id}` ? 'text-primary' : 'text-muted-foreground'
-                              }`} />
+                            <div className={`w-10 h-10 rounded-lg flex items-center justify-center ${selectedPaymentMethod === `bank-${bank.id}` ? 'bg-primary/20' : 'bg-muted'
+                              }`}>
+                              <Building2 className={`h-5 w-5 ${selectedPaymentMethod === `bank-${bank.id}` ? 'text-primary' : 'text-muted-foreground'
+                                }`} />
                             </div>
                             <div className="flex-1">
                               <h4 className="font-semibold">Bank Transfer</h4>

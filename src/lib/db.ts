@@ -17,8 +17,7 @@ const createPrismaClient = () => {
   })
 }
 
-export const prisma = globalForPrisma.prisma ?? createPrismaClient()
-
+export const prisma = (globalForPrisma.prisma ?? createPrismaClient()) as PrismaClient
 export const db = prisma
 export default prisma
 

@@ -1,5 +1,13 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { getSettings } from '@/lib/settings-db'
+import { prisma } from '@/lib/db'
+import { sendEmail } from '@/lib/email'
+import {
+  generateInvoiceNumber,
+  calculateInvoiceTotals,
+  saveInvoiceToDatabase,
+  sendInvoiceEmail
+} from '@/lib/invoice/pdf-generator'
 import crypto from 'crypto'
 
 /**
@@ -72,41 +80,82 @@ async function processPaymentStatus(payment: MolliePayment) {
   switch (status) {
     case 'paid':
       console.log('Payment completed:', id)
-      // TODO: Update order status to paid in database
-      // TODO: Send confirmation email to customer
-      // TODO: Trigger order fulfillment
-      // TODO: Create invoice
+
+      if (metadata.order_id) {
+        // Update payment status in database
+        const dbPayment = await prisma.payment.update({
+          where: { id: metadata.order_id },
+          data: { status: 'completed' }
+        })
+
+        // Generate and send invoice
+        const invoiceNumber = await generateInvoiceNumber()
+        const invoiceData = {
+          invoiceNumber,
+          invoiceDate: new Date().toISOString(),
+          customerName: dbPayment.description?.split(' for ')[1] || 'Customer',
+          customerEmail: (await prisma.customer.findUnique({ where: { id: dbPayment.customerId } }))?.email || '',
+          items: [
+            {
+              description: dbPayment.description || 'Service Purchase',
+              quantity: 1,
+              unitPrice: dbPayment.amount,
+              total: dbPayment.amount
+            }
+          ],
+          ...calculateInvoiceTotals([{ description: '', quantity: 1, unitPrice: dbPayment.amount, total: dbPayment.amount }])
+        }
+
+        await saveInvoiceToDatabase(invoiceData as any, dbPayment.id)
+        if (invoiceData.customerEmail) {
+          await sendInvoiceEmail(invoiceData as any, invoiceData.customerEmail)
+        }
+      }
       break
 
     case 'failed':
       console.log('Payment failed:', id)
-      // TODO: Update order status to failed
-      // TODO: Send payment failure notification
-      // TODO: Log failure reason
+      if (metadata.order_id) {
+        await prisma.payment.update({
+          where: { id: metadata.order_id },
+          data: { status: 'failed' }
+        })
+      }
       break
 
     case 'canceled':
       console.log('Payment canceled:', id)
-      // TODO: Update order status to canceled
-      // TODO: Send cancelation notification
+      if (metadata.order_id) {
+        await prisma.payment.update({
+          where: { id: metadata.order_id },
+          data: { status: 'canceled' }
+        })
+      }
       break
 
     case 'expired':
       console.log('Payment expired:', id)
-      // TODO: Update order status to expired
-      // TODO: Send expiration notification
+      if (metadata.order_id) {
+        await prisma.payment.update({
+          where: { id: metadata.order_id },
+          data: { status: 'failed' } // Expired is effectively failed
+        })
+      }
       break
 
     case 'pending':
+    case 'open':
       console.log('Payment pending:', id)
-      // TODO: Update order status to pending
-      // TODO: Wait for bank transfer confirmation
+      if (metadata.order_id) {
+        await prisma.payment.update({
+          where: { id: metadata.order_id },
+          data: { status: 'pending' }
+        })
+      }
       break
 
     case 'authorized':
       console.log('Payment authorized:', id)
-      // TODO: Update order status to authorized
-      // TODO: Capture payment when ready to ship
       break
 
     default:
@@ -154,7 +203,7 @@ export async function POST(request: NextRequest) {
 
     // Verify webhook by fetching payment from Mollie
     const payment = await verifyWebhook(paymentId)
-    
+
     if (!payment) {
       return NextResponse.json(
         { error: 'Payment verification failed' },

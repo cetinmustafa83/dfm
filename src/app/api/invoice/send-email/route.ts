@@ -1,47 +1,28 @@
 import { NextRequest, NextResponse } from 'next/server'
+import { sendInvoiceEmail } from '@/lib/invoice/pdf-generator'
 
 export async function POST(request: NextRequest) {
   try {
-    const { invoiceNumber, customerEmail, customerName } = await request.json()
+    const body = await request.json()
+    const { invoiceNumber, customerEmail, invoiceData } = body
 
-    // TODO: Implement actual email sending logic
-    // This is a placeholder that should be replaced with your email service
-    // Examples: SendGrid, Resend, Nodemailer, etc.
-    
-    console.log('Email sending request:', {
-      invoiceNumber,
-      customerEmail,
-      customerName,
-      timestamp: new Date().toISOString()
-    })
+    if (!invoiceNumber || !customerEmail || !invoiceData) {
+      return NextResponse.json(
+        { error: 'Missing required fields' },
+        { status: 400 }
+      )
+    }
 
-    // Simulate email sending delay
-    await new Promise(resolve => setTimeout(resolve, 1000))
+    // Generate PDF and send email
+    const success = await sendInvoiceEmail(invoiceData, customerEmail)
 
-    // In a real implementation, you would:
-    // 1. Generate the PDF invoice
-    // 2. Send it via your email service
-    // 3. Return success/failure status
-
-    // Example with a hypothetical email service:
-    /*
-    const emailService = new EmailService(process.env.EMAIL_API_KEY)
-    await emailService.send({
-      to: customerEmail,
-      subject: `Rechnung ${invoiceNumber}`,
-      html: `Sehr geehrte/r ${customerName},<br><br>anbei erhalten Sie Ihre Rechnung ${invoiceNumber}.`,
-      attachments: [
-        {
-          filename: `Rechnung_${invoiceNumber}.pdf`,
-          content: pdfBuffer
-        }
-      ]
-    })
-    */
+    if (!success) {
+      throw new Error('Failed to send email via transport')
+    }
 
     return NextResponse.json({
       success: true,
-      message: `Invoice ${invoiceNumber} email prepared for ${customerEmail}`
+      message: `Invoice ${invoiceNumber} sent to ${customerEmail}`
     })
   } catch (error) {
     console.error('Error sending invoice email:', error)

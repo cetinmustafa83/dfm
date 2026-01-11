@@ -30,6 +30,10 @@ export interface GeneralSettings {
   companyLogoUrl: string
   websiteLogoUrl: string
   faviconUrl: string
+  websiteLogoWidth?: number
+  postalCode?: string
+  city?: string
+  country?: string
   // Navigation Menu
   navMenu: NavMenuItem[]
   // Footer Menu
@@ -129,6 +133,8 @@ export interface AISettings {
   seoOptimization: boolean
   contentGeneration: boolean
   autoBlogging: boolean
+  autoBlog?: boolean
+  enabled?: boolean
   blogSchedule: string
   webSearch: {
     topics: string[]
@@ -307,6 +313,10 @@ function getDefaultSettings(key: string): any {
       companyLogoUrl: '',
       websiteLogoUrl: '',
       faviconUrl: '',
+      websiteLogoWidth: 150,
+      postalCode: '',
+      city: '',
+      country: '',
       // Navigation Menu
       navMenu: [
         { name: 'Home', href: '#hero' },
@@ -437,6 +447,8 @@ function getDefaultSettings(key: string): any {
       seoOptimization: false,
       contentGeneration: false,
       autoBlogging: false,
+      autoBlog: false,
+      enabled: true,
       blogSchedule: 'weekly',
       supportAgent: {
         enabled: false,

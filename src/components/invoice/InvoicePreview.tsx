@@ -87,7 +87,7 @@ export default function InvoicePreview(props: InvoicePreviewProps) {
       try {
         const response = await fetch('/api/settings')
         const data = await response.json()
-        
+
         const settings = data.settings
         setCompanyInfo({
           companyName: settings.general.companyName,
@@ -126,7 +126,7 @@ export default function InvoicePreview(props: InvoicePreviewProps) {
 
   async function handleDownload() {
     if (!invoiceRef.current) return
-    
+
     setDownloading(true)
     try {
       // Hide action buttons before capturing
@@ -158,7 +158,7 @@ export default function InvoicePreview(props: InvoicePreviewProps) {
 
       const imgWidth = 210 // A4 width in mm
       const imgHeight = (canvas.height * imgWidth) / canvas.width
-      
+
       pdf.addImage(imgData, 'PNG', 0, 0, imgWidth, imgHeight)
       pdf.save(`Rechnung_${props.invoiceNumber}.pdf`)
     } catch (error) {
@@ -172,15 +172,31 @@ export default function InvoicePreview(props: InvoicePreviewProps) {
   async function handleEmail() {
     setSending(true)
     try {
-      // TODO: Implement email sending logic
-      // This would typically call an API endpoint to send the invoice via email
+      // Send full invoice data for server-side generation
+      const invoiceData = {
+        invoiceNumber: props.invoiceNumber,
+        invoiceDate: props.invoiceDate,
+        dueDate: props.dueDate,
+        customerName: props.customerName,
+        customerEmail: props.customerEmail,
+        customerAddress: props.customerAddress,
+        customerNumber: props.customerNumber,
+        items: props.items,
+        subtotal: props.subtotal,
+        taxRate: props.taxRate,
+        taxAmount: props.taxAmount,
+        total: props.total,
+        notes: props.notes,
+        paymentLink: props.paymentLink
+      }
+
       const response = await fetch('/api/invoice/send-email', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           invoiceNumber: props.invoiceNumber,
           customerEmail: props.customerEmail,
-          customerName: props.customerName
+          invoiceData
         })
       })
 
@@ -211,7 +227,7 @@ export default function InvoicePreview(props: InvoicePreviewProps) {
   // Generate EPC QR Code for SEPA Bank Transfer
   const bankQRCode = useMemo(() => {
     if (!companyInfo?.bankTransfer) return null
-    
+
     // EPC QR Code format for SEPA payments (European Payments Council)
     const epcData = [
       'BCD',                                    // Service Tag
@@ -227,7 +243,7 @@ export default function InvoicePreview(props: InvoicePreviewProps) {
       '',                                       // Unstructured Remittance
       'Rechnung ' + props.invoiceNumber         // Beneficiary to Originator Information
     ].join('\n')
-    
+
     return `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(epcData)}`
   }, [companyInfo, props.total, props.invoiceNumber])
 
@@ -276,7 +292,7 @@ export default function InvoicePreview(props: InvoicePreviewProps) {
               </div>
             )}
           </div>
-          
+
           {/* Company Info - Right Aligned */}
           <div className="text-right text-sm leading-relaxed">
             <p className="font-bold text-base">{companyInfo?.companyName}</p>
@@ -356,7 +372,7 @@ export default function InvoicePreview(props: InvoicePreviewProps) {
                   <td className="p-2 text-right font-semibold">{formatCurrency(item.total)}</td>
                 </tr>
               ))}
-              
+
               {/* Totals */}
               <tr className="bg-gray-100 border-b border-black">
                 <td colSpan={6} className="border-r border-black p-2 font-semibold">Zwischensumme (netto)</td>

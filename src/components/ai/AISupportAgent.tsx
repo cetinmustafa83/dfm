@@ -54,10 +54,10 @@ export default function AISupportAgent({
     // Get CSS variable colors from the page
     const root = document.documentElement
     const computedStyle = getComputedStyle(root)
-    
+
     // Get primary color from CSS variables (Tailwind uses various formats)
     const primary = computedStyle.getPropertyValue('--primary').trim()
-    
+
     if (primary) {
       // Check if it's OKLCH format (like "oklch(0.205 0 0)" or "0.205 0 0")
       if (primary.includes('oklch') || (primary.includes('0.') && primary.split(' ').length >= 3)) {
@@ -97,9 +97,9 @@ export default function AISupportAgent({
     const detectDarkMode = () => {
       if (themeMode === 'auto') {
         const isDarkMode = root.classList.contains('dark') ||
-                          window.matchMedia('(prefers-color-scheme: dark)').matches
+          window.matchMedia('(prefers-color-scheme: dark)').matches
         setIsDark(isDarkMode)
-        
+
         // Update colors based on theme
         if (isDarkMode) {
           setButtonBgColor('rgb(255 255 255)') // White button in dark mode
@@ -113,7 +113,7 @@ export default function AISupportAgent({
       } else {
         const isDarkMode = themeMode === 'dark'
         setIsDark(isDarkMode)
-        
+
         if (isDarkMode) {
           setButtonBgColor('rgb(255 255 255)')
           setModalBgColor('rgb(17 24 39)')
@@ -150,17 +150,17 @@ export default function AISupportAgent({
       const hue2rgb = (p: number, q: number, t: number) => {
         if (t < 0) t += 1
         if (t > 1) t -= 1
-        if (t < 1/6) return p + (q - p) * 6 * t
-        if (t < 1/2) return q
-        if (t < 2/3) return p + (q - p) * (2/3 - t) * 6
+        if (t < 1 / 6) return p + (q - p) * 6 * t
+        if (t < 1 / 2) return q
+        if (t < 2 / 3) return p + (q - p) * (2 / 3 - t) * 6
         return p
       }
 
       const q = l < 0.5 ? l * (1 + s) : l + s - l * s
       const p = 2 * l - q
-      r = hue2rgb(p, q, h + 1/3)
+      r = hue2rgb(p, q, h + 1 / 3)
       g = hue2rgb(p, q, h)
-      b = hue2rgb(p, q, h - 1/3)
+      b = hue2rgb(p, q, h - 1 / 3)
     }
 
     return [Math.round(r * 255), Math.round(g * 255), Math.round(b * 255)]
@@ -224,13 +224,19 @@ export default function AISupportAgent({
         })
 
         // Change button color from yellow to black
-        const buttons = iframeDoc.querySelectorAll('button, [role="button"]')
-        buttons.forEach(button => {
-          const bgColor = window.getComputedStyle(button).backgroundColor
+        const btns = iframeDoc.querySelectorAll('button, [role="button"]')
+        btns.forEach(btn => {
+          const element = btn as HTMLElement
+          const bg = window.getComputedStyle(element).backgroundColor
+          const bt = btn as any
+          const bText = bt.textContent || ''
+          const isYOrO = bg.indexOf('255, 193') !== -1 || bg.indexOf('251, 191') !== -1
+          const isStartBtn = bText && bText.indexOf('Start') !== -1
+
           // Check if button is yellow/orange colored
-          if (bgColor.includes('255, 193') || bgColor.includes('251, 191') || button.textContent?.includes('Start')) {
-            (button as HTMLElement).style.backgroundColor = '#000000'
-            (button as HTMLElement).style.color = '#ffffff'
+          if (isYOrO || isStartBtn) {
+            element.style.backgroundColor = '#000000'
+            element.style.color = '#ffffff'
             console.log('Modified button color to black')
           }
         })
@@ -284,7 +290,7 @@ export default function AISupportAgent({
   // Position styles for button
   const getButtonPositionStyles = (): React.CSSProperties => {
     const base: React.CSSProperties = {}
-    
+
     switch (position) {
       case 'bottom-right':
         base.bottom = `${offsetY}px`
@@ -355,7 +361,7 @@ export default function AISupportAgent({
 
   const getTooltipPosition = (): React.CSSProperties => {
     const base: React.CSSProperties = {}
-    
+
     // Match button's vertical position
     if (position.includes('bottom')) {
       base.bottom = `${offsetY}px`
@@ -363,7 +369,7 @@ export default function AISupportAgent({
       base.top = '50%'
       base.transform = 'translateY(-50%)'
     }
-    
+
     // Tooltip should be on the OPPOSITE horizontal side of the button
     if (position.includes('right')) {
       // Button is on right side, place tooltip to its left
@@ -372,7 +378,7 @@ export default function AISupportAgent({
       // Button is on left side, place tooltip to its right
       base.left = `${offsetX + buttonSize + 12}px`
     }
-    
+
     return base
   }
 
@@ -435,7 +441,7 @@ export default function AISupportAgent({
             }}
           >
             {/* Header */}
-            <div 
+            <div
               className="text-white p-4 flex items-center justify-between flex-shrink-0"
               style={{
                 background: `linear-gradient(135deg, ${getBgColor(1)} 0%, ${getBgColor(0.8)} 100%)`,
@@ -504,7 +510,7 @@ export default function AISupportAgent({
               size={buttonSize * 0.5}
               strokeWidth={2}
             />
-            
+
             {/* Ripple Effect */}
             {enableRipple && (
               <>

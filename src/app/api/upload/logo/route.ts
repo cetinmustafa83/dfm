@@ -41,7 +41,7 @@ async function optimizeImage(buffer: Buffer, filename: string): Promise<Buffer> 
   try {
     // Dynamic import sharp (may not be installed)
     const sharp = await import('sharp')
-    
+
     const ext = path.extname(filename).toLowerCase()
     let optimized = sharp.default(buffer)
       .resize(800, 400, {
@@ -113,10 +113,10 @@ export async function POST(request: NextRequest) {
 
     // Get file buffer
     const arrayBuffer = await file.arrayBuffer()
-    let buffer = Buffer.from(arrayBuffer)
+    let buffer = Buffer.from(new Uint8Array(arrayBuffer))
 
     // Optimize image
-    buffer = await optimizeImage(buffer, filename)
+    buffer = await optimizeImage(buffer as any, filename) as any
 
     // Save file
     await writeFile(filepath, buffer)

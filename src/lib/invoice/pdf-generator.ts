@@ -1,4 +1,6 @@
 import { settingsDb } from '@/lib/settings-db'
+import { prisma } from '@/lib/db'
+import { sendEmail } from '@/lib/email'
 
 /**
  * Invoice PDF Generator
@@ -42,7 +44,7 @@ export async function generateInvoiceNumber(): Promise<string> {
   const year = date.getFullYear()
   const month = String(date.getMonth() + 1).padStart(2, '0')
   const random = Math.floor(Math.random() * 10000).toString().padStart(4, '0')
-  
+
   return `${prefix}-${year}${month}-${random}`
 }
 
@@ -176,7 +178,7 @@ export async function generateInvoicePDF(data: InvoiceData): Promise<Blob> {
   doc.setFontSize(12)
   doc.setTextColor(primaryColor)
   doc.text('Bill To:', 15, yPos)
-  
+
   yPos += 7
   doc.setFontSize(10)
   doc.setTextColor('#000000')
@@ -231,14 +233,14 @@ export async function generateInvoicePDF(data: InvoiceData): Promise<Blob> {
   // Totals
   const totalsX = 150
   doc.setFontSize(10)
-  
+
   doc.text('Subtotal:', totalsX, yPos)
   doc.text(formatCurrency(subtotal), 190, yPos, { align: 'right' })
-  
+
   yPos += 6
   doc.text(`Tax (${taxRate}%):`, totalsX, yPos)
   doc.text(formatCurrency(taxAmount), 190, yPos, { align: 'right' })
-  
+
   yPos += 8
   doc.setFontSize(12)
   doc.setFont(fontFamily, 'bold')
@@ -306,10 +308,10 @@ export async function downloadInvoicePDF(data: InvoiceData, filename?: string): 
 export async function generateInvoicePreview(data: InvoiceData): Promise<string> {
   const jsPDF = (await import('jspdf')).default
   const autoTable = (await import('jspdf-autotable')).default
-  
+
   // Generate PDF (same as above but return base64)
   const blob = await generateInvoicePDF(data)
-  
+
   return new Promise((resolve, reject) => {
     const reader = new FileReader()
     reader.onloadend = () => {
@@ -330,13 +332,22 @@ export async function sendInvoiceEmail(
 ): Promise<boolean> {
   try {
     const pdfBlob = await generateInvoicePDF(data)
-    
-    // TODO: Implement email sending
-    // This would typically use an email service like SendGrid, Resend, etc.
-    console.log('Sending invoice to:', recipientEmail)
-    console.log('PDF size:', pdfBlob.size, 'bytes')
-    
-    return true
+    const arrayBuffer = await pdfBlob.arrayBuffer()
+    const buffer = Buffer.from(arrayBuffer)
+
+    const result = await sendEmail({
+      to: recipientEmail,
+      subject: `Invoice ${data.invoiceNumber} from ${data.customerName}`,
+      text: `Please find attached your invoice ${data.invoiceNumber}.`,
+      attachments: [
+        {
+          filename: `invoice-${data.invoiceNumber}.pdf`,
+          content: buffer
+        }
+      ]
+    })
+
+    return result.success
   } catch (error) {
     console.error('Failed to send invoice email:', error)
     return false
@@ -346,12 +357,24 @@ export async function sendInvoiceEmail(
 /**
  * Save invoice to database (placeholder)
  */
-export async function saveInvoiceToDatabase(data: InvoiceData): Promise<string> {
+export async function saveInvoiceToDatabase(
+  data: InvoiceData,
+  paymentId?: string
+): Promise<string> {
   try {
-    // TODO: Implement database save
-    // This would save the invoice data to your database
     console.log('Saving invoice:', data.invoiceNumber)
-    
+
+    // Since there's no explicit Invoice model, we update the Payment record with the invoice number/details
+    if (paymentId) {
+      await prisma.payment.update({
+        where: { id: paymentId },
+        data: {
+          invoiceUrl: `/api/invoice/${data.invoiceNumber}`, // Placeholder URL
+          description: `Invoice ${data.invoiceNumber} for ${data.customerName}`
+        }
+      })
+    }
+
     return data.invoiceNumber
   } catch (error) {
     console.error('Failed to save invoice:', error)

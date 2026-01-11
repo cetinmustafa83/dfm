@@ -1,5 +1,13 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { getSettings } from '@/lib/settings-db'
+import { prisma } from '@/lib/db'
+import { sendEmail } from '@/lib/email'
+import {
+  generateInvoiceNumber,
+  calculateInvoiceTotals,
+  saveInvoiceToDatabase,
+  sendInvoiceEmail
+} from '@/lib/invoice/pdf-generator'
 import crypto from 'crypto'
 
 /**
@@ -40,7 +48,7 @@ async function verifyWebhookSignature(
   try {
     const settings = await getSettings()
     const webhookId = process.env.PAYPAL_WEBHOOK_ID || settings.payment?.paypal?.webhookId
-    
+
     if (!webhookId) {
       console.error('PayPal webhook ID not configured')
       return false
@@ -66,7 +74,7 @@ async function verifyWebhookSignature(
 
     // TODO: Implement actual signature verification
     // const isValid = await verifyWithPayPalAPI(...)
-    
+
     return true
   } catch (error) {
     console.error('Error verifying PayPal webhook signature:', error)
@@ -83,31 +91,63 @@ async function processPaymentEvent(event: PayPalWebhookEvent) {
   switch (event_type) {
     case 'PAYMENT.CAPTURE.COMPLETED':
       console.log('Payment captured:', resource.id)
-      // TODO: Update order status in database
-      // TODO: Send confirmation email
-      // TODO: Trigger fulfillment process
+      if (resource.custom_id) {
+        const dbPayment = await prisma.payment.update({
+          where: { id: resource.custom_id },
+          data: { status: 'completed' }
+        })
+
+        // Generate and send invoice
+        const invoiceNumber = await generateInvoiceNumber()
+        const invoiceData = {
+          invoiceNumber,
+          invoiceDate: new Date().toISOString(),
+          customerName: dbPayment.description?.split(' for ')[1] || 'Customer',
+          customerEmail: (await prisma.customer.findUnique({ where: { id: dbPayment.customerId } }))?.email || '',
+          items: [
+            {
+              description: dbPayment.description || 'Service Purchase',
+              quantity: 1,
+              unitPrice: dbPayment.amount,
+              total: dbPayment.amount
+            }
+          ],
+          ...calculateInvoiceTotals([{ description: '', quantity: 1, unitPrice: dbPayment.amount, total: dbPayment.amount }])
+        }
+
+        await saveInvoiceToDatabase(invoiceData as any, dbPayment.id)
+        if (invoiceData.customerEmail) {
+          await sendInvoiceEmail(invoiceData as any, invoiceData.customerEmail)
+        }
+      }
       break
 
     case 'PAYMENT.CAPTURE.DENIED':
       console.log('Payment denied:', resource.id)
-      // TODO: Update order status to failed
-      // TODO: Send failure notification
+      if (resource.custom_id) {
+        await prisma.payment.update({
+          where: { id: resource.custom_id },
+          data: { status: 'failed' }
+        })
+      }
       break
 
     case 'PAYMENT.CAPTURE.REFUNDED':
       console.log('Payment refunded:', resource.id)
-      // TODO: Update order status to refunded
-      // TODO: Send refund confirmation
+      if (resource.custom_id) {
+        await prisma.payment.update({
+          where: { id: resource.custom_id },
+          data: { status: 'refunded' }
+        })
+      }
       break
 
     case 'CHECKOUT.ORDER.APPROVED':
       console.log('Order approved:', resource.id)
-      // TODO: Update order status to approved
       break
 
     case 'CHECKOUT.ORDER.COMPLETED':
       console.log('Order completed:', resource.id)
-      // TODO: Update order status to completed
       break
 
     default:
@@ -123,7 +163,7 @@ export async function POST(request: NextRequest) {
   try {
     // Get raw body for signature verification
     const body = await request.text()
-    
+
     // Verify webhook signature
     const isValid = await verifyWebhookSignature(request, body)
     if (!isValid) {
@@ -135,7 +175,7 @@ export async function POST(request: NextRequest) {
 
     // Parse event
     const event: PayPalWebhookEvent = JSON.parse(body)
-    
+
     console.log('PayPal webhook received:', {
       id: event.id,
       type: event.event_type,

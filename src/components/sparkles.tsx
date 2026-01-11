@@ -45,8 +45,9 @@ export const Sparkles: React.FC<SparklesProps> = ({
       fadeSpeed: number;
 
       constructor() {
-        this.x = Math.random() * canvas.width;
-        this.y = direction === 'top' ? canvas.height : 0;
+        const c = canvas!;
+        this.x = Math.random() * c.width;
+        this.y = direction === 'top' ? c.height : 0;
         this.size = Math.random() * 2 + 0.5;
         this.speedX = (Math.random() - 0.5) * speed * 0.5;
         this.speedY = direction === 'top' ? -Math.random() * speed : Math.random() * speed;
@@ -60,9 +61,10 @@ export const Sparkles: React.FC<SparklesProps> = ({
         this.opacity -= this.fadeSpeed;
 
         // Reset particle if it goes off screen or fades out
-        if (this.opacity <= 0 || this.y < 0 || this.y > canvas.height) {
-          this.x = Math.random() * canvas.width;
-          this.y = direction === 'top' ? canvas.height : 0;
+        const c = canvas!;
+        if (this.opacity <= 0 || this.y < 0 || this.y > c.height) {
+          this.x = Math.random() * c.width;
+          this.y = direction === 'top' ? c.height : 0;
           this.opacity = Math.random() * 0.5 + 0.2;
         }
       }
@@ -88,7 +90,7 @@ export const Sparkles: React.FC<SparklesProps> = ({
     let animationFrameId: number;
     const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
-      
+
       particles.forEach((particle) => {
         particle.update();
         particle.draw();

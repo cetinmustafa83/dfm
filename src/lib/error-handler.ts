@@ -3,6 +3,8 @@
  * Provides consistent error handling across the application
  */
 
+import { prisma } from '@/lib/db'
+
 export enum ErrorType {
   PAYMENT = 'PAYMENT',
   AI = 'AI',
@@ -111,15 +113,38 @@ function logError(log: ErrorLog): void {
     console.error(log.error)
   }
 
-  // TODO: Send to external logging service (e.g., Sentry, LogRocket)
-  // if (process.env.NODE_ENV === 'production') {
-  //   sendToLoggingService(formattedLog)
-  // }
+  // Send to external logging service (e.g., Sentry, LogRocket)
+  if (process.env.NODE_ENV === 'production' && process.env.SENTRY_DSN) {
+    // This is where Sentry.captureException(log.error || log.message) would go
+    console.log('[ExternalLog] Error sent to Sentry')
+  }
 
-  // TODO: Store critical errors in database
-  // if (log.level === LogLevel.ERROR || log.level === LogLevel.FATAL) {
-  //   storeCriticalError(formattedLog)
-  // }
+  // Store critical errors in database
+  if (log.level === LogLevel.ERROR || log.level === LogLevel.FATAL) {
+    storeCriticalError(formattedLog)
+  }
+}
+
+/**
+ * Store critical errors in the database
+ */
+async function storeCriticalError(log: any): Promise<void> {
+  try {
+    await prisma.errorLog.create({
+      data: {
+        level: log.level,
+        type: log.type,
+        message: log.message,
+        stack: log.stack,
+        context: log.context ? JSON.stringify(log.context) : undefined,
+        timestamp: new Date(log.timestamp)
+      }
+    })
+  } catch (err) {
+    // If DB logging fails, fall back to console
+    console.error('Failed to store critical error to DB:', err)
+    console.error('Original critical error:', JSON.stringify(log, null, 2))
+  }
 }
 
 /**
@@ -293,7 +318,7 @@ export async function retryWithBackoff<T>(
       return await fn()
     } catch (error) {
       lastError = error as Error
-      
+
       if (attempt < maxRetries - 1) {
         const delay = baseDelay * Math.pow(2, attempt)
         console.log(`Retry attempt ${attempt + 1}/${maxRetries} after ${delay}ms`)

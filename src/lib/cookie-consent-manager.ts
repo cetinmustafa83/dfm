@@ -158,7 +158,7 @@ export class CookieConsentManager {
       // No consent yet, block all non-necessary scripts
       const src = script.src || script.innerHTML
       const service = this.findServiceByScript(src)
-      
+
       if (service && service.category !== 'necessary') {
         this.blockScript(script)
       }
@@ -177,7 +177,7 @@ export class CookieConsentManager {
   }
 
   private findServiceByScript(src: string): ServiceConfig | undefined {
-    return SERVICES.find(service => 
+    return SERVICES.find(service =>
       service.scripts.some(pattern => src.includes(pattern))
     )
   }
@@ -186,10 +186,10 @@ export class CookieConsentManager {
     // Change type to prevent execution
     script.type = 'text/plain'
     script.setAttribute('data-consent-blocked', 'true')
-    
+
     const src = script.src || 'inline'
     this.blockedScripts.add(src)
-    
+
     console.log('[Cookie Consent] Blocked script:', src)
   }
 
@@ -212,11 +212,11 @@ export class CookieConsentManager {
     cookieNames.forEach(name => {
       // Remove cookie for current domain
       document.cookie = `${name}=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;`
-      
+
       // Try to remove for all possible domains
       const domain = window.location.hostname
       const parts = domain.split('.')
-      
+
       for (let i = 0; i < parts.length; i++) {
         const testDomain = parts.slice(i).join('.')
         document.cookie = `${name}=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=.${testDomain}`
@@ -227,28 +227,28 @@ export class CookieConsentManager {
   private reloadScriptsWithConsent(): void {
     // Find all blocked scripts
     const blockedScripts = document.querySelectorAll('script[data-consent-blocked="true"]')
-    
+
     blockedScripts.forEach((script) => {
       const src = (script as HTMLScriptElement).src || script.innerHTML
       const service = this.findServiceByScript(src)
-      
+
       if (service && this.preferences![service.category]) {
         // User has granted consent, reload script
         const newScript = document.createElement('script')
-        
+
         if ((script as HTMLScriptElement).src) {
           newScript.src = (script as HTMLScriptElement).src
         } else {
           newScript.innerHTML = script.innerHTML
         }
-        
+
         // Copy attributes
         Array.from(script.attributes).forEach(attr => {
           if (attr.name !== 'type' && attr.name !== 'data-consent-blocked') {
             newScript.setAttribute(attr.name, attr.value)
           }
         })
-        
+
         script.parentNode?.replaceChild(newScript, script)
         console.log('[Cookie Consent] Reloaded script with consent:', src)
       }
@@ -259,23 +259,23 @@ export class CookieConsentManager {
   hasServiceConsent(serviceName: string): boolean {
     const service = SERVICES.find(s => s.name === serviceName)
     if (!service || !this.preferences) return false
-    
+
     return this.preferences[service.category]
   }
 
   // Get all services by category
-  getServicesByCategory(category: CookiePreferences['necessary' | 'functional' | 'analytics' | 'marketing']): ServiceConfig[] {
+  getServicesByCategory(category: 'necessary' | 'functional' | 'analytics' | 'marketing'): ServiceConfig[] {
     return SERVICES.filter(s => s.category === category)
   }
 
   // Reset all consent
   resetConsent(): void {
     if (typeof window === 'undefined') return
-    
+
     localStorage.removeItem(CONSENT_KEY)
     localStorage.removeItem(CONSENT_DATE_KEY)
     this.preferences = null
-    
+
     // Remove all service cookies
     SERVICES.forEach(service => {
       this.removeCookies(service.cookies)

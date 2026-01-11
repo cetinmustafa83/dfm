@@ -32,7 +32,7 @@ export default function UserMarketplace() {
       setLoading(true)
       const response = await fetch('/api/templates')
       const result = await response.json()
-      
+
       if (result.success && result.data) {
         const transformedTemplates = result.data.map((t: any) => ({
           id: t.id,
@@ -45,10 +45,10 @@ export default function UserMarketplace() {
           downloadUrl: t.downloadUrl
         }))
         setTemplates(transformedTemplates)
-        
+
         // Extract unique categories
         const uniqueCategories = ['all', ...new Set(result.data.map((t: any) => t.category))]
-        setCategories(uniqueCategories)
+        setCategories(uniqueCategories as string[])
       }
     } catch (error) {
       console.error('Error fetching templates:', error)
@@ -139,11 +139,10 @@ export default function UserMarketplace() {
                   <button
                     key={category}
                     onClick={() => setCategoryFilter(category as any)}
-                    className={`px-3 py-1.5 rounded-md text-sm font-medium transition-colors ${
-                      categoryFilter === category
+                    className={`px-3 py-1.5 rounded-md text-sm font-medium transition-colors ${categoryFilter === category
                         ? 'bg-primary text-primary-foreground'
                         : 'bg-muted/50 text-muted-foreground hover:bg-muted'
-                    }`}
+                      }`}
                   >
                     <Tag className="h-3 w-3 mr-1 inline" />
                     {category === 'all' ? 'All Categories' : category}
@@ -168,9 +167,8 @@ export default function UserMarketplace() {
                         </CardDescription>
                       </div>
                       <div
-                        className={`inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium ${
-                          statusColors[template.status]
-                        }`}
+                        className={`inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium ${statusColors[template.status]
+                          }`}
                       >
                         {statusLabels[template.status]}
                       </div>

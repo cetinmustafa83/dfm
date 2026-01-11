@@ -21,7 +21,7 @@ const nextConfig: NextConfig = {
       },
     ],
   },
-  // Disable static page generation for error pages
+  // Next.js 15 top-level options (moved from experimental)
   skipMiddlewareUrlNormalize: true,
   skipTrailingSlashRedirect: true,
   // Force cache invalidation for deployment

@@ -273,12 +273,12 @@ export function validate<T>(schema: z.ZodSchema<T>, data: unknown): {
  */
 export function formatZodErrors(error: z.ZodError): Record<string, string> {
   const errors: Record<string, string> = {}
-  
-  error.errors.forEach(err => {
+
+  error.issues.forEach(err => {
     const path = err.path.join('.')
     errors[path] = err.message
   })
-  
+
   return errors
 }
 
@@ -292,11 +292,11 @@ export function safeParse<T>(schema: z.ZodSchema<T>, data: unknown): {
   fieldErrors?: Record<string, string>
 } {
   const result = schema.safeParse(data)
-  
+
   if (result.success) {
     return { success: true, data: result.data }
   }
-  
+
   return {
     success: false,
     error: 'Validation failed',

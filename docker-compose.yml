@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  app:
+    container_name: dfm-app
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: always
+    ports:
+      - "3000:3000"
+    environment:
+      - DATABASE_URL=${DATABASE_URL}
+      - NEXTAUTH_URL=${NEXTAUTH_URL:-http://localhost:3000}
+      - NEXTAUTH_SECRET=${NEXTAUTH_SECRET}
+      # Add other environment variables here as needed
+    networks:
+      - dfm-network
+
+networks:
+  dfm-network:
+    driver: bridge
